@@ -17,6 +17,8 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO Food (FoodName, FoodCost)
 VALUES ('Hamburgers', 25)";
 
+//Display records
+//$sql = "SELECT * FROM Food";
 
 
 // record confirmation 
