@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Nachos', 15)";
+VALUES ('Pancakes', 15)";
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
