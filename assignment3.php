@@ -1,6 +1,6 @@
 <?php
 // open db connection
-$servername = "https://cs3620app.azurewebsites.net";
+$servername = "cs3620sqlsam.mysql.database.azure.com";
 $username = "sam@cs3620sqlsam";
 $password = "1801Church!";
 $dbname = "cs3620schema";
