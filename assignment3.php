@@ -14,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 // insert statement
-//$sql = "INSERT INTO Food (FoodName, FoodCost)
-//VALUES ('Pancakes', 15)";
+$sql = "INSERT INTO Food (FoodName, FoodCost)
+VALUES ('Pancakes', 15)";
 
-$sql = "SELECT * FROM Food";
+$sql = "SELECT * FROM Food;";
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
