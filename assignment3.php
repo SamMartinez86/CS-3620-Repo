@@ -2,7 +2,7 @@
 // open db connection
 $servername = "https://cs3620app.azurewebsites.net";
 $username = "sam@cs3620sqlsam";
-$password = "1801Church";
+$password = "1801church";
 $dbname = "cs3620schema";
 
 // Create connection
