@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Pancakes', 15)";
+VALUES ('Hamburgers', 25)";
 
-$sql = "SELECT * FROM Food;";
+
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo "New record 'Hamburgers' created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
