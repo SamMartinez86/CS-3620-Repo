@@ -1,9 +1,9 @@
 <?php
 // open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
-$username = "sam@cs3620sqlsam";
-$password = "1801Church";
-$dbname = "cs3620schema";
+$username = $_ENV['SQLUSER'];
+$password = $_ENV['SQLPW'];
+$dbname = $_ENV["cs3620schema"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
