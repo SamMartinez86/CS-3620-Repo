@@ -1,8 +1,10 @@
 <?php
 // open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
-$username = $_ENV['SQLUSER'];
-$password = $_ENV['SQLPW'];
+$username = "sam@cs3620sqlsam";
+$password = "1801Church";
+//$username = $_ENV['SQLUSER'];
+//$password = $_ENV['SQLPW'];
 $dbname = $_ENV["cs3620schema"];
 
 // Create connection
@@ -15,7 +17,7 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Hamburgers', 25)";
+VALUES ('Pizza', 5)";
 
 //Display records
 //$sql = "SELECT * FROM Food";
