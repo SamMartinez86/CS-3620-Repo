@@ -4,10 +4,8 @@ $servername = "cs3620sqlsam.mysql.database.azure.com";
 
 echo $_session['SQLUSER'];
 
-$username = "sam@cs3620sqlsam";
-$password = "1801Church";
-//$username = $_ENV['SQLUSER'];
-//$password = $_ENV['SQLPW'];
+$username = $_ENV['SQLUSER'];
+$password = $_ENV['SQLPW'];
 $dbname = "cs3620schema";
 
 // Create connection
