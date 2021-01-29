@@ -28,7 +28,7 @@ VALUES ('Pizza', 5)";
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
-  echo "New record 'Hamburgers' created successfully";
+  echo "New record 'Pizza' created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
