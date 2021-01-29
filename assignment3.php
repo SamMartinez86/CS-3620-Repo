@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Pizza', 5)";
+VALUES ('Sandwich', 5)";
 
 //Display records
 //$sql = "SELECT * FROM Food";
