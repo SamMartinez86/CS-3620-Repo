@@ -8,7 +8,7 @@ $username = "sam@cs3620sqlsam";
 $password = "1801Church";
 //$username = $_ENV['SQLUSER'];
 //$password = $_ENV['SQLPW'];
-$dbname = $_ENV["cs3620schema"];
+$dbname = "cs3620schema";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
