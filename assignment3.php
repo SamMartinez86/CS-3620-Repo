@@ -20,19 +20,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-/*
-$sql = "SELECT * FROM Food";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - FoodName: " . $row["FoodName"]. " - FoodCost: " . $row["FoodCost"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-*/
 
 // Insert into Db
 $sql = "INSERT INTO Food (FoodName, FoodCost)
@@ -44,6 +31,18 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
+// Display Db
+$sql = "SELECT * FROM Food";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "Food Name: " . $row["FoodName"]. "Food Cost: " . $row["FoodCost"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
 
 
 // close db connection
