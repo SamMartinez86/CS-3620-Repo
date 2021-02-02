@@ -16,12 +16,20 @@ $dbname = "cs3620schema";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
+/*
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+*/
+
 // query table
-$sql = "SELECT * FROM Food";
+//$sql = "SELECT * FROM Food";
 // store query in variable
-$result = $conn->query($sql);
+//$result = $conn->query($sql);
 
 // If rows exist in result
+/*
 if ($result->num_rows > 0) 
 {
     while($row = $result->fetch_assoc()) // put results in array and loop
@@ -33,6 +41,9 @@ if ($result->num_rows > 0)
 {
     echo "No results, something is wrong."
 }
+*/
+
+echo "Working!"
 
 
 // Check connection
