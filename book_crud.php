@@ -1,6 +1,10 @@
 <?php
 
-//session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
 
 // open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
@@ -10,6 +14,7 @@ $servername = "cs3620sqlsam.mysql.database.azure.com";
 
 $username = (isset($_SESSION["SQLUSER"]) ? $_SESSION["SQLUSER"] : $_ENV['SQLUSER']);
 $password = (isset($_SESSION["SQLPW"]) ? $_SESSION["SQLPW"] : $_ENV['SQLPW']);
+
 $dbname = "cs3620schema";
 
 // Create connection
