@@ -8,7 +8,7 @@
    
     echo"Running";
 
-    //echo"$_SESSION["SQLUSER"]";
+    echo"$_SESSION["SQLUSER"]";
     //echo"<br>";
     //echo"$_SESSION["SQLPW"]";
 
