@@ -20,14 +20,47 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Display database
+// Display Db
 $sql = "SELECT * FROM Food";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo " - Food Name: " . $row["FoodName"]. " - Food Cost: " . $row["FoodCost"]. "<br>";
+    echo "Food Name: " . $row["FoodName"]. "Food Cost: " . $row["FoodCost"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+
+// Insert into Db
+$sql = "INSERT INTO Food (FoodName, FoodCost)
+VALUES ('Sushi', '30')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record 'Sushi' created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+
+// Delete record from Db
+$sql = "DELETE FROM Food WHERE FoodName='Lasagna'";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record 'Lasagna' deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+// show inserted record
+// Display Db
+$sql = "SELECT * FROM Food";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "Food Name: " . $row["FoodName"]. "Food Cost: " . $row["FoodCost"]. "<br>";
   }
 } else {
   echo "0 results";
