@@ -20,6 +20,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+/*
 $sql = "SELECT * FROM Food";
 $result = $conn->query($sql);
 
@@ -31,6 +32,17 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
+*/
+
+// Insert into Db
+$sql = "INSERT INTO Food (FoodName, FoodCost)
+VALUES ('Lasagna', '20')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record 'Lasagna' created successfully <br>";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 
 
 

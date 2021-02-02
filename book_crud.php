@@ -38,7 +38,7 @@ $sql = "INSERT INTO Food (FoodName, FoodCost)
 VALUES ('Sushi', '30')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record 'Sushi' created successfully";
+    echo "New record 'Sushi' created successfully <br>";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
@@ -47,9 +47,23 @@ if ($conn->query($sql) === TRUE) {
 $sql = "DELETE FROM Food WHERE FoodName='Lasagna'";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record 'Lasagna' deleted successfully";
+  echo "Record 'Lasagna' deleted successfully <br>";
 } else {
   echo "Error deleting record: " . $conn->error;
+}
+
+// show inserted record "Sushi"
+// Display Db
+$sql = "SELECT FoodName, FoodCost FROM Food WHERE FoodName = 'Sushi'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "Food Name: " . $row["FoodName"]. " Food Cost: " . $row["FoodCost"]. "<br>";
+  }
+} else {
+  echo "0 results";
 }
 
 // show inserted record
@@ -60,7 +74,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "Food Name: " . $row["FoodName"]. "Food Cost: " . $row["FoodCost"]. "<br>";
+    echo "Food Name: " . $row["FoodName"]. " Food Cost: " . $row["FoodCost"]. "<br>";
   }
 } else {
   echo "0 results";
