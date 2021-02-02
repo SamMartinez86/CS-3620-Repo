@@ -1,18 +1,4 @@
-  
 <?php
-    //ini_set('display_errors', 1);
-    //ini_set('display_startup_errors', 1);
-    //error_reporting(E_ALL);
-
-    session_start();
-   
-    echo"Running";
-
-    //echo"$_SESSION["SQLUSER"]";
-
-    //echo"$_SESSION["SQLPW"]";
-
-    print_r($_SESSION);
-
-
-?>  
+session_start();
+echo $_SESSION['SQLPW'];
+?>
