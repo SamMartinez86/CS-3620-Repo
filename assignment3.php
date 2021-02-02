@@ -31,6 +31,15 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
+// Delete record from Db
+$sql = "DELETE FROM Food WHERE FoodName='Sushi'";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record 'Sushi' deleted successfully <br>";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
 // Display Db
 $sql = "SELECT * FROM Food";
 $result = $conn->query($sql);
