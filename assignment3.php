@@ -1,6 +1,6 @@
 <?php
 
-//session_start();
+session_start();
 
 // open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
