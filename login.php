@@ -6,12 +6,13 @@
 
     session_start();
    
+    echo"Running";
 
     //echo"$_SESSION["SQLUSER"]";
     //echo"<br>";
     //echo"$_SESSION["SQLPW"]";
 
-    print_r($_SESSION);
+    //print_r($_SESSION);
 
 
 ?>  
