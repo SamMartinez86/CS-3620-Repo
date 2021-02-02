@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Sandwich', 5)";
+VALUES ('Lasagna', 8)";
 
 //Display records
 //$sql = "SELECT * FROM Food";
