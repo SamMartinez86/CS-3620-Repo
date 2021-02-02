@@ -1,16 +1,15 @@
 <?php
 
-// store variables
-// server name 
+//session_start();
+
+// open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
 
-// store user and password
 $username = "sam@cs3620sqlsam";
 $password = "1801Church";
 
-// store user and password with environment variables
-
-// store db schema 
+//$username = (isset($_SESSION['SQLUSER'] ? $_SESSION ['SQLUSER'] : $_ENV['SQLUSER'];
+//$password = (isset($_SESSION['SQLPW'] ? $_SESSION ['SQLPW'] : $_ENV['SQLPW'];
 $dbname = "cs3620schema";
 
 // Create connection
@@ -18,9 +17,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
+  die("Connection failed: " . $conn->connect_error);
+}
 
 // query table
 $sql = "SELECT * FROM Food";
@@ -41,15 +39,20 @@ if ($result->num_rows > 0)
 }
 
 
-
-
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
+// record confirmation 
+if ($conn->query($sql) === TRUE) {
+  echo "Display";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
 // close db connection
 $conn->close();
 ?>
+
+
+
+
+
+
+
