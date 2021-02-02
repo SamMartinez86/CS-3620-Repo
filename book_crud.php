@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 }
 
 // query table
-$sql = "SELECT * FROM Food";
+$sql = "SELECT FoodName, FoodCost FROM Food";
 // store query in variable
 $result = $conn->query($sql);
 
@@ -37,7 +37,6 @@ if ($result->num_rows > 0)
 {
     echo "No results, something is wrong."
 }
-
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
