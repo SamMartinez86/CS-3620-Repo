@@ -7,9 +7,9 @@
     session_start();
    
 
-    echo"$_SESSION["SQLUSER"]";
-    echo"<br>";
-    echo"$_SESSION["SQLPW"]";
+    //echo"$_SESSION["SQLUSER"]";
+    //echo"<br>";
+    //echo"$_SESSION["SQLPW"]";
 
     print_r($_SESSION);
 
