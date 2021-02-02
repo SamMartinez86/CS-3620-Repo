@@ -4,9 +4,14 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    $_SESSION[]
+    session_start();
+   
 
-    print_r($_SESSION);  
+    echo"$_SESSION["SQLUSER"]";
+    echo"<br>";
+    echo"$_SESSION["SQLPW"]";
+
+    print_r($_SESSION);
 
 
 ?>  
