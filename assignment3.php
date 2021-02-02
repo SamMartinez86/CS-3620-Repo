@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 // insert statement
 $sql = "INSERT INTO Food (FoodName, FoodCost)
-VALUES ('Lasagna', 8)";
+VALUES ('taco', 9)";
 
 //Display records
 //$sql = "SELECT * FROM Food";
@@ -30,7 +30,7 @@ VALUES ('Lasagna', 8)";
 
 // record confirmation 
 if ($conn->query($sql) === TRUE) {
-  echo "New query inserted";
+  echo "New taco query inserted";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
