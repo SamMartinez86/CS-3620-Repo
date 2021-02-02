@@ -62,7 +62,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "*** New Record *** <br>"
     echo "Food Name: " . $row["FoodName"]. " Food Cost: " . $row["FoodCost"]. "<br>";
-    Echo "***            *** <br>"
+    echo "***            *** <br>"
   }
 } else {
   echo "0 results";
