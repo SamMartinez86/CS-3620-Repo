@@ -60,9 +60,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "*** New Record *** <br>"
+    //echo "*** New Record *** <br>"
     echo "Food Name: " . $row["FoodName"]. " Food Cost: " . $row["FoodCost"]. "<br>";
-    echo "***            *** <br>"
+    //echo "***            *** <br>"
   }
 } else {
   echo "0 results";
