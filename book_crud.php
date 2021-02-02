@@ -20,38 +20,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// query table
-$sql = "SELECT FoodName, FoodCost FROM Food";
-// store query in variable
+$sql = "SELECT * FROM Food";
 $result = $conn->query($sql);
 
-// If rows exist in result
-if ($result->num_rows > 0) 
-{
-    while($row = $result->fetch_assoc()) // put results in array and loop
-    {
-        echo "Food Name: " . $row["FoodName"]. "Food Cost: " . $row["FoodCost"]. "<br>";
-    }
-
-} else 
-{
-    echo "No results, something is wrong."
-}
-
-// record confirmation 
-if ($conn->query($sql) === TRUE) {
-  echo "Display";
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - FoodName: " . $row["FoodName"]. " - FoodCost: " . $row["FoodCost"]. "<br>";
+  }
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "0 results";
 }
 
 // close db connection
 $conn->close();
 ?>
-
-
-
-
-
-
-
