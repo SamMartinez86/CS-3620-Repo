@@ -1,11 +1,11 @@
 <?php
 
-    require_once('./header.php');
+    require_once('./user/header.php');
 
 ?>
 
 <?php
-    require_once('./user.php');
+    require_once('./user/user.php');
 
     $user = new user();
     $user->getUser(1);
