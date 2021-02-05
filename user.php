@@ -10,12 +10,16 @@ CLass User
     public function getUser($user_id)
     {
         $this->user_id = $user_id;
+
+        $userDAO = new $userDAO();
+        $userDAO->getUser($this);
+        
         return $this;
     {
 
     public function getUsername()
     {
-        return $username;
+        return $this->username;
     }
     public function setUsername($username)
     {
@@ -23,7 +27,7 @@ CLass User
     }
     public function getUserId()
     {
-        return $user_id;
+        return $this->user_id;
     }
 }
 
