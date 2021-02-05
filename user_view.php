@@ -10,5 +10,6 @@
     $user = new user();
     $user->getUser(1);
 
+    echo $user->getUsername();
 ?>
 
