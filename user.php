@@ -1,6 +1,6 @@
 <?php
 
-CLass user
+CLass User
 {
     public function getUser($user_id)
     {

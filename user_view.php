@@ -5,7 +5,7 @@
 ?>
 
 <?php
-    require_once('./user/user.php');
+    require_once('./user.php');
 
     $user = new user();
     $user->getUser(1);
