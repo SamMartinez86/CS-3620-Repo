@@ -8,7 +8,7 @@ CLass User
     }
     public function getUsername()
     {
-        return "Gabe";
+        return "Sam";
     }
 }
 
