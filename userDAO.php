@@ -3,7 +3,7 @@
     {
         public function getUser($user)
         {
-            
+            $user->setUsername("Gabe");
         }
     }
 ?>
