@@ -1,8 +1,11 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 
-// open db connection
 $servername = "cs3620sqlsam.mysql.database.azure.com";
 
 $username = "sam@cs3620sqlsam";
@@ -14,7 +17,6 @@ $dbname = "cs3620schema";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -52,6 +54,5 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
-// close db connection
 $conn->close();
 ?>
