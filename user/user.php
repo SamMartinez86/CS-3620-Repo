@@ -54,5 +54,10 @@ class User {
     $userDAO = new userDAO();
     $userDAO->createUser($this);
   }
+
+  function deleteUser($username){
+    $userDAO = new userDAO();
+    $userDAO->deleteUser($username);
+  }
 }
 ?>

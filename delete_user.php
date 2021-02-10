@@ -2,12 +2,9 @@
     require_once('./header.php');
 ?>  
 
-<form method="POST" action="user_insert.php">
-
-    Username:<input type="text" name="username" /><br />
-
-    <input type="submit" value="Create User" />
-
+<form method="POST" action="user_delete.php" >
+    Username:<input type="text" name="username" /><br /><br />
+    <input type="submit" value="Eliminate User" />
 </form>
 
 <?php
