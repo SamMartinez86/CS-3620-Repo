@@ -6,7 +6,7 @@
     require_once('./user/user.php');
 
     $user = new user();
-    $user->getUser(1);
+    $user->getUser(10);
 
     echo $user->getUsername();
     echo "<br />";
