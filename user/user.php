@@ -50,7 +50,7 @@ class User {
 
   function createUser(){
     $userDAO = new userDAO();
-    
+    $userDAO->createUser($this);
   }
 }
 ?>
