@@ -38,7 +38,9 @@ class User {
   }
   function setPassword($password){
     $this->password = hash("sha256", $password);
-    echo $this->password;
+  }
+  function getPassword(){
+    return $this->password;
   }
 
   function getUser($user_id){
