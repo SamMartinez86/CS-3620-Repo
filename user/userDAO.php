@@ -19,5 +19,28 @@ class UserDAO {
     }
     $conn->close();
   }
+
+  function createUser($user){
+    require_once('./utilities/connection.php');
+    
+    $sql = "INSERT INTO cs3620schema.usertable
+    (
+    `user_id`,
+    `username`,
+    `password`,
+    `first_name`,
+    `last_name`)
+    VALUES
+    ('" . $user->getUserId() . "',
+    '" . $user->getUsername() . "',
+    '" . $user->getPassword() . "',
+    '" . $user->getFirstName() . "',
+    '" . $user->getLastName() . "'
+    );";
+    $result = $conn->query($sql);
+
+    $conn->close();
+  }
+
 }
 ?>

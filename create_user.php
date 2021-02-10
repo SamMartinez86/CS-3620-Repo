@@ -9,7 +9,6 @@
     First name:<input type="text" name="first_name" /><br />
     Last name:<input type="text" name="last_name" /><br />
     Password:<input type="text" name="password" /><br />
-
     <input type="submit" value="Create User" />
 
 </form>
