@@ -37,7 +37,8 @@ class User {
     $this->last_name = $last_name;
   }
   function setPassword($password){
-    $this->password = $password;
+    $this->password = hash("sha256", $password);
+    echo $this->password;
   }
 
   function getUser($user_id){
