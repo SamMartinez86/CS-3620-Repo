@@ -47,5 +47,10 @@ class User {
     $userDAO->getUser($this);
     return $this;
   }
+
+  function createUser(){
+    $userDAO = new userDAO();
+    $userDAO = 
+  }
 }
 ?>
