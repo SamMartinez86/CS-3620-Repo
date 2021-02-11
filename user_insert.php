@@ -6,8 +6,8 @@ require_once('./user/user.php');
 
 $user = new user();
 $user->setUsername($_POST["username"]);
-$user->setFirstName($_POST["first_name"]);
-$user->setLastName($_POST["last_name"]);
+$user->setFirstName($_POST["firstName"]);
+$user->setLastName($_POST["lastName"]);
 $user->setUserId($_POST["password"]);
 $user->createUser();
 

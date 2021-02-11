@@ -1,5 +1,5 @@
 <h1>
 
-User footer
+This is the footer!
 
 </h1>

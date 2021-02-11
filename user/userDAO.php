@@ -35,11 +35,14 @@ class UserDAO {
     '" . $user->getFirstName() . "',
     '" . $user->getLastName() . "'
     );";
-    $result = $conn->query($sql);
+
+    if ($conn->query($sql) === TRUE) {
+      echo "user created";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
     $conn->close();
-
-    echo "user created";
   }
 
   function deleteUser($un){
