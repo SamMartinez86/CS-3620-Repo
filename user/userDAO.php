@@ -3,7 +3,7 @@ class UserDAO {
   function getUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "SELECT * user_id FROM usertable " . $user->getUserId();
+    $sql = "SELECT first_name, last_name, user_id FROM usertable WHERE user_id =" . $user->getUserId();
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -25,14 +25,12 @@ class UserDAO {
     
     $sql = "INSERT INTO cs3620schema.usertable
     (
-    `user_id`,
     `username`,
     `password`,
     `first_name`,
     `last_name`)
     VALUES
-    ('" . $user->getUserId() . "',
-    '" . $user->getUsername() . "',
+    ('" . $user->getUsername() . "',
     '" . $user->getPassword() . "',
     '" . $user->getFirstName() . "',
     '" . $user->getLastName() . "'
@@ -49,11 +47,13 @@ class UserDAO {
     
     $sql = "DELETE FROM cs3620_proj.user WHERE username = '" . $un . "';";
 
-    $result = $conn->query($sql);
+    if ($conn->query($sql) === TRUE) {
+      echo "user deleted";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
     $conn->close();
-
-    echo "user deleted";
   }
 
 }
