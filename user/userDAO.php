@@ -23,7 +23,7 @@ class UserDAO {
   function createUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "INSERT INTO cs3620schema.usertable
+    $sql = "INSERT INTO userschema.usertable
     (
     `username`,
     `password`,
@@ -48,7 +48,7 @@ class UserDAO {
   function deleteUser($un){
     require_once('./utilities/connection.php');
     
-    $sql = "DELETE FROM cs3620_proj.user WHERE username = '" . $un . "';";
+    $sql = "DELETE FROM userschema.usertable WHERE username = '" . $un . "';";
 
     if ($conn->query($sql) === TRUE) {
       echo "user deleted";
