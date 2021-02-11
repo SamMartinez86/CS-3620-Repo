@@ -3,14 +3,14 @@ class UserDAO {
   function getUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "SELECT first_name, last_name, user_id FROM usertable WHERE user_id =" . $user->getUserId();
+    $sql = "SELECT firstName, lastName, user_id FROM usertable WHERE user_id =" . $user->getUserId();
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      $user->setFirstName($row["first_name"]);
-      $user->setLastName($row["last_name"]);
+      $user->setFirstName($row["firstName"]);
+      $user->setLastName($row["lastName"]);
       $user->setUsername($row["username"]);
         
     }
@@ -27,8 +27,8 @@ class UserDAO {
     (
     `username`,
     `password`,
-    `first_name`,
-    `last_name`)
+    `firstName`,
+    `lastName`)
     VALUES
     ('" . $user->getUsername() . "',
     '" . $user->getPassword() . "',

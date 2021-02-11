@@ -5,7 +5,7 @@ class User {
   // Properties
   private $user_id;
   private $username;
-  private $first_name;
+  private $firstName;
   private $last_name;
   private $password;
 
@@ -25,10 +25,10 @@ class User {
     $this->username = $username;
   }
   function getFirstName() {
-    return $this->first_name;
+    return $this->firstName;
   }
-  function setFirstName($first_name){
-    $this->first_name = $first_name;
+  function setFirstName($firstName){
+    $this->firstName = $firstName;
   }
   function getLastName() {
     return $this->last_name;
