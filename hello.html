@@ -2,7 +2,7 @@
 
 <script>
 
-    function hello(userid){
+    function hello(user_id){
         fetch('https://cs3620app.azurewebsites.net/user_view.php' + user_id)
         .then(response => response.json())
         .then(
