@@ -31,10 +31,10 @@ class User {
     $this->firstName = $firstName;
   }
   function getLastName() {
-    return $this->last_name;
+    return $this->lastName;
   }
-  function setLastName($last_name){
-    $this->last_name = $last_name;
+  function setLastName($lastName){
+    $this->lastName = $lastName;
   }
   function setPassword($password){
     $this->password = hash("sha256", $password);
