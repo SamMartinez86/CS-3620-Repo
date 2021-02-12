@@ -1,28 +1,31 @@
-
 <h1 id="header1"></h1>
 
 <script>
 
-    function hello(){
-        fetch('https://cs3620app.azurewebsites.net/user_view.php')
+    function hello(userid){
+        fetch('https://cs3620app.azurewebsites.net/user_view.php' + userid)
         .then(response => response.json())
         .then(
-            
-            function (data) {
-                document.getElementById("firstName").innerHTML = "";
-                document.getElementById("lastName").innerHTML = "";
-                document.getElementById("userName").innerHTML = data.userName;
+
+            function (data){
+                document.getElementById("firstName").innerHTML = data.first_name;
+                document.getElementById("lastName").innerHTML = data.last_name;
+                document.getElementById("userName").innerHTML = data.username;
             }
+
+        ).catch((error) => {
+            alert("That user does not yet exist")
+            document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = "";
+        });
     }
 
 </script>
 
-Userid: <input type="text" id="theUserid" />
+Userid: <input type="text" id="theUserId" />
 <input type="button" value="Get User" onclick="hello(document.getElementById('theUserId').value);" />
 
-<div id='firstName'></div>
-<div id='lastName'></div>
-<div id='userName'></div>
-
-
-
+<div id="firstName"></div>
+<div id="lastName"></div>
+<div id="userName"></div>
