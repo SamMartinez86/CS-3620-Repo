@@ -1,0 +1,28 @@
+
+<h1 id="header1"></h1>
+
+<script>
+
+    function hello(){
+        fetch('https://cs3620app.azurewebsites.net/user_view.php')
+        .then(response => response.json())
+        .then(
+            
+            function (data) {
+                document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = data.username;
+            }
+    }
+
+</script>
+
+Userid: <input type="text" id="theUserid" />
+<input type="button" value="Get User" onclick="hello(document.getElementById('theUserId').value);" />
+
+<div id='firstName'></div>
+<div id='lastName'></div>
+<div id='userName'></div>
+
+
+

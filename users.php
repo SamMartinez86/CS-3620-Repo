@@ -18,10 +18,6 @@
 
     echo json_encode($user);
 
-    if ($result = $conn->query($sql) === TRUE) {
-        echo "Error";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
+
 
 ?>
