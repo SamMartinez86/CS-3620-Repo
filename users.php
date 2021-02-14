@@ -12,9 +12,9 @@
 
     echo json_encode($user);
 
-    $username = new username();
-    $username->getUserN($_GET["name"]);
+    //$username = new username();
+    //$username->getUserN($_GET["name"]);
 
-    echo json_encode($username);
+    //echo json_encode($username);
 
 ?>
