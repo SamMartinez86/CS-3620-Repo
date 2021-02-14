@@ -9,7 +9,7 @@
     //$user->getUser(1);
 
     $user = new user();
-    $user->getUserN(ironman@avengers.com);
+    $user->getUserN("ironman@avengers.com");
 
     echo $user->getUsername();
     echo "<br />";
