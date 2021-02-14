@@ -1,6 +1,14 @@
 <h1 id="header1"></h1>
 <style>
-    h1 {text-align:center;}
+    h1 
+    {
+        text-align: center;
+    }
+    div 
+    {
+        text-align: center;
+        font-size: 20px;
+    }
 
 </style>
 <h1> Data Puller </h1>
@@ -93,14 +101,14 @@ function lastnameselect(last_name)
 
 </script>
 
-<center><table style="width:50%">
+<center><table style="width:30%">
     <tr>
         <th>User id: <input type="text" id="theUserId" /></th>
         <th><input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" /></th>
     </tr>
     <tr>
         <th>User Name: <input type="text" id="theUserName" /></th>
-        <th><input type="button" value="Get Username" onclick="usernameselect(document.getElementById('theUserName').value);" /></th>
+        <th><input type="button" value="Get User name" onclick="usernameselect(document.getElementById('theUserName').value);" /></th>
     </tr>
     <tr>
         <th>First Name: <input type="text" id="theUserFirst" /></th>
