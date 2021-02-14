@@ -8,9 +8,8 @@
    require_once('./user/user.php');
 
     $user = new user();
-    $user->getUser($_GET["id"]);
+    $user->getUserL($_GET["id"]);
 
     echo json_encode($user);
-
 
 ?>
