@@ -20,7 +20,7 @@ class UserDAO {
   }
 
   // for username
-  function getUserN($user){
+  function getUserN(){
     require_once('./utilities/connection.php');
     
     //$sql = "SELECT first_name, last_name, username, user_id FROM user WHERE username =" . $user->getUsername();
