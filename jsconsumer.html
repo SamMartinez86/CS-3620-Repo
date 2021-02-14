@@ -1,8 +1,11 @@
 <h1 id="header1"></h1>
+<center> Data Puller </center>
 
 <script>
 
-    function userselect(user_id){
+// select statement based off user id
+    function userselect(user_id)
+    {
         fetch('https://cs3620app.azurewebsites.net/users.php?id=' + user_id)
         .then(response => response.json())
         .then(
@@ -20,6 +23,16 @@
                 document.getElementById("userName").innerHTML = "";
         });
     }
+
+// select statement based off username
+    function usernameselect(username)
+    {
+
+    }
+
+// select statement based off first name
+
+// select statement based off last name
 
 </script>
 
