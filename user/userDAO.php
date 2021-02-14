@@ -23,8 +23,6 @@ class UserDAO {
   function getUserN($user){
     require_once('./utilities/connection.php');
     
-    echo $user->getUsername();
-
     $sql = "SELECT first_name, last_name, username FROM user WHERE username ="."'". $user->getUsername() ."'";
     $result = $conn->query($sql);
 
