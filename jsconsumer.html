@@ -107,20 +107,20 @@ function lastnameselect(last_name)
 
 <center><table class="w3-table" style="width:45%">
     <tr>
-        <th>User id: <input class="w3-input" type="text" id="theUserId" /></th>
-        <th><input class="w3-button w3-round w3-blue" type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" onfocus="this.value=''" /></th>
+        <th>User id: <input class="w3-input" type="text" id="theUserId" onfocus="this.value=''" /></th>
+        <th><input class="w3-button w3-round w3-blue" type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);"  /></th>
     </tr>
     <tr>
-        <th>User Name: <input class="w3-input" type="text" id="theUserName" /></th>
-        <th><input class="w3-button w3-round w3-blue" type="button" value="Get User name" onclick="usernameselect(document.getElementById('theUserName').value);" onfocus="this.value=''" /></th>
+        <th>User Name: <input class="w3-input" type="text" id="theUserName" onfocus="this.value=''" /></th>
+        <th><input class="w3-button w3-round w3-blue" type="button" value="Get User name" onclick="usernameselect(document.getElementById('theUserName').value);"  /></th>
     </tr>
     <tr>
-        <th>First Name: <input class="w3-input" type="text" id="theUserFirst" /></th>
-        <th><input class="w3-button w3-round w3-blue" type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" onfocus="this.value=''"/></th>
+        <th>First Name: <input class="w3-input" type="text" id="theUserFirst" onfocus="this.value=''" /></th>
+        <th><input class="w3-button w3-round w3-blue" type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" /></th>
     </tr>
     <tr>
-        <th>Last Name: <input class="w3-input" type="text" id="theUserLast" /></th>
-        <th><input class="w3-button w3-round w3-blue" type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);"  onfocus="this.value=''"/></th>
+        <th>Last Name: <input class="w3-input" type="text" id="theUserLast" onfocus="this.value=''"/></th>
+        <th><input class="w3-button w3-round w3-blue" type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);"  /></th>
     </tr>
 </table></center>
 
