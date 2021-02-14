@@ -3,16 +3,15 @@ class UserDAO {
   function getUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "SELECT firstName, lastName, username, user_id FROM usertable WHERE user_id =" . $user->getUserId();
+    $sql = "SELECT first_name, last_name, username, user_id FROM user WHERE user_id =" . $user->getUserId();
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      $user->setFirstName($row["firstName"]);
-      $user->setLastName($row["lastName"]);
-      $user->setUsername($row["username"]);
-        
+        $user->setFirstName($row["first_name"]);
+        $user->setLastName($row["last_name"]);
+        $user->setUsername($row["username"]);
     }
     } else {
         echo "0 results";
@@ -23,12 +22,12 @@ class UserDAO {
   function createUser($user){
     require_once('./utilities/connection.php');
     
-    $sql = "INSERT INTO userschema.usertable
+    $sql = "INSERT INTO cs3620_proj.user
     (
     `username`,
     `password`,
-    `firstName`,
-    `lastName`)
+    `first_name`,
+    `last_name`)
     VALUES
     ('" . $user->getUsername() . "',
     '" . $user->getPassword() . "',
@@ -48,7 +47,7 @@ class UserDAO {
   function deleteUser($un){
     require_once('./utilities/connection.php');
     
-    $sql = "DELETE FROM userschema.usertable WHERE username = '" . $un . "';";
+    $sql = "DELETE FROM cs3620_proj.user WHERE username = '" . $un . "';";
 
     if ($conn->query($sql) === TRUE) {
       echo "user deleted";
@@ -58,6 +57,5 @@ class UserDAO {
 
     $conn->close();
   }
-
 }
 ?>

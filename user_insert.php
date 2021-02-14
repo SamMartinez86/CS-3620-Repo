@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 session_start();
 
@@ -8,7 +8,7 @@ $user = new user();
 $user->setUsername($_POST["username"]);
 $user->setFirstName($_POST["firstName"]);
 $user->setLastName($_POST["lastName"]);
-$user->setUserId($_POST["password"]);
-$user->createUser();
+$user->setPassword($_POST["password"]);
+$user->createUser(); 
 
 ?>

@@ -1,23 +1,14 @@
 <?php
+   session_start();
 
-    session_start();
+   ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
-    require_once('./user/user.php');
-
-    $user = new user();
-    $user->getUser(2);
-
-    echo $user->getUsername();
-    echo "<br />";
-    echo $user->getFirstName();
-    echo "<br />";
-    echo $user->getLastName();
+   require_once('./user/user.php');
 
     $user = new user();
-    $user->getUser($_GET["id"])
+    $user->getUser($_GET["id"]);
 
     echo json_encode($user);
-
-
-
 ?>

@@ -9,5 +9,5 @@ session_start();
 
 
 <h1>
-    This is the header!
+This is the header!
 </h1>
