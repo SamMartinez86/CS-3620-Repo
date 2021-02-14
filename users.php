@@ -7,10 +7,10 @@
 
    require_once('./user/user.php');
 
-    //$user = new user();
-    //$user->getUser($_GET["id"]);
+    $user = new user();
+    $user->getUser($_GET["id"]);
 
-    //echo json_encode($user);
+    echo json_encode($user);
 
     $user = new user();
     $user->getUserN($_GET["id"]);
