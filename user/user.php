@@ -27,12 +27,12 @@ class User {
   function getFirstName() {
     return $this->firstName;
   }
-  function setFirstName($firstName){
-    $this->firstName = $firstName;
-  }
-  function getLastName() {
-    return $this->lastName;
-  }
+  //function setFirstName($firstName){
+  //  $this->firstName = $firstName;
+  //}
+  //function getLastName() {
+  //  return $this->lastName;
+  //}
   function setLastName($lastName){
     $this->lastName = $lastName;
   }
