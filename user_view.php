@@ -5,8 +5,11 @@
 <?php
     require_once('./user/user.php');
 
+    //$user = new user();
+    //$user->getUser(1);
+
     $user = new user();
-    $user->getUser(1);
+    $user->getUserN('ironman@avengers.com');
 
     echo $user->getUsername();
     echo "<br />";

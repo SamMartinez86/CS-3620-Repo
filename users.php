@@ -12,8 +12,8 @@
 
     echo json_encode($user);
 
-    $user = new user();
-    $user->getUserN($_GET["id"]);
+    //$user = new user();
+    //$user->getUserN($_GET["id"]);
 
     //echo json_encode($user);
 
