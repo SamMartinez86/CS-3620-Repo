@@ -9,7 +9,7 @@
     //$user->getUser(1);
 
     $user = new user();
-    $user->getUserN(1);
+    $user->getUser(1);
 
     echo $user->getUsername();
     echo "<br />";
