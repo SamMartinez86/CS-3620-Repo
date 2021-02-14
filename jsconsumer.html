@@ -1,6 +1,6 @@
 <h1 id="header1"></h1>
 <style>
-    h1 {text-align:justify;}
+    h1 {text-align:center;}
 
 </style>
 <h1> Data Puller </h1>
@@ -93,7 +93,7 @@ function lastnameselect(last_name)
 
 </script>
 
-<table style="width:50%">
+<center><table style="width:50%">
     <tr>
         <th>User id: <input type="text" id="theUserId" /></th>
         <th><input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" /></th>
@@ -110,7 +110,7 @@ function lastnameselect(last_name)
         <th>Last Name: <input type="text" id="theUserLast" /></th>
         <th><input type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);" /></th>
     </tr>
-</table>
+</table></center>
 
 <div id="firstName"></div>
 <div id="lastName"></div>
