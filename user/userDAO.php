@@ -25,7 +25,7 @@ class UserDAO {
     
     echo $user->getUsername();
 
-    $sql = "SELECT first_name, last_name, username FROM user WHERE username = \'". $user->getUsername() ."\'";
+    $sql = "SELECT first_name, last_name, username FROM user WHERE username = '". $user->getUsername() ."'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
