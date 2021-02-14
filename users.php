@@ -13,7 +13,7 @@
     //echo json_encode($user);
 
     $username = new username();
-    $username->getUserN($_GET["name"]);
+    $username->getUserN($_GET["id"]);
 
     echo json_encode($username);
 
