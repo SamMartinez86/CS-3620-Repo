@@ -15,6 +15,6 @@
     //$user = new user();
     //$user->getUserN($_GET["id"]);
 
-    //echo json_encode($user);
+    echo json_encode($user);
 
 ?>
