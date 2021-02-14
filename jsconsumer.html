@@ -2,7 +2,7 @@
 
 <script>
 
-    function hello(user_id){
+    function userselect(user_id){
         fetch('https://cs3620app.azurewebsites.net/users.php?id=' + user_id)
         .then(response => response.json())
         .then(
@@ -24,7 +24,7 @@
 </script>
 
 Userid: <input type="text" id="theUserId" />
-<input type="button" value="Get User" onclick="hello(document.getElementById('theUserId').value);" />
+<input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" />
 
 <div id="firstName"></div>
 <div id="lastName"></div>
