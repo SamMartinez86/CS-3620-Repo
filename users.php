@@ -10,11 +10,11 @@
     $user = new user();
     $user->getUser($_GET["id"]);
 
-    //echo json_encode($user);
+    echo json_encode($user);
 
     //$user = new user();
-    $user->getUserN($_GET["id"]);
+    //$user->getUserN($_GET["id"]);
 
-    echo json_encode($user);
+    //echo json_encode($user);
 
 ?>
