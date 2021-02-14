@@ -1,7 +1,7 @@
 <h1 id="header1"></h1>
 <style>
     h1 {text-align: center;}
-    
+
 </style>
 <h1> Data Puller </h1>
 
@@ -93,21 +93,24 @@ function lastnameselect(last_name)
 
 </script>
 
-<ul>
-
-<li>User id: <input type="text" id="theUserId" />
-<input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" /></li>
-
-<li>User Name: <input type="text" id="theUserName" />
-<input type="button" value="Get Username" onclick="usernameselect(document.getElementById('theUserName').value);" /></li>
-
-<li>First Name: <input type="text" id="theUserFirst" />
-<input type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" /></li>
-
-<li>Last Name: <input type="text" id="theUserLast" />
-<input type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);" /></li>
-
-</ul>
+<table style="width:100%">
+    <tr>
+        <th>User id: <input type="text" id="theUserId" /></th>
+        <th><input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" /></th>
+    </tr>
+    <tr>
+        <th>User Name: <input type="text" id="theUserName" /></th>
+        <th>input type="button" value="Get Username" onclick="usernameselect(document.getElementById('theUserName').value);" /></th>
+    </tr>
+    <tr>
+        <th>First Name: <input type="text" id="theUserFirst" /></th>
+        <th><input type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" /></th>
+    </tr>
+    <tr>
+        <th>Last Name: <input type="text" id="theUserLast" /></th>
+        <th><input type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);" /></th>
+    </tr>
+</table>
 
 <div id="firstName"></div>
 <div id="lastName"></div>
