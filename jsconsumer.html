@@ -49,7 +49,7 @@
     }
 
 // select statement based off first name
-function usernameselect(first_name)
+function firstnameselect(first_name)
     {
         fetch('https://cs3620app.azurewebsites.net/userfirst.php?id=' + first_name)
         .then(response => response.json())
@@ -70,7 +70,7 @@ function usernameselect(first_name)
     }
 
 // select statement based off last name
-function usernameselect(last_name)
+function lastnameselect(last_name)
     {
         fetch('https://cs3620app.azurewebsites.net/userlast.php?id=' + last_name)
         .then(response => response.json())
@@ -99,10 +99,10 @@ User Name: <input type="text" id="theUserName" />
 <input type="button" value="Get Username" onclick="usernameselect(document.getElementById('theUserName').value);" />
 
 First Name: <input type="text" id="theUserFirst" />
-<input type="button" value="Get First name" onclick="usernameselect(document.getElementById('theUserFirst').value);" />
+<input type="button" value="Get First name" onclick="firstnameselect(document.getElementById('theUserFirst').value);" />
 
 Last Name: <input type="text" id="theUserLast" />
-<input type="button" value="Get Last name" onclick="usernameselect(document.getElementById('theUserLast').value);" />
+<input type="button" value="Get Last name" onclick="lastnameselect(document.getElementById('theUserLast').value);" />
 
 <div id="firstName"></div>
 <div id="lastName"></div>
