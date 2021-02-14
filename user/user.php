@@ -50,6 +50,15 @@ class User implements \JsonSerializable {
     return $this;
   }
 
+  // for username
+  function getUserN($username){
+    $this->username = $username;
+    $userDAO = new userDAO();
+    $userDAO->getUserName($this);
+    return $this;
+  }
+
+
   function createUser(){
     $userDAO = new userDAO();
     $userDAO->createUser($this);

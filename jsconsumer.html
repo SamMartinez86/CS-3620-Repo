@@ -30,7 +30,22 @@
 // select statement based off username
     function usernameselect(username)
     {
+        fetch('https://cs3620app.azurewebsites.net/users.php?id=' + username)
+        .then(response => response.json())
+        .then(
 
+            function (data){
+                document.getElementById("firstName").innerHTML = data.first_name;
+                document.getElementById("lastName").innerHTML = data.last_name;
+                document.getElementById("userName").innerHTML = data.username;
+            }
+
+        ).catch((error) => {
+            alert("That user does not yet exist")
+            document.getElementById("firstName").innerHTML = "";
+                document.getElementById("lastName").innerHTML = "";
+                document.getElementById("userName").innerHTML = "";
+        });
     }
 
 // select statement based off first name
@@ -41,6 +56,13 @@
 
 Userid: <input type="text" id="theUserId" />
 <input type="button" value="Get User" onclick="userselect(document.getElementById('theUserId').value);" />
+
+<div id="firstName"></div>
+<div id="lastName"></div>
+<div id="userName"></div>
+
+UserName: <input type="text" id="theUserName" />
+<input type="button" value="Get Username" onclick="usernameselect(document.getElementById('theUserName').value);" />
 
 <div id="firstName"></div>
 <div id="lastName"></div>
