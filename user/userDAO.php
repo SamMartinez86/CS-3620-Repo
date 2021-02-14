@@ -23,7 +23,9 @@ class UserDAO {
   function getUserN($user){
     require_once('./utilities/connection.php');
     
-    $sql = "SELECT first_name, last_name, username, user_id FROM user WHERE username='ironman@avengers.com'" //. $user->getUsername();
+    echo $user->getUsername();
+
+    $sql = "SELECT first_name, last_name, username FROM user WHERE username =" . $user->getUsername();
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
