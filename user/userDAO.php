@@ -22,8 +22,8 @@ class UserDAO {
   function checkLogin($passedinusername, $passedinpassword){
     require_once('./utilities/connection.php');
     $user_id = 0;
-    //$sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . hash("sha256", trim($passedinpassword)) . "'";
-    $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . $passedinpassword . "'";
+    $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . hash("sha256", trim($passedinpassword)) . "'";
+    //$sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . $passedinpassword . "'";
 
     $result = $conn->query($sql);
 
@@ -99,28 +99,26 @@ class UserDAO {
     $conn->close();
   }
 
+
+
   function createUser($user){
     require_once('./utilities/connection.php');
-    
-    $sql = "INSERT INTO userschema.user
-    (
-    `username`,
+
+    // prepare and bind
+    $stmt = $conn->prepare("INSERT INTO userschema.user (`username`,
     `password`,
     `first_name`,
-    `last_name`)
-    VALUES
-    ('" . $user->getUsername() . "',
-    '" . $user->getPassword() . "',
-    '" . $user->getFirstName() . "',
-    '" . $user->getLastName() . "'
-    );";
+    `last_name`) VALUES (?, ?, ?, ?)");
 
-    if ($conn->query($sql) === TRUE) {
-      echo "user created";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    $un = $user->getUsername();
+    $pw = $user->getPassword();
+    $fn = $user->getFirstName();
+    $ln = $user->getLastName();
 
+    $stmt->bind_param("ssss", $un, $pw, $fn, $ln);
+    $stmt->execute();
+
+    $stmt->close();
     $conn->close();
   }
 
