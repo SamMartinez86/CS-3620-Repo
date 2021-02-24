@@ -37,7 +37,7 @@ class UserDAO {
       }
     }
     else {
-        echo $hashpassword ;
+        echo "SQL query is bad news bruh" ;
     }
     $conn->close();
     return $user_id;
