@@ -29,6 +29,7 @@ class UserDAO {
     $user_id = 0;
     //$sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . $passedinpassword . "'";
     $hashpassword  = hash("sha256", trim($passedinpassword));
+    
     $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . $hashpassword . "'";
 
     $result = $conn->query($sql);
@@ -39,7 +40,7 @@ class UserDAO {
       }
     }
     else {
-        //echo $result;
+        echo $hashpassword ;
     }
     $conn->close();
     return $user_id;
