@@ -2,11 +2,13 @@
 require_once('./user/user.php');
 
 class session {
+
   // Methods
   function logout(){
     unset($_SESSION["loggedIn"]);
     unset($_SESSION["user_id"]);
   }
+
   function login($username, $password) {
     $user = new User();
     $loggedInUser = $user->checkLogin($username, $password);
@@ -16,9 +18,10 @@ class session {
       return true;
     }
     else{
-      this->logout();
+    $this->logout();
       return false;
     }
   }
+  
 }
 ?>
