@@ -1,6 +1,10 @@
 <?php
 require_once('./user/userDAO.php');
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 class User implements \JsonSerializable {
   // Properties
   private $user_id;

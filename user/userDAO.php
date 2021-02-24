@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 class UserDAO {
   function getUser($user){
     require_once('./utilities/connection.php');
@@ -23,7 +28,7 @@ class UserDAO {
     require_once('./utilities/connection.php');
     $user_id = 0;
     //$sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . $passedinpassword . "'";
-    $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . hash("sha256", trim($passedinpassword) . "'";
+    $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . hash("sha256", trim($passedinpassword)) . "'";
 
     $result = $conn->query($sql);
 
