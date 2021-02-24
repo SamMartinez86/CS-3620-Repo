@@ -10,6 +10,10 @@
 
     $session = new session();
     $login_result = $session->login($_POST["username"], $_POST["password"]);
+    echo $_POST["username"];
+    echo $_POST["password"];
+
+    /*
     if(!$login_result){
         header("Location: login.html?error=true");
         exit();
@@ -18,4 +22,5 @@
         header("Location: dashboard.php");
         exit();
     }
+    */
 ?>  
