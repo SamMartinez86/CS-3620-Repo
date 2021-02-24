@@ -1,7 +1,35 @@
-<?php require_once("sessioncheck.php") 
+<?php 
+    require_once("sessioncheck.php") 
+
+    require_once('./header.php');
 ?>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  div {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  a {
+    color: blue;
+    font-size: 20px;
+  }
+</style>
 
 <h1>Page protected</h1>
 
 <a href="logout.php">Logout</a>
+
+<?php 
+    require_once('./footer.php');
+?>
 
