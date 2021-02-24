@@ -9,7 +9,5 @@
 
     echo $_POST["username"];
     echo $_POST["password"];
-
     
-    //$session->login("sam@cs3620sqlsam", "1801Church");
 ?>  
