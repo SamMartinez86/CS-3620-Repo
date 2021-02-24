@@ -1,4 +1,4 @@
-  <?php
+<?php
 
 session_start();
 
@@ -11,4 +11,5 @@ $user->setLastName($_POST["lastName"]);
 $user->setPassword($_POST["password"]);
 $user->createUser(); 
 
+header("Location: login.html");
 ?>
