@@ -3,7 +3,7 @@
 ?>  
 
 
-<form method="POST" action="user_insert.php" >
+<form method="POST" action="registration_insert.php" >
     Username:<input type="text" name="username" /><br />
     First Name:<input type="text" name="firstName" /><br />
     Last Name:<input type="text" name="lastName" /><br />
