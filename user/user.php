@@ -37,8 +37,8 @@ class User implements \JsonSerializable {
     $this->last_name = $last_name;
   }
   function setPassword($password){
-    //$this->password = hash("sha256", trim($password));
-    $this->password = $password;
+    $this->password = hash("sha256", trim($password));
+    //$this->password = $password;
   }
 
   function getPassword(){
