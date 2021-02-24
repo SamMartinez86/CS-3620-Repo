@@ -20,11 +20,10 @@ class UserDAO {
   }
 
   function checkLogin($passedinusername, $passedinpassword){
-
     require_once('./utilities/connection.php');
     $user_id = 0;
     $sql = "SELECT user_id FROM user WHERE username = '" . $passedinusername . "' AND password = '" . hash("sha256", trim($passedinpassword)) . "'";
-    
+
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -33,7 +32,7 @@ class UserDAO {
       }
     }
     else {
-        echo "0 results";
+        // echo "0 results";
     }
     $conn->close();
     return $user_id;
