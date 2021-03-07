@@ -32,9 +32,9 @@
   }
 
   .cards {
-    /*width: 20rem;*/
-    display: flex;
-    flex-direction: column;
+    /*width: 20rem;
+    display: flex;*/
+    flex-basis: 20rem;
     /*flex-wrap: wrap;
     justify-content: space-between; */
   }
