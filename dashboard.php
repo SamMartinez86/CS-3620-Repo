@@ -27,6 +27,7 @@
 
   .cardtainer {
     /*margin: 0 auto;*/
+    flex: 0 1 24%;
 
   }
 
