@@ -1,5 +1,7 @@
 <?php 
-    require_once("sessioncheck.php") 
+    //require_once("sessioncheck.php") 
+
+    require_once('header.php');
 
 ?>
 
@@ -27,5 +29,7 @@
 <h1>Page protected</h1>
 
 <center><a href="logout.php">Logout</a></center>
+
+<?php require_once('footer.php'); ?>
 
 
