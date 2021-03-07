@@ -32,7 +32,7 @@
   }
 
   .cards {
-    /*width: 20rem;
+    /*
     display: flex;*/
     flex-basis: 20rem;
     flex-wrap: wrap;
@@ -41,6 +41,7 @@
 
   .card {
     flex: 24%;
+    width: 20rem;
   }
 </style>
 
