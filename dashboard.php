@@ -47,10 +47,8 @@
   <h1 class="mt-5">Team Members:</h1>
 
   <form action="create_hero.php">
-    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add a Superhero" /></center>
+    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add Superhero" /></center>
   </form>
-
-  <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
 
   <br />
   <?php
@@ -68,9 +66,9 @@
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cardtainer w3-card-4 w3-light-grey" style="width: 20rem;">
                     <div class="cards">
-                        <h3 class="card">Name: ' . $heros[$i]->getHeroName() . '</h3>
+                        <h1 class="card">Name: ' . $heros[$i]->getHeroName() . '</h1>
                         <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
-                        <p class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</p>
+                        <h5 class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
                     </div>
                   </div>
                   <br />';
