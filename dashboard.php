@@ -26,7 +26,9 @@
   }
 
   .cardtainer {
-    /*margin: 0 auto;*/
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em 0;
   
 
   }
@@ -41,7 +43,7 @@
   }
 
   .card {
-    flex: 24%;
+    flex: 0 1 24%;
     
   }
 </style>
@@ -56,6 +58,7 @@
   </form>
 
   <br />
+  <div class="cardtainer">
   <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -79,7 +82,7 @@
                   <br />';
         }
       ?>
-
+  </div>
   <!-- 
             echo '<div class="cards" style="width: 18rem;">
                     <div class="card-body">
