@@ -33,13 +33,14 @@
 
   .cards {
     width: 20rem;
-    display: flex;
+    display: flex-basis;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; 
   }
 
   .card {
-    flex: 0 1 24%;
+    flex: 24%;
   }
 </style>
 
