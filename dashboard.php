@@ -37,12 +37,12 @@
   .cards {
     width: 90%;
     margin: 0.5em auto;
-    flex: 1 0 48%;
+    flex: 1 0 24%;
     margin: 1%;
   }
 
   .card {
-    flex: 0 1 24%;
+    /*flex: 0 1 24%;*/
     
   }
 </style>
@@ -82,18 +82,6 @@
         }
       ?>
   </div>
-  <!-- 
-            echo '<div class="cards" style="width: 18rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">Name:' . $heros[$i]->getHeroName() . '</h3>
-                        <h4 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
-                        <p class="card-text">Powers:' . $heros[$i]->getHeroDescription() . '</p>
-                    </div>
-                  </div>
-                  <br />';
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      -->
 
 </main>
 
