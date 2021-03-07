@@ -33,7 +33,7 @@
 
   .cards {
     width: 20rem;
-    display: flex-basis;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
   }
