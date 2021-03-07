@@ -32,11 +32,11 @@
   }
 
   .cards {
-    width: 20rem;
-    display: flex-basis;
+    /*width: 20rem;*/
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+    /*flex-wrap: wrap;
+    justify-content: space-between; */
   }
 
   .card {
