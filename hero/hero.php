@@ -35,7 +35,7 @@ class Hero implements \JsonSerializable {
   function getHeroDescription() {
     return $this->hero_description;
   }
-  function setHeroHeroDescription($hero_description){
+  function setHeroDescription($hero_description){
     $this->hero_description = $hero_description;
   }
 
