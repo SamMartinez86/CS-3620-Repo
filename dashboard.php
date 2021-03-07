@@ -26,8 +26,8 @@
   }
 
   .cardtainer {
-    /*margin: 0 auto;
-    style="width: 20rem;*/
+    /*margin: 0 auto;*/
+    style="width: 20rem;
 
   }
 
@@ -65,8 +65,8 @@
         $listLength = count($heros);
 
         for($i = 0; $i < $listLength; $i++) {            
-            echo '<div class="cards w3-card-4 w3-light-grey">
-                    <div >
+            echo '<div class="cardtainer centered w3-card-4 w3-light-grey">
+                    <div class="cards">
                         <h1 class="card">' . $heros[$i]->getHeroName() . '</h1>
                         <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
