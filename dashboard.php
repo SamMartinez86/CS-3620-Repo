@@ -27,11 +27,12 @@
 
   .cardtainer {
     /*margin: 0 auto;*/
-    width: 20rem;
+  
 
   }
 
   .cards {
+    width: 20rem;
     display: flex-basis;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -65,11 +66,11 @@
         $listLength = count($heros);
 
         for($i = 0; $i < $listLength; $i++) {            
-            echo '<div class="cardtainer w3-card-4 w3-light-grey">
-                    <div class="cards">
-                        <h1 class="card">' . $heros[$i]->getHeroName() . '</h1>
-                        <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
-                        <h5 class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
+            echo '<div class="cards w3-card-4 w3-light-grey">
+                    <div class="card">
+                        <h1 >' . $heros[$i]->getHeroName() . '</h1>
+                        <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
+                        <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
                     </div>
                   </div>
                   <br />';
