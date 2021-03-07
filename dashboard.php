@@ -48,9 +48,9 @@
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">' . $heros[$x]->getHeroName() . '</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$x]->getHeroAbility() . '</h6>
-                        <p class="card-text">' . $heros[$x]->getHeroDescription() . '</p>
+                        <h5 class="card-title">' . $heros[$i]->getHeroName() . '</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h6>
+                        <p class="card-text">' . $heros[$i]->getHeroDescription() . '</p>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
