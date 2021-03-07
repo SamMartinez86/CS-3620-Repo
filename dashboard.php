@@ -32,9 +32,9 @@
 
   .cards {
     display: flex-basis;
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
-    justify-content: space-between;
+    /*flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; */
   }
 
   .card {
