@@ -27,14 +27,15 @@
 
   .cardtainer {
     /*margin: 0 auto;*/
+    display: flex;
+    flex-direction: row;
 
   }
 
   .cards {
-    display: flex;
-    flex-direction: row;
-    /*flex-wrap: wrap;
-    justify-content: space-between; */
+    display: flex-basis;
+    flex-wrap: wrap;
+    justify-content: space-between; 
   }
 
   .card {
