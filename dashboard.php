@@ -32,8 +32,8 @@
 
   .cards {
     display: flex-basis;
-    /*flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /*flex-wrap: wrap;
     justify-content: space-between; */
   }
 
