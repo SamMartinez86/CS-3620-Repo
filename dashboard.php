@@ -29,17 +29,16 @@
     width: 90%;
     margin: 0 auto;
     padding: 0.5em 0;
-  
+    display: flex;
+    flex-flow: wrap;
 
   }
 
   .cards {
-    /*
-    display: flex;*/
-    width: 20rem;
-    flex-basis: 20rem;
-    flex-wrap: wrap;
-    /*justify-content: space-between; */
+    width: 90%;
+    margin: 0.5em auto;
+    flex: 1 0 48%;
+    margin: 1%;
   }
 
   .card {
