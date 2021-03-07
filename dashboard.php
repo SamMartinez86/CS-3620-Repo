@@ -26,10 +26,11 @@
   }
   .cardtainer {
     margin: 0 auto;
+    
   }
-  
+
   .cards {
-    display: flex;
+    display: flex-basis;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -41,10 +42,11 @@
 
  <!-- Begin page content -->
  <main role="main" class="container">
-      <h1 class="mt-5">Superhero Team Builder</h1>
-      <div class="col-3">
-        <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
-      </div>
+
+      <h1 class="mt-5">Team Members:</h1>
+      
+      <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
+
   <br/>
       <?php
         ini_set('display_errors', 1);
@@ -59,11 +61,11 @@
         $listLength = count($heros);
 
         for($i = 0; $i < $listLength; $i++) {            
-            echo '<div class="cardtainer" style="width: 18rem;">
+            echo '<div class="cardtainer w3-card-4 w3-light-grey" style="width: 20rem;">
                     <div class="cards">
-                        <h3 class="card">Name:' . $heros[$i]->getHeroName() . '</h3>
+                        <h3 class="card">Name: ' . $heros[$i]->getHeroName() . '</h3>
                         <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
-                        <p class="card">Powers:' . $heros[$i]->getHeroDescription() . '</p>
+                        <p class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</p>
                     </div>
                   </div>
                   <br />';

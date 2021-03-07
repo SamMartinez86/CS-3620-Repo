@@ -10,5 +10,5 @@
 </style>
 
 <div class=" w3-panel w3-padding-24 w3-leftbar w3-topbar w3-border-blue">
-    <h1 class="shiftl">Login and Registration</h1>
+    <h1 class="shiftl">Super Hero Team Builder</h1>
 </div>
