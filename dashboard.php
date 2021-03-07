@@ -24,6 +24,19 @@
     color: blue;
     font-size: 20px;
   }
+  .cardtainer {
+    margin: 0 auto;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 24%;
+  }
 </style>
 
  <!-- Begin page content -->
@@ -46,18 +59,29 @@
         $listLength = count($heros);
 
         for($i = 0; $i < $listLength; $i++) {            
-            echo '<div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">' . $heros[$i]->getHeroName() . '</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h6>
-                        <p class="card-text">' . $heros[$i]->getHeroDescription() . '</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+            echo '<div class="cardtainer" style="width: 18rem;">
+                    <div class="cards">
+                        <h3 class="card">Name:' . $heros[$i]->getHeroName() . '</h3>
+                        <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
+                        <p class="card">Powers:' . $heros[$i]->getHeroDescription() . '</p>
                     </div>
                   </div>
                   <br />';
         }
       ?>
+
+      <!-- 
+            echo '<div class="cards" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Name:' . $heros[$i]->getHeroName() . '</h3>
+                        <h4 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
+                        <p class="card-text">Powers:' . $heros[$i]->getHeroDescription() . '</p>
+                    </div>
+                  </div>
+                  <br />';
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      -->
 
     </main>
 
