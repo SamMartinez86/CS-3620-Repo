@@ -34,7 +34,7 @@
   .cards {
     /*width: 20rem;*/
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /*flex-wrap: wrap;
     justify-content: space-between; */
   }
