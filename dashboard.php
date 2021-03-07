@@ -34,6 +34,7 @@
   .cards {
     /*
     display: flex;*/
+    width: 20rem;
     flex-basis: 20rem;
     flex-wrap: wrap;
     /*justify-content: space-between; */
@@ -41,7 +42,7 @@
 
   .card {
     flex: 24%;
-    width: 20rem;
+    
   }
 </style>
 
