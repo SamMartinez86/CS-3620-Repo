@@ -24,9 +24,10 @@
     color: blue;
     font-size: 20px;
   }
+
   .cardtainer {
     margin: 0 auto;
-    
+
   }
 
   .cards {
@@ -40,15 +41,19 @@
   }
 </style>
 
- <!-- Begin page content -->
- <main role="main" class="container">
+<!-- Begin page content -->
+<main role="main" class="container">
 
-      <h1 class="mt-5">Team Members:</h1>
-      
-      <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
+  <h1 class="mt-5">Team Members:</h1>
 
-  <br/>
-      <?php
+  <form action="create_hero.php">
+    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add a Superhero" /></center>
+  </form>
+
+  <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
+
+  <br />
+  <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
@@ -72,7 +77,7 @@
         }
       ?>
 
-      <!-- 
+  <!-- 
             echo '<div class="cards" style="width: 18rem;">
                     <div class="card-body">
                         <h3 class="card-title">Name:' . $heros[$i]->getHeroName() . '</h3>
@@ -85,10 +90,8 @@
         <a href="#" class="card-link">Another link</a>
       -->
 
-    </main>
+</main>
 
 <center><a href="logout.php">Logout</a></center>
 
 <?php require_once('footer.php'); ?>
-
-
