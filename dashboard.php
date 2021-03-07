@@ -26,7 +26,40 @@
   }
 </style>
 
-<h1>Page protected</h1>
+ <!-- Begin page content -->
+ <main role="main" class="container">
+      <h1 class="mt-5">Superhero Team Builder</h1>
+      <div class="col-3">
+        <a href="./create_hero.php" class="btn-primary form-control btn">Add a Superhero</a>
+      </div>
+  <br/>
+      <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+
+        require_once('./hero/hero.php');
+
+        $hero = new hero();
+        $heros = $hero->getMyHeros();  
+
+        $listLength = count($heros);
+
+        for($i = 0; $i < $listLength; $i++) {            
+            echo '<div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">' . $heros[$x]->getHeroName() . '</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating: ' . $heros[$x]->getHeroAbility() . '</h6>
+                        <p class="card-text">' . $heros[$x]->getHeroDescription() . '</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+                  <br />';
+        }
+      ?>
+
+    </main>
 
 <center><a href="logout.php">Logout</a></center>
 

@@ -1,10 +1,7 @@
+  
 <?php
     require_once('./header.php');
-
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-?>
+?>  
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
@@ -27,28 +24,25 @@
     }
 </style>
 
-<title>Registration</title>
+<title>Add Hero</title>
 
 
-<form method="POST" action="registration_insert.php">
+<form method="POST" action="hero_insert.php">
     <center>
         <table class="w3-table" style="width:40%">
             <tr>
-                <th>Email:<input class="w3-input" type="text" name="username" onfocus="this.value=''" /></th>
+                <th>Hero name:<input class="w3-input" type="text" name="hero_name" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>First Name:<input class="w3-input" type="text" name="firstName" onfocus="this.value=''" /></th>
+                <th>Hero ability:<input class="w3-input" type="text" name="hero_ability" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Last Name:<input class="w3-input" type="text" name="lastName" onfocus="this.value=''" /></th>
-            </tr>
-            <tr>
-                <th>Password:<input class="w3-input" type="password" name="password" onfocus="this.value=''" /></th>
+                <th>Hero description:<input class="w3-input" type="text" name="hero_description" onfocus="this.value=''" /></th>
             </tr>
             <tr>
                 <th>
                     <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit"
-                            value="Create User" /></center>
+                            value="Create hero" /></center>
             </tr>
         </table>
     </center>
