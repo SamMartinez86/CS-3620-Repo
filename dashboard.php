@@ -35,8 +35,8 @@
     /*width: 20rem;
     display: flex;*/
     flex-basis: 20rem;
-    /*flex-wrap: wrap;
-    justify-content: space-between; */
+    flex-wrap: wrap;
+    /*justify-content: space-between; */
   }
 
   .card {
