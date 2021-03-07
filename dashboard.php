@@ -66,7 +66,7 @@
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cardtainer w3-card-4 w3-light-grey" style="width: 20rem;">
                     <div class="cards">
-                        <h1 class="card">Name: ' . $heros[$i]->getHeroName() . '</h1>
+                        <h1 class="card">' . $heros[$i]->getHeroName() . '</h1>
                         <h4 class="card mb-2 text-muted">Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 class="card">Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
                     </div>
