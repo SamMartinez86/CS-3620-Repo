@@ -1,6 +1,8 @@
   
 <?php
-    require_once('./header.php');
+    require_once'sessioncheck.php'; 
+
+    require_once'header.php';
 ?>  
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
