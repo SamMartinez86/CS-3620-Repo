@@ -37,7 +37,7 @@ class UserDAO {
       }
     }
     else {
-        echo "SQL query is bad news bruh" ;
+        echo "****Email or Password is incorrect****" ;
     }
     $conn->close();
     return $user_id;
