@@ -1,5 +1,5 @@
 <?php 
-    //require_once("sessioncheck.php") 
+    require_once("sessioncheck.php") 
 
     require_once('header.php');
 
