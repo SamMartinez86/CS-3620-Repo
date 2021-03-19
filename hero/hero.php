@@ -9,7 +9,6 @@ class Hero implements \JsonSerializable {
   private $user_id;
   private $hero_ability;
   private $hero_description;
-  private $user_id;
 
   // constructor
   function __construct() {
