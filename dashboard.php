@@ -81,7 +81,7 @@
                         <h1 >' . $heros[$i]->getHeroName() . '</h1>
                         <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>                       
-                        <a href="delete_hero.php?hero_id=' . $heros[$i]->getHeroId() . '" class="card-link">Delete Show</a>
+                        <a href="delete_hero.php?hero_id=' . $heros[$i]->getHeroId() . '" class="card-link w3-blue">Delete Show</a>
                     </div>
                   </div>
                   <br />';
