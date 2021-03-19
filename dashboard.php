@@ -60,9 +60,9 @@
   <div class="cardtainer">
   <?php
 
-        if(isset($_GET["del"]) AND $_GET["del"] == "true"){
-          echo "<script>alert('Show was deleted!')</script>";
-        }
+        //if(isset($_GET["del"]) AND $_GET["del"] == "true"){
+        //  echo "<script>alert('Show was deleted!')</script>";
+        //}
 
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);

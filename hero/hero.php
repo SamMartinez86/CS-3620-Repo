@@ -71,11 +71,10 @@ class Hero implements \JsonSerializable {
   }
 
   // delete hero function
-  function deleteHero($user_id,$hero_id){
+  function deleteHero($user_id, $hero_id){
     $heroDAO = new heroDAO();
-    $heroDAO->deleteHero($user_id,$hero_id);
+    $heroDAO->deleteHero($user_id, $hero_id);
   }
 }
-
 
 ?>
