@@ -80,7 +80,7 @@ class heroDAO {
     } 
     $conn->close();
 
-    return $shows;
+    return $heros;
   }
 
   // delete show function
