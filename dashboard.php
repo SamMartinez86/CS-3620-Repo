@@ -41,6 +41,18 @@
     margin: 1%;
   }
 
+  .deleteButton {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #2196f3;
+    color: #ffffff;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+
   .card {
     /*flex: 0 1 24%;*/
     
@@ -82,7 +94,7 @@
                         <h1 >' . $heros[$i]->getHeroName() . '</h1>
                         <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
-                        <a href="delete_show.php?hero_id=" #shows[$x] class"card-link">Delete show</a>
+                        <a class="deleteButton" href="delete_hero.php?hero_id=" #heros[$x] class"card-link">Delete Hero</a>
                     </div>
                   </div>
                   <br />';
