@@ -9,6 +9,7 @@ class Hero implements \JsonSerializable {
   private $user_id;
   private $hero_ability;
   private $hero_description;
+  private $user_id;
 
   // constructor
   function __construct() {
@@ -69,5 +70,13 @@ class Hero implements \JsonSerializable {
     $heroDAO = new heroDAO();
     $heroDAO->createHero($this);
   }
+
+  // delete hero function
+  function deleteHero($user_id,$hero_id){
+    $showDAO = new showDAO();
+    $showDAO->deleteHero($user_id,$hero_id);
+  }
 }
+
+
 ?>

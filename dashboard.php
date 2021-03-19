@@ -59,6 +59,11 @@
   <br />
   <div class="cardtainer">
   <?php
+
+        if(isset($_GET["del"]) AND $_GET["del"] == "true"){
+          echo "<script>alert('Show was deleted!')</script>";
+        }
+
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
@@ -66,7 +71,8 @@
         require_once('./hero/hero.php');
 
         $hero = new hero();
-        $heros = $hero->getMyHeros();  
+        $heros = $hero->getMyHeros($_SESSION["user_id"]);
+        
 
         $listLength = count($heros);
 
@@ -76,6 +82,7 @@
                         <h1 >' . $heros[$i]->getHeroName() . '</h1>
                         <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>
+                        <a href="delete_show.php?hero_id=" #shows[$x] class"card-link">Delete show</a>
                     </div>
                   </div>
                   <br />';
