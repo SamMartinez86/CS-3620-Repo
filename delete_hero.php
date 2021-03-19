@@ -8,7 +8,7 @@
     require_once('./hero/hero.php');
 
     $hero = new hero();
-    $heros = $hero->deleteHero($_SESSION["user_id"]. $_GET["hero_id"]);
+    $heros = $hero->deleteHero($_SESSION["user_id"], $_GET["hero_id"]);
 
     header("Location: dashboard.php?del=true");
 ?>

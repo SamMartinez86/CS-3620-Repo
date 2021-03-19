@@ -42,8 +42,8 @@
   }
 
   .deleteButton {
-    font: bold 11px Arial;
-    text-decoration: none;
+    /*font: bold 11px Arial;
+    text-decoration: none; */
     background-color: #2196f3;
     color: #ffffff;
     padding: 2px 6px 2px 6px;
