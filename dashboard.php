@@ -73,7 +73,6 @@
         $hero = new hero();
         $heros = $hero->getMyHeros($_SESSION["user_id"]);
         
-
         $listLength = count($heros);
 
         for($i = 0; $i < $listLength; $i++) {            
