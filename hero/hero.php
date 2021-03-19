@@ -53,7 +53,7 @@ class Hero implements \JsonSerializable {
   }
  
   // get hero list function
-  function getMyHeros(){
+  function getMyHeros($user_id){
     $heroDAO = new heroDAO();
     return $heroDAO->getHerosByUserId($user_id);
   }
