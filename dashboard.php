@@ -82,7 +82,7 @@
                         <h1 >' . $heros[$i]->getHeroName() . '</h1>
                         <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>                       
-                        <form action="delete_hero.php?hero_id=' . $heros[$x]->getHeroId() . '">
+                        <form action="delete_hero.php?hero_id=' . $heros[$i]->getHeroId() . '">
                           <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Delete Superhero" /></center>
                         </form>
                     </div>
