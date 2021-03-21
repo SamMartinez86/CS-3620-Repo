@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 session_start();
 
-
+require_once('sessioncheck.php');
 
 require_once('./hero/hero.php');
 
@@ -16,6 +16,8 @@ $hero->setHeroAbility($_POST["hero_ability"]);
 $hero->setHeroDescription($_POST["hero_description"]);
 $hero->setUserId($_SESSION["user_id"]);
 $hero->createHero(); 
+
+echo '<h2>'.$_SESSION["user_id"].'</h2>';
 
 header("Location: dashboard.php");
 ?>
