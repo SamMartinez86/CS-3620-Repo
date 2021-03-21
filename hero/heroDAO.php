@@ -77,9 +77,9 @@ class heroDAO {
         }
     }
     else {
-        echo '<center><h1>If Blank press add Superhero</h1></center>';
-        echo '<br><br><br><br><br><br><br><br>';
-        echo "<center><h1>0 results</h2></center><br>";
+        echo "<center><h1>If Blank press add Superhero</h1></center>\r";
+        echo "\r\r\r\r\r\r\r\r\r\r\r";
+        echo "<center><h1>0 results</h2></center>\r";
     } 
     $conn->close();
 
