@@ -63,7 +63,7 @@
   <br />
   <div class="cardtainer">
   <?php
-
+        echo $_SESSION["user_id"]
         //if(isset($_GET["del"]) AND $_GET["del"] == "true"){
         //  echo "<script>alert('Show was deleted!')</script>";
         //}
