@@ -12,6 +12,7 @@ $hero = new hero();
 $hero->setHeroName($_POST["hero_name"]);
 $hero->setHeroAbility($_POST["hero_ability"]);
 $hero->setHeroDescription($_POST["hero_description"]);
+$hero->setUserId($_SESSION["user_id"]);
 $hero->createHero(); 
 
 header("Location: dashboard.php");
