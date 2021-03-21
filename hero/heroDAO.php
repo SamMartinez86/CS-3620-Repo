@@ -77,6 +77,7 @@ class heroDAO {
         }
     }
     else {
+        echo '<h1>If Blank press add Superhero</h1>';
         echo "0 results";
     } 
     $conn->close();
