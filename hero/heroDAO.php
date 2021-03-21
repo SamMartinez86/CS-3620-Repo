@@ -59,7 +59,7 @@ class heroDAO {
     $sql = "SELECT hero_id, hero_name, hero_ability, hero_description, user_id FROM userschema.herodb WHERE user_id =" . $user_id;
     $result = $conn->query($sql);
 
-    $heros = 0;
+    $heros;
     $index = 0;
 
     if ($result->num_rows > 0) {
