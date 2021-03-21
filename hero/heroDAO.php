@@ -59,7 +59,7 @@ class heroDAO {
     $sql = "SELECT hero_id, hero_name, hero_ability, hero_description, user_id FROM userschema.herodb WHERE user_id =" . $user_id;
     $result = $conn->query($sql);
 
-    $heros;
+    $heros = 0;
     $index = 0;
 
     if ($result->num_rows > 0) {
@@ -77,9 +77,7 @@ class heroDAO {
         }
     }
     else {
-        echo "<center><h1>If Blank press add Superhero</h1></center>\r";
-        echo "\r\r\r\r\r\r\r\r\r\r\r";
-        echo "<center><h1>0 results</h2></center>\r";
+        echo "0 results";
     } 
     $conn->close();
 
