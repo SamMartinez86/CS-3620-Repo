@@ -37,13 +37,14 @@ class heroDAO {
 
     // prepare and bind
     $insertHero = $conn->prepare("INSERT INTO userschema.herodb (`hero_name`,
-    `hero_ability`, `hero_description`) VALUES (?, ?, ?)");
+    `hero_ability`, `hero_description`, `user_id`) VALUES (?, ?, ?, ?)");
 
     $hn = $hero->getHeroName();
     $ha = $hero->getHeroAbility();
     $hd = $hero->getHeroDescription();
+    $ui = $hero->getUserId();
 
-    $insertHero->bind_param("sss", $hn, $ha, $hd);
+    $insertHero->bind_param("ssss", $hn, $ha, $hd, $ui);
     $insertHero->execute();
 
     $insertHero->close();

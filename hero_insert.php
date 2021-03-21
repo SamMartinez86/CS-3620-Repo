@@ -17,7 +17,7 @@ $hero->setHeroDescription($_POST["hero_description"]);
 $hero->setUserId($_SESSION["user_id"]);
 $hero->createHero(); 
 
-echo '<h2>'.$_SESSION["user_id"].'</h2>';
+
 
 header("Location: dashboard.php");
 ?>

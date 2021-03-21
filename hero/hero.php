@@ -47,9 +47,13 @@ class Hero implements \JsonSerializable {
     $this->hero_ability = $hero_ability;
   }
 
-  // user_id setter
+  // user_id getter/setter
   function setUserId($user_id){
     $this->user_id = $user_id;
+  }
+
+  function getUserId(){
+    return $this->user_id;
   }
  
   // get hero list function
