@@ -63,10 +63,10 @@
   <br />
   <div class="cardtainer">
   <?php
-        echo $_SESSION["user_id"]
-        //if(isset($_GET["del"]) AND $_GET["del"] == "true"){
-        //  echo "<script>alert('Show was deleted!')</script>";
-        //}
+         
+        if(isset($_GET["del"]) AND $_GET["del"] == "true"){
+          echo "<script>alert('Show was deleted!')</script>";
+        }
 
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -83,6 +83,7 @@
             echo '<div class="cards w3-card-4 w3-light-grey">
                     <div class="card">
                         <h1 >' . $heros[$i]->getHeroName() . '</h1>
+                        <h2>'.$_SESSION["user_id"].' </h2>
                         <h4 >Rating: ' . $heros[$i]->getHeroAbility() . '</h4>
                         <h5 >Powers: ' . $heros[$i]->getHeroDescription() . '</h5>                       
                         <a href="delete_hero.php?hero_id=' . $heros[$i]->getHeroId() . '" class="card-link deleteLink">Delete Show</a>
