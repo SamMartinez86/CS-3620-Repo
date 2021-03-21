@@ -4,7 +4,6 @@
 
     require_once'header.php';
 
-    echo '<h2>'.$_SESSION["user_id"].'</h2>';
 ?>  
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
