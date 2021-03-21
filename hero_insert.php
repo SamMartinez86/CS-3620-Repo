@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 
 session_start();
 
+require_once'sessioncheck.php'; 
+
 require_once('./hero/hero.php');
 
 $hero = new hero();
