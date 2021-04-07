@@ -54,7 +54,7 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 
-  <h1 class="mt-5">Team Members:</h1>
+  <h1 class="mt-5">Marketplace items:</h1>
 
   <form action="create_item.php">
     <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
@@ -72,7 +72,7 @@
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
-        require_once('./hero/hero.php');
+        require_once('./item/item.php');
 
         $hero = new hero();
         $heros = $hero->getMyHeros($_SESSION["user_id"]);
