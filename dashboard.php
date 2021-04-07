@@ -83,8 +83,8 @@
             echo '<div class="cards w3-card-4 w3-light-grey">
                     <div class="card">
                         <h1 >' . $items[$i]->getItemName() . '</h1>                     
-                        <h4 >$ ' . $items[$i]->getItemCost() . '</h4>
-                        <h5 > ' . $items[$i]->getItemDescription() . '</h5>                       
+                        <h4 > ' . $items[$i]->getItemCost() . '</h4>
+                        <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
                         <a href="delete_hero.php?hero_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete Show</a>
                     </div>
                   </div>
