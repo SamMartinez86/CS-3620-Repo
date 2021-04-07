@@ -13,7 +13,7 @@ class itemDAO {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $item = new hero();
+            $item = new item();
 
             $item->setItemId($row["item_id"]);
             $item->setItemName($row["item_name"]);
@@ -34,16 +34,16 @@ class itemDAO {
     return $items;
   }
 
-  function createHero($item){
+  function createItem($item){
     require_once('./utilities/connection.php');
 
     // prepare and bind
     $insertItem = $conn->prepare("INSERT INTO userschema.item (`item_name`,
     `item_description`, `item_cost`, `user_id`) VALUES (?, ?, ?, ?)");
 
-    $hn = $item->getHeroName();
-    $ha = $item->getHeroAbility();
-    $hd = $item->getHeroDescription();
+    $hn = $item->getItemName();
+    $ha = $item->getItemCost();
+    $hd = $item->getItemDescription();
     $ui = $item->getUserId();
 
     $insertItem->bind_param("ssss", $hn, $ha, $hd, $ui);
@@ -54,9 +54,9 @@ class itemDAO {
   }
 
   // select heros by user id function
-  function getHerosByUserId($user_id){
+  function getItemsByUserId($user_id){
     require_once('./utilities/connection.php');
-    require_once('./hero/hero.php');
+    require_once('./item/item.php');
 
     $sql = "SELECT item_id, item_name, item_description, item_cost, user_id FROM userschema.item WHERE user_id =" . $user_id;
     $result = $conn->query($sql);
@@ -67,12 +67,12 @@ class itemDAO {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $item = new hero();
+            $item = new item();
 
-            $item->setHeroId($row["item_id"]);
-            $item->setHeroName($row["item_name"]);
-            $item->setHeroAbility($row["item_description"]);
-            $item->setHeroDescription($row["item_cost"]);
+            $item->setItemId($row["item_id"]);
+            $item->setItemName($row["item_name"]);
+            $item->setItemCost($row["item_description"]);
+            $item->setItemDescription($row["item_cost"]);
             $item->setUserId($row["user_id"]);
             $items[$index] = $item;
             $index = $index + 1;
@@ -87,7 +87,7 @@ class itemDAO {
   }
 
   // delete show function
-  function deleteHero($uid,$hid){
+  function deleteItem($uid,$hid){
     require_once('./utilities/connection.php');
 
     $sql = "DELETE FROM userschema.item WHERE user_id =" . $uid . " AND item_id =" . $hid;

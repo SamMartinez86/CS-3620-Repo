@@ -53,7 +53,6 @@ class item implements \JsonSerializable {
   function setUserId($user_id){
     $this->user_id = $user_id;
   }
-
   function getUserId(){
     return $this->user_id;
   }
