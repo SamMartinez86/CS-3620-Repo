@@ -2,9 +2,9 @@
 class heroDAO {
   function getAllHeros(){
     require_once('./utilities/connection.php');
-    require_once('./hero/hero.php');
+    require_once('./item/item.php');
 
-    $sql = "SELECT hero_id, hero_name, hero_ability, hero_description, user_id FROM userschema.herodb";
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item";
     $result = $conn->query($sql);
 
     $heros;

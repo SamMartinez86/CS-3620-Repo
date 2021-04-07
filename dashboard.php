@@ -56,8 +56,8 @@
 
   <h1 class="mt-5">Team Members:</h1>
 
-  <form action="create_hero.php">
-    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add Superhero" /></center>
+  <form action="create_item.php">
+    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
   </form>
 
   <br />

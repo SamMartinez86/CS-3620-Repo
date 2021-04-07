@@ -4,7 +4,7 @@ require_once('./hero/heroDAO.php');
 class Hero implements \JsonSerializable {
 
   // object member variables
-  private $hero_id;
+  private $item_id;
   private $hero_name;
   private $user_id;
   private $hero_ability;
