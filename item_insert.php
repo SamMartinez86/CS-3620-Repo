@@ -8,14 +8,14 @@ session_start();
 
 require_once('sessioncheck.php');
 
-require_once('./hero/hero.php');
+require_once('./item/item.php');
 
-$hero = new hero();
-$hero->setHeroName($_POST["hero_name"]);
-$hero->setHeroAbility($_POST["hero_ability"]);
-$hero->setHeroDescription($_POST["hero_description"]);
+$hero = new item();
+$hero->setItemName($_POST["item_name"]);
+$hero->setItemCost($_POST["cost_item"]);
+$hero->setItemDescription($_POST["item_description"]);
 $hero->setUserId($_SESSION["user_id"]);
-$hero->createHero(); 
+$hero->createItem(); 
 
 
 

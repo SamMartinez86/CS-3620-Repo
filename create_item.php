@@ -35,13 +35,13 @@
     <center>
         <table class="w3-table" style="width:40%">
             <tr>
-                <th>Hero name:<input class="w3-input" type="text" name="hero_name" onfocus="this.value=''" /></th>
+                <th>Item name:<input class="w3-input" type="text" name="Item_name" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Hero ability:<input class="w3-input" type="text" name="hero_ability" onfocus="this.value=''" /></th>
+                <th>Item cost:<input class="w3-input" type="text" name="Item_cost" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Hero description:<input class="w3-input" type="text" name="hero_description" onfocus="this.value=''" /></th>
+                <th>Item description:<input class="w3-input" type="text" name="Item_description" onfocus="this.value=''" /></th>
             </tr>
             <tr>
                 <th>

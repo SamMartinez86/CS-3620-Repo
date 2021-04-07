@@ -5,10 +5,10 @@
 
     require_once('./sessioncheck.php');
 
-    require_once('./hero/hero.php');
+    require_once('./item/item.php');
 
-    $hero = new hero();
-    $heros = $hero->deleteHero($_SESSION["user_id"], $_GET["hero_id"]);
+    $hero = new item();
+    $heros = $hero->deleteHero($_SESSION["user_id"], $_GET["item_id"]);
 
     header("Location: dashboard.php?del=true");
 ?>
