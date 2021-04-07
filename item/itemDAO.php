@@ -1,13 +1,13 @@
 <?php
-class heroDAO {
-  function getAllHeros(){
+class itemDAO {
+  function getAllItems(){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
 
     $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item";
     $result = $conn->query($sql);
 
-    $heros;
+    $items;
     $index = 0;
 
     if ($result->num_rows > 0) {
@@ -15,10 +15,12 @@ class heroDAO {
         while($row = $result->fetch_assoc()) {
             $hero = new hero();
 
-            $hero->setHeroId($row["hero_id"]);
-            $hero->setHeroName($row["hero_name"]);
-            $hero->setHeroAbility($row["hero_ability"]);
-            $hero->setHeroDescription($row["hero_description"]);
+            $hero->setItemId($row["item_id"]);
+            $hero->setItemName($row["item_name"]);
+            $hero->setItemDescription($row["item_description"]);
+            $hero->setItemCost($row["item_cost"]);
+            $hero->setItemType($row["item_cost"]);
+            $hero->setItemImage($row["item_cost"]);
             $hero->setUserId($row["user_id"]);
             $heros[$index] = $hero;
             $index = $index + 1;
@@ -29,15 +31,15 @@ class heroDAO {
     } 
     $conn->close();
 
-    return $heros;
+    return $items;
   }
 
   function createHero($hero){
     require_once('./utilities/connection.php');
 
     // prepare and bind
-    $insertHero = $conn->prepare("INSERT INTO userschema.herodb (`hero_name`,
-    `hero_ability`, `hero_description`, `user_id`) VALUES (?, ?, ?, ?)");
+    $insertHero = $conn->prepare("INSERT INTO userschema.herodb (`item_name`,
+    `item_description`, `item_cost`, `user_id`) VALUES (?, ?, ?, ?)");
 
     $hn = $hero->getHeroName();
     $ha = $hero->getHeroAbility();
@@ -56,7 +58,7 @@ class heroDAO {
     require_once('./utilities/connection.php');
     require_once('./hero/hero.php');
 
-    $sql = "SELECT hero_id, hero_name, hero_ability, hero_description, user_id FROM userschema.herodb WHERE user_id =" . $user_id;
+    $sql = "SELECT item_id, item_name, item_description, item_cost, user_id FROM userschema.herodb WHERE user_id =" . $user_id;
     $result = $conn->query($sql);
 
     $heros;
@@ -67,10 +69,10 @@ class heroDAO {
         while($row = $result->fetch_assoc()) {
             $hero = new hero();
 
-            $hero->setHeroId($row["hero_id"]);
-            $hero->setHeroName($row["hero_name"]);
-            $hero->setHeroAbility($row["hero_ability"]);
-            $hero->setHeroDescription($row["hero_description"]);
+            $hero->setHeroId($row["item_id"]);
+            $hero->setHeroName($row["item_name"]);
+            $hero->setHeroAbility($row["item_description"]);
+            $hero->setHeroDescription($row["item_cost"]);
             $hero->setUserId($row["user_id"]);
             $heros[$index] = $hero;
             $index = $index + 1;
@@ -88,7 +90,7 @@ class heroDAO {
   function deleteHero($uid,$hid){
     require_once('./utilities/connection.php');
 
-    $sql = "DELETE FROM userschema.herodb WHERE user_id =" . $uid . " AND hero_id =" . $hid;
+    $sql = "DELETE FROM userschema.herodb WHERE user_id =" . $uid . " AND item_id =" . $hid;
 
 
     if ($conn->query($sql) == TRUE) {

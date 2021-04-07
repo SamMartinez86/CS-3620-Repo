@@ -1,50 +1,52 @@
 <?php
-require_once('./hero/heroDAO.php');
+require_once('./item/itemDAO.php');
 
-class Hero implements \JsonSerializable {
+class Item implements \JsonSerializable {
 
   // object member variables
   private $item_id;
-  private $hero_name;
   private $user_id;
-  private $hero_ability;
-  private $hero_description;
+  private $item_name;
+  private $item_description;
+  private $item_cost;
+  private $item_type;
+  private $item_image;
+
 
   // constructor
   function __construct() {
   }
 
-  // hero_id getter/setter
-  function getHeroId(){
-    return $this->hero_id;
+  // item_id getter/setter
+  function getItemId(){
+    return $this->item_id;
   }
-  function setHeroId($hero_id){
-    $this->hero_id = $hero_id;
+  function setItemId($item_id){
+    $this->item_id = $item_id;
   }
 
-  // hero_name getter/setter
-  function getHeroName() {
+  // item_name getter/setter
+  function getItemName() {
     return $this->hero_first;
   }
-  function setHeroName($hero_first){
+  function setItemName($hero_first){
     $this->hero_first = $hero_first;
   }
 
-  // hero_description getter and setter
-  
-  function getHeroDescription() {
-    return $this->hero_description;
+  // item_description getter and setter
+  function getItemDescription() {
+    return $this->item_description;
   }
-  function setHeroDescription($hero_description){
-    $this->hero_description = $hero_description;
+  function setItemDescription($item_description){
+    $this->item_description = $item_description;
   }
 
-  // hero_ability getter/setter
-  function getHeroAbility() {
-    return $this->hero_ability;
+  // item_cost getter/setter
+  function getItemCost() {
+    return $this->item_cost;
   }
-  function setHeroAbility($hero_ability){
-    $this->hero_ability = $hero_ability;
+  function setItemCost($item_cost){
+    $this->item_cost = $item_cost;
   }
 
   // user_id getter/setter
@@ -56,10 +58,26 @@ class Hero implements \JsonSerializable {
     return $this->user_id;
   }
  
-  // get hero list function
-  function getMyHeros($user_id){
-    $heroDAO = new heroDAO();
-    return $heroDAO->getHerosByUserId($user_id);
+  // item_type getter/setter
+  function getItemType() {
+    return $this->item_cost;
+  }
+  function setItemType($item_cost){
+    $this->item_cost = $item_cost;
+  }
+
+  // item_image getter/setter
+  function getItemImage() {
+    return $this->item_cost;
+  }
+  function setItemImage($item_cost){
+    $this->item_cost = $item_cost;
+  }
+
+  // get item list function
+  function getMyItems($user_id){
+    $itemDAO = new itemDAO();
+    return $itemDAO->getItemsByUserId($user_id);
   }
 
   // serialize object Json
@@ -69,15 +87,15 @@ class Hero implements \JsonSerializable {
   }
 
   // create new hero entry
-  function createHero(){
-    $heroDAO = new heroDAO();
-    $heroDAO->createHero($this);
+  function createItem(){
+    $itemDAO = new itemDAO();
+    $itemDAO->createItem($this);
   }
 
   // delete hero function
-  function deleteHero($user_id, $hero_id){
-    $heroDAO = new heroDAO();
-    $heroDAO->deleteHero($user_id, $hero_id);
+  function deleteItem($user_id, $item_id){
+    $itemDAO = new itemDAO();
+    $itemDAO->deleteItem($user_id, $item_id);
   }
 }
 
