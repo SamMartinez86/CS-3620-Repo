@@ -27,10 +27,10 @@ class item implements \JsonSerializable {
 
   // item_name getter/setter
   function getItemName() {
-    return $this->hero_first;
+    return $this->item_name;
   }
-  function setItemName($hero_first){
-    $this->hero_first = $hero_first;
+  function setItemName($item_name){
+    $this->item_name = $item_name;
   }
 
   // item_description getter and setter

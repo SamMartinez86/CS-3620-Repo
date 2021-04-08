@@ -19,8 +19,8 @@ class itemDAO {
             $item->setItemName($row["item_name"]);
             $item->setItemDescription($row["item_description"]);
             $item->setItemCost($row["item_cost"]);
-            $item->setItemType($row["item_cost"]);
-            $item->setItemImage($row["item_cost"]);
+            $item->setItemType($row["item_type"]);
+            $item->setItemImage($row["item_image"]);
             $item->setUserId($row["user_id"]);
             $items[$index] = $item;
             $index = $index + 1;
@@ -39,14 +39,16 @@ class itemDAO {
 
     // prepare and bind
     $insertItem = $conn->prepare("INSERT INTO userschema.item (`item_name`,
-    `item_description`, `item_cost`, `user_id`) VALUES (?, ?, ?, ?)");
+    `item_description`, `item_cost`,`item_type`, `item_image` ,`user_id`) VALUES (?, ?, ?, ?, ?, ?)");
 
-    $hn = $item->getItemName();
-    $ha = $item->getItemCost();
-    $hd = $item->getItemDescription();
+    $in = $item->getItemName();
+    $ia = $item->getItemCost();
+    $id = $item->getItemDescription();
+    $it = $item->getItemType();
+    $ii = $item->getItemImage();
     $ui = $item->getUserId();
 
-    $insertItem->bind_param("ssss", $hn, $ha, $hd, $ui);
+    $insertItem->bind_param("ssssss", $in, $ia, $id, $it, $ii, $ui);
     $insertItem->execute();
 
     $insertItem->close();

@@ -10,12 +10,15 @@ require_once('sessioncheck.php');
 
 require_once('./item/item.php');
 
-$hero = new item();
-$hero->setItemName($_POST["item_name"]);
-$hero->setItemCost($_POST["cost_item"]);
-$hero->setItemDescription($_POST["item_description"]);
-$hero->setUserId($_SESSION["user_id"]);
-$hero->createItem(); 
+$item = new item();
+$item->setItemName($_POST["item_name"]);
+$item->setItemCost($_POST["cost_item"]);
+$item->setItemDescription($_POST["item_description"]);
+$item->setItemType($_SESSION["item_type"]);
+$item->setItemImage($_SESSION["item_image"]);
+$item->setUserId($_SESSION["user_id"]);
+
+$item->createItem(); 
 
 
 

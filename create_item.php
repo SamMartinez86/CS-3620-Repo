@@ -27,10 +27,10 @@
     }
 </style>
 
-<title>Add Hero</title>
+<title>Add item</title>
 
 
-<form method="POST" action="hero_insert.php">
+<form method="POST" action="item_insert.php">
 
     <center>
         <table class="w3-table" style="width:40%">
@@ -44,9 +44,15 @@
                 <th>Item description:<input class="w3-input" type="text" name="Item_description" onfocus="this.value=''" /></th>
             </tr>
             <tr>
+                <th>Item type:<input class="w3-input" type="text" name="Item_type" onfocus="this.value=''" /></th>
+            </tr>
+            <tr>
+                <th>Item image:<input class="w3-input" type="text" name="Item_image" onfocus="this.value=''" /></th>
+            </tr>
+            <tr>
                 <th>
                     <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit"
-                            value="Create hero" /></center>
+                            value="Create item" /></center>
             </tr>
         </table>
     </center>
