@@ -9,6 +9,6 @@
     }
 </style>
 
-<div class="w3-panel w3-padding-24 w3-rightbar w3-bottombar w3-border-blue">
+<div class="w3-panel w3-padding-24">
     <h2 class="shiftr"><?php echo date("Y.m.d") . "<br>";?></h2>
 </div>
