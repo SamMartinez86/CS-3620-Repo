@@ -59,18 +59,18 @@ class item implements \JsonSerializable {
  
   // item_type getter/setter
   function getItemType() {
-    return $this->item_cost;
+    return $this->item_type;
   }
-  function setItemType($item_cost){
-    $this->item_cost = $item_cost;
+  function setItemType($item_type){
+    $this->item_type = $item_type;
   }
 
   // item_image getter/setter
   function getItemImage() {
-    return $this->item_cost;
+    return $this->item_image;
   }
-  function setItemImage($item_cost){
-    $this->item_cost = $item_cost;
+  function setItemImage($item_image){
+    $this->item_image = $item_image;
   }
 
   // get item list function
