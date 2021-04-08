@@ -60,7 +60,7 @@ class itemDAO {
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
 
-    $sql = "SELECT item_id, item_name, item_description, item_cost, user_id FROM userschema.item WHERE user_id =" . $user_id;
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image user_id FROM userschema.item WHERE user_id =" . $user_id;
     $result = $conn->query($sql);
 
     $items;
@@ -75,6 +75,8 @@ class itemDAO {
             $item->setItemName($row["item_name"]);
             $item->setItemCost($row["item_description"]);
             $item->setItemDescription($row["item_cost"]);
+            $item->getItemType($row["item_type"]);
+            $item->getItemImage($row["item_image"]);
             $item->setUserId($row["user_id"]);
             $items[$index] = $item;
             $index = $index + 1;
