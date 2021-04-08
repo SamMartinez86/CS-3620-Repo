@@ -87,7 +87,7 @@
                         <h4 > ' . $items[$i]->getItemType() . '</h4>
                         <h4 > ' . $items[$i]->getItemImage() . '</h4>
                         <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
-                        <a href="delete_hero.php?hero_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete Show</a>
+                        <a href="delete_item.php?hero_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete Show</a>
                     </div>
                   </div>
                   <br />';
