@@ -75,8 +75,8 @@ class itemDAO {
             $item->setItemName($row["item_name"]);
             $item->setItemCost($row["item_description"]);
             $item->setItemDescription($row["item_cost"]);
-            $item->getItemType($row["item_type"]);
-            $item->getItemImage($row["item_image"]);
+            $item->setItemType($row["item_type"]);
+            $item->setItemImage($row["item_image"]);
             $item->setUserId($row["user_id"]);
             $items[$index] = $item;
             $index = $index + 1;
