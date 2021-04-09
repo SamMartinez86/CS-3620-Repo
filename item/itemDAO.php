@@ -98,7 +98,7 @@ class itemDAO {
 
 
     if ($conn->query($sql) == TRUE) {
-      echo "Show Deleted";
+      echo "Item deleted";
   }
   else {
       echo "0 results";

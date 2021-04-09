@@ -65,7 +65,7 @@
   <?php
          
         if(isset($_GET["del"]) AND $_GET["del"] == "true"){
-          echo "<script>alert('Show was deleted!')</script>";
+          echo "<script>alert('Item was deleted!')</script>";
         }
 
         ini_set('display_errors', 1);
@@ -87,7 +87,7 @@
                         <h4 > ' . $items[$i]->getItemType() . '</h4>
                         <h4 > ' . $items[$i]->getItemImage() . '</h4>
                         <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
-                        <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete Show</a>
+                        <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
                   <br />';
