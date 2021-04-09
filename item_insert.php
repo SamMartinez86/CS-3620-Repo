@@ -14,8 +14,8 @@ $item = new item();
 $item->setItemName($_POST["item_name"]);
 $item->setItemCost($_POST["item_cost"]);
 $item->setItemDescription($_POST["item_description"]);
-$item->setItemType($_SESSION["item_type"]);
-$item->setItemImage($_SESSION["item_image"]);
+$item->setItemType($_POST["item_type"]);
+$item->setItemImage($_POST["item_image"]);
 $item->setUserId($_SESSION["user_id"]);
 
 $item->createItem(); 
