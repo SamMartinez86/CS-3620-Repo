@@ -7,8 +7,8 @@
 
     require_once('./item/item.php');
 
-    $hero = new item();
-    $heros = $hero->deleteHero($_SESSION["user_id"], $_GET["item_id"]);
+    $item = new item();
+    $items = $item->deleteItem($_SESSION["user_id"], $_GET["item_id"]);
 
     header("Location: dashboard.php?del=true");
 ?>
