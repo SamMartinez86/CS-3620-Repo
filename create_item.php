@@ -35,19 +35,19 @@
     <center>
         <table class="w3-table" style="width:40%">
             <tr>
-                <th>Item name:<input class="w3-input" type="text" name="Item_name" onfocus="this.value=''" /></th>
+                <th>Item name:<input class="w3-input" type="text" name="item_name" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Item cost:<input class="w3-input" type="text" name="Item_cost" onfocus="this.value=''" /></th>
+                <th>Item cost:<input class="w3-input" type="text" name="item_cost" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Item description:<input class="w3-input" type="text" name="Item_description" onfocus="this.value=''" /></th>
+                <th>Item description:<input class="w3-input" type="text" name="item_description" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Item type:<input class="w3-input" type="text" name="Item_type" onfocus="this.value=''" /></th>
+                <th>Item type:<input class="w3-input" type="text" name="item_type" onfocus="this.value=''" /></th>
             </tr>
             <tr>
-                <th>Item image:<input class="w3-input" type="text" name="Item_image" onfocus="this.value=''" /></th>
+                <th>Item image:<input class="w3-input" type="text" name="item_image" onfocus="this.value=''" /></th>
             </tr>
             <tr>
                 <th>
