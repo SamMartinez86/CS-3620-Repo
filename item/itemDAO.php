@@ -39,7 +39,7 @@ class itemDAO {
 
     // prepare and bind
     $insertItem = $conn->prepare("INSERT INTO userschema.item (`item_name`,
-    `item_description`, `item_cost`,`item_type`, `item_image` ,`user_id`) VALUES (?, ?, ?, ?, ?, ?)");
+    `item_cost`,`item_description`,`item_type`, `item_image` ,`user_id`) VALUES (?, ?, ?, ?, ?, ?)");
 
     $in = $item->getItemName();
     $ia = $item->getItemCost();
