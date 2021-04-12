@@ -25,6 +25,11 @@
     font-size: 20px;
   }
 
+  img {
+    width: 350px;
+    height: auto;
+  }
+
   .cardtainer {
     width: 90%;
     margin: 0 auto;
