@@ -26,13 +26,10 @@
   }
 
   img {
-    /*
-    width: 350px;
+
+    width: 100%;
     height: auto;
     margin: 2rem;
-    */
-    max-height: 100%;
-    min-width: 100%;
     object-fit: cover;
     vertical-align: top;
   }
@@ -47,7 +44,7 @@
   }
 
   .cards {
-    width: 30%;
+    width: 400px;
     margin: 0.5em auto;
     flex: 1 0 24%;
     margin: 1%;
