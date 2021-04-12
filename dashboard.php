@@ -31,8 +31,8 @@
     height: auto;
     margin: 2rem;
     */
-    height: auto;
-    width: auto;
+    max-height: 100%;
+    min-width: 100%;
     object-fit: cover;
     vertical-align: top;
   }
