@@ -26,9 +26,15 @@
   }
 
   img {
+    /*
     width: 350px;
     height: auto;
     margin: 2rem;
+    */
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: top;
   }
 
   .cardtainer {
@@ -95,7 +101,7 @@
                       <h1 >' . $items[$i]->getItemName() . '</h1>                     
                       <h4 > ' . $items[$i]->getItemCost() . '</h4>
                       <h4 > ' . $items[$i]->getItemType() . '</h4>                       
-                      <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
+                      <h5 >$' . $items[$i]->getItemDescription() . '</h5>                       
                       <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
