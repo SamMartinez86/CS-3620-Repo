@@ -28,8 +28,7 @@
   img {
 
     width: 100%;
-    height: auto;
-    margin: 2rem;
+    height: 350px;
     object-fit: cover;
     vertical-align: top;
   }
@@ -44,7 +43,7 @@
   }
 
   .cards {
-    width: 400px;
+    width: 350px;
     margin: 0.5em auto;
     flex: 1 0 24%;
     margin: 1%;
