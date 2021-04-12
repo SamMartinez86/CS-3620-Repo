@@ -43,7 +43,7 @@
 
   .card {
     /*flex: 0 1 24%;*/
-    
+
   }
 
   .deleteLink {
@@ -59,10 +59,13 @@
   <form action="create_item.php">
     <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
   </form>
+  <form action="wishlist.php">
+    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
+  </form>
 
   <br />
   <div class="cardtainer">
-  <?php
+    <?php
          
         if(isset($_GET["del"]) AND $_GET["del"] == "true"){
           echo "<script>alert('Item was deleted!')</script>";
@@ -81,13 +84,13 @@
 
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cards w3-card-4 w3-light-grey">
-                    <div class="card">
-                        <h1 >' . $items[$i]->getItemName() . '</h1>                     
-                        <h4 > ' . $items[$i]->getItemCost() . '</h4>
-                        <h4 > ' . $items[$i]->getItemType() . '</h4>
-                        <h4 > ' . $items[$i]->getItemImage() . '</h4>
-                        <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
-                        <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                    <div class="card">                    
+                      <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
+                      <h1 >' . $items[$i]->getItemName() . '</h1>                     
+                      <h4 > ' . $items[$i]->getItemCost() . '</h4>
+                      <h4 > ' . $items[$i]->getItemType() . '</h4>                       
+                      <h5 >$ ' . $items[$i]->getItemDescription() . '</h5>                       
+                      <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
                   <br />';
