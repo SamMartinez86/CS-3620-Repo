@@ -47,7 +47,7 @@
   }
 
   .cards {
-    width: 90%;
+    width: 500px;
     margin: 0.5em auto;
     flex: 1 0 24%;
     margin: 1%;
