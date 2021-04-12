@@ -28,6 +28,7 @@
   img {
     width: 350px;
     height: auto;
+    margin: 2rem;
   }
 
   .cardtainer {
