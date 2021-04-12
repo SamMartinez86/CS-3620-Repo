@@ -64,9 +64,9 @@
 
   .menuItems {}
 
-
-
-
+  .searchHolder {
+    cursor: pointer;
+  }
 
   .deleteLink {
     color: #2494ef;
@@ -76,7 +76,6 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 
-  <h1 class="mt-5">Marketplace items:</h1>
   <div class="menuRow">
     <div class="searchHolder menuItems">
       <form action="search.php">
