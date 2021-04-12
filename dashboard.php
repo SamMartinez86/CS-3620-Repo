@@ -6,6 +6,7 @@
 ?>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   h1 {
     text-align: center;
@@ -54,6 +55,19 @@
 
   }
 
+  .menuRow {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .menuItems {}
+
+
+
+
+
   .deleteLink {
     color: #2494ef;
   }
@@ -63,13 +77,24 @@
 <main role="main" class="container">
 
   <h1 class="mt-5">Marketplace items:</h1>
-
-  <form action="create_item.php">
-    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
-  </form>
-  <form action="wishlist.php">
-    <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
-  </form>
+  <div class="menuRow">
+    <div class="searchHolder menuItems">
+      <form action="search.php">
+        <input type="text" placeholder="search?" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="menuItems">
+      <form action="create_item.php">
+        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
+      </form>
+    </div>
+    <div class="menuItems">
+      <form action="wishlist.php">
+        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
+      </form>
+    </div>
+  </div>
 
   <br />
   <div class="cardtainer">
@@ -97,7 +122,10 @@
                       <h1 >' . $items[$i]->getItemName() . '</h1>                     
                       <h4 > ' . $items[$i]->getItemCost() . '</h4>
                       <h4 > ' . $items[$i]->getItemType() . '</h4>                       
-                      <h5 >$' . $items[$i]->getItemDescription() . '</h5>                       
+                      <h5 >$' . $items[$i]->getItemDescription() . '</h5>
+                      <form action="addWishlist.php">
+                      <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
+                      </form>                       
                       <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
