@@ -79,6 +79,12 @@ class item implements \JsonSerializable {
     return $itemDAO->getItemsByUserId($user_id);
   }
 
+    // get item list function
+    function getItemsByUserId($user_id){
+      $itemDAO = new itemDAO();
+      return $itemDAO->getItemsByUserId($user_id);
+    }
+
   // serialize object Json
   public function jsonSerialize(){
       $vars = get_object_vars($this);
