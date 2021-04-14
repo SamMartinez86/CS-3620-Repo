@@ -95,7 +95,7 @@ require_once 'header.php';
   }
 
   .searchSpot {
-    height: 
+    height: 34px;
   }
 </style>
 
@@ -126,8 +126,15 @@ require_once 'header.php';
     </div>
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="buttonzy" type="submit" value="wishlist" /></center>
+        <center><input class="buttonzy" type="submit" value="Wish list" /></center>
       </form>
+    </div>
+    <div class="menuItems" >
+      <div class="menuItems">
+        <form action="logout.php">
+          <center><input class="buttonzy" type="submit" value="Logout" /></center>
+        </form>
+      </div>
     </div>
   </div>
 
