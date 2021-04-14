@@ -83,9 +83,9 @@ class item implements \JsonSerializable {
   }
 
   // get item list function
-  function getMyItems($user_id){
+  function getMyItems(){
     $itemDAO = new itemDAO();
-    return $itemDAO->getItemsByUserId($user_id);
+    return $itemDAO->getAllItems();
   }
 
   // get item list function
@@ -119,9 +119,9 @@ class item implements \JsonSerializable {
   }
   
   // get item list function
-  function searchItemsByUserId($user_id, $search_keyword){
+  function searchItemsByUserId($search_keyword){
     $itemDAO = new itemDAO();
-    return $itemDAO->searchItemsByUserId($user_id, $search_keyword);
+    return $itemDAO->searchItemsByUserId($search_keyword);
   }
 }
 
