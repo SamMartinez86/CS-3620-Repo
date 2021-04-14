@@ -72,6 +72,8 @@ require_once 'header.php';
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 5px;
+
   }
 
   .deleteLink {
@@ -92,7 +94,7 @@ require_once 'header.php';
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="btn btn-primary w3-button w3-round w3-red" type="submit" value="Reset" name="reset" />
+          <input class="w3-btn w3-tiny w3-ripple w3-red" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
