@@ -22,7 +22,7 @@ class item implements \JsonSerializable {
   function getSearchKeyword(){
     return $this->search_keyword;
   }
-  function setSearchKeyword($item_id){
+  function setSearchKeyword($search_keyword){
     $this->search_keyword = $search_keyword;
   }
 
@@ -119,9 +119,9 @@ class item implements \JsonSerializable {
   }
   
   // get item list function
-  function searchItemsByUserId($search_keyword){
+  function searchItemsByKeyword($search_keyword){
     $itemDAO = new itemDAO();
-    return $itemDAO->searchItemsByUserId($search_keyword);
+    return $itemDAO->searchItemsByKeyword($search_keyword);
   }
 }
 

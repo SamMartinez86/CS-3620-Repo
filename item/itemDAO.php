@@ -7,7 +7,7 @@ class itemDAO {
     $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item";
     $result = $conn->query($sql);
 
-    $items;
+    $items = [];
     $index = 0;
 
     if ($result->num_rows > 0) {
@@ -17,8 +17,8 @@ class itemDAO {
 
             $item->setItemId($row["item_id"]);
             $item->setItemName($row["item_name"]);
-            $item->setItemDescription($row["item_description"]);
-            $item->setItemCost($row["item_cost"]);
+            $item->setItemCost($row["item_description"]);
+            $item->setItemDescription($row["item_cost"]);
             $item->setItemType($row["item_type"]);
             $item->setItemImage($row["item_image"]);
             $item->setUserId($row["user_id"]);
@@ -108,14 +108,15 @@ class itemDAO {
 
 
   //search items
-  function searchItemsByUserId($search_keyword){
+  
+  function searchItemsByKeyword($search_keyword){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
 
-    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE "%. $search_keyword .%";
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE '%" . $search_keyword . "%'";
     $result = $conn->query($sql);
 
-    $items;
+    $items = [];
     $index = 0;
 
     if ($result->num_rows > 0) {
@@ -140,6 +141,7 @@ class itemDAO {
     $conn->close();
 
     return $items;
+    
   
 }
 ?>

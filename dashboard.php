@@ -51,7 +51,7 @@
   }
 
   .card {
-    /*flex: 0 1 24%;*/
+    flex: 0 1 24%;
 
   }
 
@@ -72,7 +72,11 @@
     color: #2494ef;
   }
 
-  /* method='post' action="search_insert.php" */
+  /* method='post' action="search_insert.php"      <div class="menuItems">
+      <form action="create_item.php">
+        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
+      </form>
+    </div> */
 </style>
 
 <!-- Begin page content -->
@@ -80,14 +84,9 @@
 
   <div class="menuRow">
     <div class="searchHolder menuItems">
-      <form action="search_insert.php">
+      <form method='post'>
         <input type="text" placeholder="search?" name="search_keyword">
         <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-    <div class="menuItems">
-      <form action="create_item.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
       </form>
     </div>
     <div class="menuItems">
@@ -101,19 +100,17 @@
   <div class="cardtainer">
     <?php
          
-        if(isset($_GET["del"]) AND $_GET["del"] == "true"){
-          echo "<script>alert('Item was deleted!')</script>";
-        }
-
+        
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
         require_once('./item/item.php');
 
+        if( ! empty($_POST['search_keyword'])){
+
         $item = new item();
-        $items = $item->getMyItems($_SESSION["user_id"]);
-        $searchKey = $item->getSearchKeyword($_POST["search_keyword"])
+        $items = $item->getMyItems();
         
         $listLength = !empty($items) ? count($items) : 0;
 
@@ -127,18 +124,17 @@
                       <h5 >$' . $items[$i]->getItemDescription() . '</h5>
                       <form action="addWishlist.php">
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
-                      </form>                       
-                      <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                      </form>                                            
                     </div>
+                  </div>  
                     <br />';
           }
-
-        /* } else {
-
-          $item = new item();
-          $items = $item->getMyItems($_SESSION["user_id"]);
+        } else {
           
-          $listLength = count($items);
+          $item = new item();
+          $items = $item->searchItemsByKeyword($_POST['search_keyword']);
+          
+          $listLength = !empty($items) ? count($items) :0;
 
           for($i = 0; $i < $listLength; $i++) {            
               echo '<div class="cards w3-card-4 w3-light-grey">
@@ -150,14 +146,13 @@
                         <h5 >$' . $items[$i]->getItemDescription() . '</h5>
                         <form action="addWishlist.php">
                         <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
-                        </form>                       
-                        <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                        </form>                                            
                       </div>
-                    </div>
-                    <br />';
-          } 
+                    </div>  
+                      <br />';
+          }
 
-        } */
+        }
       ?>
   </div>
 
