@@ -104,8 +104,8 @@ require_once 'header.php';
 
   <div class="menuRow">
     <div class="searchBox">
-      <div>
-      <select class="buttonzy" name="order" id="order">
+      <div class="menuItems">
+      <select class="buttonzy searchSpot" name="order" id="order">
         <option value="name_asc">Name Asc</option></option>
         <option value="name_desc">Name Desc</option>
         <option value="cost_asc">Cost Asc</option>
@@ -114,25 +114,25 @@ require_once 'header.php';
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="buttonzy" type="text" placeholder="search?" name="search_keyword">  
+          <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">  
           <button class="buttonzy searchSpot" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="buttonzy" type="submit" value="Reset" name="reset" />
+          <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="buttonzy" type="submit" value="Wish list" /></center>
+        <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
       </form>
     </div>
     <div class="menuItems" >
       <div class="menuItems">
         <form action="logout.php">
-          <center><input class="buttonzy" type="submit" value="Logout" /></center>
+          <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
         </form>
       </div>
     </div>
@@ -224,7 +224,5 @@ require_once 'header.php';
   </div>
 
 </main>
-
-<center><a href="logout.php">Logout</a></center>
 
 <?php require_once('footer.php'); ?>
