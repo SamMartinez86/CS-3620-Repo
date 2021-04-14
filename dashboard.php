@@ -73,11 +73,6 @@ require_once 'header.php';
         color: #2494ef;
     }
 
-    /* method='post' action="search_insert.php"      <div class="menuItems">
-        <form action="create_item.php">
-          <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
-        </form>
-      </div> */
 </style>
 
 <!-- Begin page content -->
@@ -113,7 +108,7 @@ require_once 'header.php';
 
         require_once('./item/item.php');
         
-        //if (!isset($_POST['search_keyword'])) {
+        if (!isset($_POST['search_keyword'])) {
 
             $item = new item();
             $items = $item->getMyItems();
@@ -134,8 +129,9 @@ require_once 'header.php';
                     </div>
                   </div>  
                     <br />';
-          /*
-          } elseif (isset($_POST["reset"])){
+            }
+          
+          } elseif ($_POST["reset"]){
 
             $item = new item();
             $items = $item->getMyItems();
@@ -182,7 +178,7 @@ require_once 'header.php';
             }
 
         }
-        */
+        
         ?>
     </div>
 
