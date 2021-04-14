@@ -10,21 +10,26 @@ require_once 'header.php';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   h1 {
-    text-align: center;
+    /* text-align: center; */
   }
 
   div {
+    /*
     text-align: center;
     font-size: 20px;
+    */
   }
 
   th {
-    text-align: left;
+    /*align: left; */
   }
 
   a {
+
+    /*
     color: blue;
     font-size: 20px;
+    */
   }
 
   img {
