@@ -90,6 +90,11 @@
       </form>
     </div>
     <div class="menuItems">
+      <form method='post'>
+        <center><input class="btn btn-primary w3-button w3-round w3-red" type="submit" value="Reset" name="reset"/></center>
+      </form>
+    </div>
+    <div class="menuItems">
       <form action="wishlist.php">
         <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
       </form>
@@ -107,7 +112,7 @@
 
         require_once('./item/item.php');
 
-        echo $_POST["search_keyword"];
+        
 
         if(!isset($_POST["search_keyword"])){
 
@@ -131,6 +136,30 @@
                   </div>  
                     <br />';
           }
+
+        } elseif($_POST["reset"]){
+
+          $item = new item();
+          $items = $item->getMyItems();
+          
+          $listLength = !empty($items) ? count($items) :0;
+  
+          for($i = 0; $i < $listLength; $i++) {            
+              echo '<div class="cards w3-card-4 w3-light-grey">
+                      <div class="card">                    
+                        <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
+                        <h1 >' . $items[$i]->getItemName() . '</h1>                     
+                        <h4 > ' . $items[$i]->getItemCost() . '</h4>
+                        <h4 > ' . $items[$i]->getItemType() . '</h4>                       
+                        <h5 >$' . $items[$i]->getItemDescription() . '</h5>
+                        <form action="addWishlist.php">
+                        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
+                        </form>                                            
+                      </div>
+                    </div>  
+                      <br />';
+            }
+        
         } else {
           
           $item = new item();
