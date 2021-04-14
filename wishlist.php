@@ -78,7 +78,7 @@
 
   <div class="menuRow">
     <div class="searchHolder menuItems">
-      <form action="search.php">
+      <form action="search_insert.php">
         <input type="text" placeholder="search?" name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
