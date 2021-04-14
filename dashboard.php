@@ -1,4 +1,6 @@
 <?php
+
+error_reporting (E_ALL ^ E_NOTICE);
 require_once 'sessioncheck.php';
 
 require_once 'header.php';
@@ -80,10 +82,12 @@ require_once 'header.php';
 
   .buttonBoi {
     flex-shrink: 0;
+    margin: 5px;
   }
 
   .deleteLink {
     color: #2494ef;
+    
   }
 </style>
 
