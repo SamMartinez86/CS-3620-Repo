@@ -53,7 +53,6 @@ require_once 'header.php';
   }
 
   .menusItemized {
-    width: 350px;
     margin: 0.5em auto;
     flex: 1 0 24%;
     margin: 1%;
