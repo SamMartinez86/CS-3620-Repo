@@ -57,10 +57,10 @@ require_once 'header.php';
   }
 
   .menuRow {
-    width: 90%;
+    width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .menuItems {
@@ -71,18 +71,6 @@ require_once 'header.php';
 
   .searchHolder {
     cursor: pointer;
-  }
-
-  .searchBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-  }
-
-  .buttonBoi {
-    flex-shrink: 0;
-    margin: 5px;
   }
 
   .deleteLink {
