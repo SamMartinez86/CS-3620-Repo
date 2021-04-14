@@ -72,7 +72,11 @@
     color: #2494ef;
   }
 
-  /* method='post' action="search_insert.php" */
+  /* method='post' action="search_insert.php"      <div class="menuItems">
+      <form action="create_item.php">
+        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
+      </form>
+    </div> */
 </style>
 
 <!-- Begin page content -->
@@ -83,11 +87,6 @@
       <form action="search_insert.php">
         <input type="text" placeholder="search?" name="search_keyword">
         <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-    <div class="menuItems">
-      <form action="create_item.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
       </form>
     </div>
     <div class="menuItems">
@@ -127,13 +126,14 @@
                       <h5 >$' . $items[$i]->getItemDescription() . '</h5>
                       <form action="addWishlist.php">
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
-                      </form>                       
-                      <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                      </form>                                            
                     </div>
                     <br />';
           }
 
         /* } else {
+
+          <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
 
           $item = new item();
           $items = $item->getMyItems($_SESSION["user_id"]);
