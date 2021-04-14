@@ -141,7 +141,7 @@ class itemDAO {
     $conn->close();
 
     return $items;
-    
+  }  
   
 }
 ?>
