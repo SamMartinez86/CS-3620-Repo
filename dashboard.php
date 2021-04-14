@@ -63,13 +63,22 @@ require_once 'header.php';
 
   }
 
+ select {
+    width: auto;
+ }
+
+ form {
+  width: auto;
+ }
+
+
 
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
 
-  <div class="menuRow">
+  <center><div class="menuRow">
     <div class="menusItemized">
       <form action="wishlist.php">
         <input class="" type="submit" value="Wish list" />
@@ -99,7 +108,7 @@ require_once 'header.php';
         <input class="" type="submit" value="Logout" />
       </form>
     </div>
-  </div>
+    </center></div>
 
   <br />
   <div class="cardtainer">
