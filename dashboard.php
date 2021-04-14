@@ -87,8 +87,12 @@ require_once 'header.php';
   }
 
   .deleteLink {
-    color: #2494ef;
-    
+    color: #2494ef;  
+  }
+
+  .buttonzy{
+    height: 20px;
+
   }
 </style>
 
@@ -98,7 +102,7 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="searchBox">
       <div>
-      <select class="" name="order" id="order">
+      <select class="buttonzy" name="order" id="order">
         <option value="name_asc">Name Asc</option></option>
         <option value="name_desc">Name Desc</option>
         <option value="cost_asc">Cost Asc</option>
@@ -107,19 +111,19 @@ require_once 'header.php';
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="" type="text" placeholder="search?" name="search_keyword">         
-          <button class="" type="submit"><i class="fa fa-search"></i></button>
+          <input class="buttonzy" type="text" placeholder="search?" name="search_keyword">         
+          <button class="buttonzy" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="" type="submit" value="Reset" name="reset" />
+          <input class="buttonzy" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="" type="submit" value="wishlist" /></center>
+        <center><input class="buttonzy" type="submit" value="wishlist" /></center>
       </form>
     </div>
   </div>
