@@ -112,7 +112,7 @@
         $item = new item();
         $items = $item->getMyItems($_SESSION["user_id"]);
         
-        $listLength = count($items);
+        $listLength = !empty($items) ? count($items) :0;
 
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cards w3-card-4 w3-light-grey">
