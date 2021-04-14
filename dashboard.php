@@ -1,6 +1,7 @@
+
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <?php
 
-error_reporting (E_ALL ^ E_NOTICE);
 require_once 'sessioncheck.php';
 
 require_once 'header.php';
@@ -62,7 +63,7 @@ require_once 'header.php';
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: baseline;
   }
 
   .menuItems {}
