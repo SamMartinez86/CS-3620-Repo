@@ -42,7 +42,7 @@ require_once 'header.php';
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: stretch;
   }
 
@@ -71,12 +71,12 @@ require_once 'header.php';
 <main role="main" class="container">
 
   <div class="menuRow">
-    <div class="menusItemized w3-bar w3-block">
+    <div class="menusItemized">
       <form action="wishlist.php">
         <input class="buttonzy searchSpot" type="submit" value="Wish list" />
       </form>
     </div>
-    <div class="menusItemized w3-bar w3-block">
+    <div class="menusItemized ">
       <select class="buttonzy searchSpot" name="order">
         <option value="name_asc">Name Asc</option>
         <option value="name_desc">Name Desc</option>
@@ -84,18 +84,18 @@ require_once 'header.php';
         <option value="cost_desc">Cost Desc</option>
       </select>
     </div>
-    <div class="menusItemized w3-bar w3-block">
+    <div class="menusItemized ">
       <form method='post'>
         <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
         <button class="buttonzy searchSpot" type="submit">Search</button>
       </form>
     </div>
-    <div class="menusItemized w3-bar w3-block">
+    <div class="menusItemized ">
       <form method='post'>
         <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
       </form>
     </div>
-    <div class="menusItemized w3-bar w3-block">
+    <div class="menusItemized ">
       <form action="logout.php">
         <input class="buttonzy searchSpot" type="submit" value="Logout" />
       </form>
