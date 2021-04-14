@@ -1,4 +1,5 @@
 <?php
+error_reporting (E_ALL ^ E_NOTICE);
 class itemDAO {
   function getAllItems(){
     require_once('./utilities/connection.php');
