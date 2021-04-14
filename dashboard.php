@@ -64,7 +64,11 @@ require_once 'header.php';
     align-items: baseline;
   }
 
-  .menuItems {}
+  .menuItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
   .searchHolder {
     cursor: pointer;
@@ -94,28 +98,28 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="searchBox">
       <div>
-      <select class="searchHolder menuItems buttonBoi" name="order" id="order">
+      <select class="" name="order" id="order">
         <option value="name_asc">Name Asc</option></option>
         <option value="name_desc">Name Desc</option>
         <option value="cost_asc">Cost Asc</option>
         <option value="cost_desc">Cost Desc</option>
       </select>
       </div>
-      <div class="searchHolder menuItems buttonBoi">
+      <div class="menuItems">
         <form method='post'>
-          <input class="buttonBoi" type="text" placeholder="search?" name="search_keyword">         
-          <button class="btn btn-primary btn-lg buttonBoi" type="submit"><i class="fa fa-search"></i></button>
+          <input class="" type="text" placeholder="search?" name="search_keyword">         
+          <button class="" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="buttonBoi" type="submit" value="Reset" name="reset" />
+          <input class="" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue buttonBoi" type="submit" value="wishlist" /></center>
+        <center><input class="" type="submit" value="wishlist" /></center>
       </form>
     </div>
   </div>
