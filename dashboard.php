@@ -60,7 +60,7 @@ require_once 'header.php';
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .searchHolder {
@@ -86,12 +86,12 @@ require_once 'header.php';
 <main role="main" class="container">
 
   <div class="menuRow">
-    <div class="menusItemized">
+    <div class="menusItemized w3-bar w3-block">
       <form action="wishlist.php">
         <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
       </form>
     </div>
-    <div class="menusItemized">
+    <div class="menusItemized w3-bar w3-block">
       <select class="buttonzy searchSpot" name="order">
         <option value="name_asc">Name Asc</option>
         <option value="name_desc">Name Desc</option>
@@ -99,18 +99,18 @@ require_once 'header.php';
         <option value="cost_desc">Cost Desc</option>
       </select>
     </div>
-    <div class="menusItemized">
+    <div class="menusItemized w3-bar w3-block">
       <form method='post'>
         <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
         <button class="buttonzy searchSpot" type="submit">Search</button>
       </form>
     </div>
-    <div class="menusItemized">
+    <div class="menusItemized w3-bar w3-block">
       <form method='post'>
         <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
       </form>
     </div>
-    <div class="menusItemized">
+    <div class="menusItemized w3-bar w3-block">
       <form action="logout.php">
         <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
       </form>
