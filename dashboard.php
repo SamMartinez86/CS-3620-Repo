@@ -94,11 +94,11 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="searchBox">
       <div>
-      <select class="searchHolder menuItems" name="order" id="order">
-        <option value="name asc">Volvo</option>
-        <option value="name dsc">Saab</option>
-        <option value="cost asc">Mercedes</option>
-        <option value="cost dsc">Audi</option>
+      <select class="searchHolder menuItems buttonBoi" name="order" id="order">
+        <option value="name_asc">Name Asc</option></option>
+        <option value="name_desc">Name Desc</option>
+        <option value="cost_asc">Cost Asc</option>
+        <option value="cost_desc">Cost Desc</option>
       </select>
       </div>
       <div class="searchHolder menuItems">
