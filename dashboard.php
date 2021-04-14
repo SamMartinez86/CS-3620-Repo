@@ -108,7 +108,7 @@
         require_once('./item/item.php');
 
         $item = new item();
-        $items = $item->getAllItems();
+        $items = $item->getMyItems();
         
         $listLength = !empty($items) ? count($items) :0;
 
