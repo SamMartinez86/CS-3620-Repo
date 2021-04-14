@@ -108,11 +108,12 @@ class itemDAO {
 
 
   //search items
+  /*
   function searchItemsByUserId($search_keyword){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
 
-    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE %'" . $search_keyword . "'%";
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE %" . $search_keyword . "%";
     $result = $conn->query($sql);
 
     $items;
@@ -140,6 +141,7 @@ class itemDAO {
     $conn->close();
 
     return $items;
+    */
   
 }
 ?>
