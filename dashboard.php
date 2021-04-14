@@ -60,8 +60,6 @@ require_once 'header.php';
   .menusItemized {
     width: 100%;
     display: flex;
-    background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQE0NnIkjkotGA/company-background_10000/0/1541489744017?e=2159024400&v=beta&t=8CzJngJh5TrtF6_WFRYSlDeycAkT52hAfb4qLYGYnv8");
-    background-color: #cccccc;
 
   }
 
