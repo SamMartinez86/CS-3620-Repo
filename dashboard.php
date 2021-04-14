@@ -101,10 +101,10 @@ require_once 'header.php';
         <option value="cost_desc">Cost Desc</option>
       </select>
       </div>
-      <div class="searchHolder menuItems">
+      <div class="searchHolder menuItems buttonBoi">
         <form method='post'>
-          <input type="text" placeholder="search?" name="search_keyword">         
-          <button class="btn btn-primary btn-lg" type="submit"><i class="fa fa-search"></i></button>
+          <input class="buttonBoi" type="text" placeholder="search?" name="search_keyword">         
+          <button class="btn btn-primary btn-lg buttonBoi" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
@@ -115,7 +115,7 @@ require_once 'header.php';
     </div>
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
+        <center><input class="btn btn-primary w3-button w3-round w3-blue buttonBoi" type="submit" value="wishlist" /></center>
       </form>
     </div>
   </div>
