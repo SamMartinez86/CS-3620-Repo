@@ -100,9 +100,12 @@
   <div class="cardtainer">
     <?php
          
+
+        /* 
         if(isset($_GET["del"]) AND $_GET["del"] == "true"){
           echo "<script>alert('Item was deleted!')</script>";
         }
+        */
 
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -114,7 +117,8 @@
         $items = $item->getMyItems($_SESSION["user_id"]);
         $searchKey = $item->getSearchKeyword($_POST["search_keyword"])
         
-        $listLength = !empty($items) ? count($items) :0;
+        // $listLength = !empty($items) ? count($items) :0;
+        $listLength = count($items);
 
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cards w3-card-4 w3-light-grey">
