@@ -85,7 +85,7 @@ class item implements \JsonSerializable {
   // get item list function
   function getMyItems(){
     $itemDAO = new itemDAO();
-    return $itemDAO->getAllItems();
+    return $itemDAO->getItemsByUserId();
   }
 
   // get item list function

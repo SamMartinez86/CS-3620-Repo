@@ -115,7 +115,7 @@
         require_once('./item/item.php');
 
         $item = new item();
-        $items = $item->getMyItems();
+        $items = $item->getItemsByUserId($_SESSION["user_id"]);
         
         $listLength = !empty($items) ? count($items) :0;
         //$listLength = count($items);
