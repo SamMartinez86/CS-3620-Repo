@@ -7,7 +7,7 @@ class itemDAO {
     $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item";
     $result = $conn->query($sql);
 
-    $items = [];
+    $items;
     $index = 0;
 
     if ($result->num_rows > 0) {
