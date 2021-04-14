@@ -42,8 +42,8 @@ require_once 'header.php';
 
   .menuRow {
     width: 90%;
-    margin: 0 auto;
-    padding: 0.5em 0;
+    margin: 10px auto;
+    padding: 10px 0;
     display: flex;
     flex-flow: wrap;
   }
@@ -53,7 +53,7 @@ require_once 'header.php';
   }
 
   .menusItemized {
-
+    display: flex;
   }
 
 
