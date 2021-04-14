@@ -70,7 +70,7 @@ require_once 'header.php';
         </form>
       </div>
       <div class="menusItemized ">
-        <select class="" name="order">
+        <select name="order">
           <option value="name_asc">Name Asc</option>
           <option value="name_desc">Name Desc</option>
           <option value="cost_asc">Cost Asc</option>
