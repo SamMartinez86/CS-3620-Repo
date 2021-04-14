@@ -60,13 +60,7 @@ require_once 'header.php';
     width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-  }
-
-  .menuItems {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .searchHolder {
@@ -74,9 +68,9 @@ require_once 'header.php';
   }
 
   .menusItemized {
-    width: 100px; 
+    width: 100px;
     display: flex;
-    
+
   }
 
   .buttonzy {
@@ -104,27 +98,28 @@ require_once 'header.php';
         <option value="cost_asc">Cost Asc</option>
         <option value="cost_desc">Cost Desc</option>
       </select>
-      <div class="menusItemized">
-        <form method='post'>
-          <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
-          <button class="buttonzy searchSpot" type="submit">Search</button>
-        </form>
-      </div>
-      <div class="menusItemized">
-        <form method='post'>
-          <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
-        </form>
-      </div>
-      <div class="menusItemized">
-        <form action="logout.php">
-          <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
-        </form>
-      </div>
     </div>
+    <div class="menusItemized">
+      <form method='post'>
+        <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
+        <button class="buttonzy searchSpot" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="menusItemized">
+      <form method='post'>
+        <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
+      </form>
+    </div>
+    <div class="menusItemized">
+      <form action="logout.php">
+        <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
+      </form>
+    </div>
+  </div>
 
-    <br />
-    <div class="cardtainer">
-      <?php
+  <br />
+  <div class="cardtainer">
+    <?php
 
 
         //ini_set('display_errors', 1);
@@ -205,7 +200,7 @@ require_once 'header.php';
         }
         
         ?>
-    </div>
+  </div>
 
 </main>
 
