@@ -107,7 +107,9 @@
 
         require_once('./item/item.php');
 
-        if( ! empty($_POST['search_keyword'])){
+        echo $_POST["search_keyword"];
+
+        if(!isset($_POST["search_keyword"])){
 
         $item = new item();
         $items = $item->getMyItems();
@@ -132,7 +134,7 @@
         } else {
           
           $item = new item();
-          $items = $item->searchItemsByKeyword($_POST['search_keyword']);
+          $items = $item->searchItemsByKeyword($_POST["search_keyword"]);
           
           $listLength = !empty($items) ? count($items) :0;
 
