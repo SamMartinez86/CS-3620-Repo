@@ -42,7 +42,7 @@ require_once 'header.php';
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .searchHolder {
@@ -54,6 +54,7 @@ require_once 'header.php';
     display: flex;
     background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQE0NnIkjkotGA/company-background_10000/0/1541489744017?e=2159024400&v=beta&t=8CzJngJh5TrtF6_WFRYSlDeycAkT52hAfb4qLYGYnv8");
     background-color: #cccccc;
+    flex-grow: 1;
   }
 
   .buttonzy {
