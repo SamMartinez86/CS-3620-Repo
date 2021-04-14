@@ -56,6 +56,10 @@ require_once 'header.php';
     display: flex;
   }
 
+  .top-menu {
+
+  }
+
 
 </style>
 
@@ -79,7 +83,7 @@ require_once 'header.php';
       </div>
       <div class="menusItemized ">
         <form method='post'>
-          <input class="searchHolder" type="text" placeholder="search?" name="search_keyword">
+          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
           <button  type="submit">Search</button>
         </form>
       </div>

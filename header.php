@@ -6,9 +6,12 @@
     .shiftl{
         text-align: left;
     }
+    a:link {
+        text-decoration: none;
+    }
 
 </style>
 
-<div class=" w3-panel w3-padding-24 w3-blue">
-    <h1 class="shiftl w3-text-white">Electronics Marketplace</h1>
+<div class="w3-panel w3-padding-24 w3-blue top-menu">
+    <a href="dashboard.php"><h1 class="shiftl w3-text-white">Electronics Marketplace</h1></a>
 </div>
