@@ -92,7 +92,10 @@ require_once 'header.php';
 
   .buttonzy{
     
+  }
 
+  .searchSpot {
+    height: 
   }
 </style>
 
@@ -112,9 +115,7 @@ require_once 'header.php';
       <div class="menuItems">
         <form method='post'>
           <input class="buttonzy" type="text" placeholder="search?" name="search_keyword">  
-      <div class="menuItems">
-          <button class="buttonzy" type="submit"><i class="fa fa-search"></i></button>
-      </div>
+          <button class="buttonzy searchSpot" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
