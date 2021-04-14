@@ -70,7 +70,7 @@ require_once 'header.php';
     cursor: pointer;
   }
 
-  .searchBox {
+  .searchBox{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -84,7 +84,7 @@ require_once 'header.php';
 
   .deleteLink {
     color: #2494ef;
-
+    
   }
 </style>
 
@@ -94,20 +94,17 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="searchBox">
       <div>
-        <select class="searchHolder menuItems buttonBoi" name="order" id="order">
-          <option value="name_asc">Name Asc</option>
-          </option>
-          <option value="name_desc">Name Desc</option>
-          <option value="cost_asc">Cost Asc</option>
-          <option value="cost_desc">Cost Desc</option>
-        </select>
+      <select class="searchHolder menuItems buttonBoi" name="order" id="order">
+        <option value="name_asc">Name Asc</option></option>
+        <option value="name_desc">Name Desc</option>
+        <option value="cost_asc">Cost Asc</option>
+        <option value="cost_desc">Cost Desc</option>
+      </select>
       </div>
       <div class="searchHolder menuItems">
         <form method='post'>
-          <input type="text" placeholder="search?" name="search_keyword">
-          <div class="menuItems">
-            <button class="" type="submit"><i class="fa fa-search"></i></button>
-          </div>
+          <input type="text" placeholder="search?" name="search_keyword">         
+          <button class="w3-btn w3-tiny w3-ripple buttonBoi" type="submit"><i class="fa fa-search  w3-red"></i></button>
         </form>
       </div>
       <div class="menuItems">
