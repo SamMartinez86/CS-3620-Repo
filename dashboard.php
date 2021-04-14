@@ -73,8 +73,8 @@ require_once 'header.php';
     cursor: pointer;
   }
 
-  .deleteLink {
-    color: #2494ef;
+  .menusItemized {
+    width: 100px; 
   }
 
   .buttonzy {
@@ -90,36 +90,39 @@ require_once 'header.php';
 <main role="main" class="container">
 
   <div class="menuRow">
+    <div class="menusItemized">
+      <form action="wishlist.php">
+        <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
+      </form>
+    </div>
+    <div class="menusItemized">
+      <select class="buttonzy searchSpot" name="order">
+        <option value="name_asc">Name Asc</option>
+        <option value="name_desc">Name Desc</option>
+        <option value="cost_asc">Cost Asc</option>
+        <option value="cost_desc">Cost Desc</option>
+      </select>
+      <div class="menusItemized">
+        <form method='post'>
+          <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
+          <button class="buttonzy searchSpot" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="menusItemized">
+        <form method='post'>
+          <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
+        </form>
+      </div>
+      <div class="menusItemized">
+        <form action="logout.php">
+          <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
+        </form>
+      </div>
+    </div>
 
-    <form action="wishlist.php">
-      <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
-    </form>
-
-    <select class="buttonzy searchSpot" name="order">
-      <option value="name_asc">Name Asc</option>
-      <option value="name_desc">Name Desc</option>
-      <option value="cost_asc">Cost Asc</option>
-      <option value="cost_desc">Cost Desc</option>
-    </select>
-
-    <form method='post'>
-      <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
-      <button class="buttonzy searchSpot" type="submit">Search</button>
-    </form>
-
-    <form method='post'>
-      <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
-    </form>
-
-    <form action="logout.php">
-      <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
-    </form>
-
-  </div>
-
-  <br />
-  <div class="cardtainer">
-    <?php
+    <br />
+    <div class="cardtainer">
+      <?php
 
 
         //ini_set('display_errors', 1);
@@ -200,7 +203,7 @@ require_once 'header.php';
         }
         
         ?>
-  </div>
+    </div>
 
 </main>
 
