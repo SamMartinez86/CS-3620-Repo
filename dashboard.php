@@ -70,7 +70,8 @@ require_once 'header.php';
   .menusItemized {
     width: 100%;
     display: flex;
-
+    background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQE0NnIkjkotGA/company-background_10000/0/1541489744017?e=2159024400&v=beta&t=8CzJngJh5TrtF6_WFRYSlDeycAkT52hAfb4qLYGYnv8");
+    background-color: #cccccc;
   }
 
   .buttonzy {
@@ -88,7 +89,7 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="menusItemized w3-bar w3-block">
       <form action="wishlist.php">
-        <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
+        <input class="buttonzy searchSpot" type="submit" value="Wish list" />
       </form>
     </div>
     <div class="menusItemized w3-bar w3-block">
@@ -112,7 +113,7 @@ require_once 'header.php';
     </div>
     <div class="menusItemized w3-bar w3-block">
       <form action="logout.php">
-        <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
+        <input class="buttonzy searchSpot" type="submit" value="Logout" />
       </form>
     </div>
   </div>
