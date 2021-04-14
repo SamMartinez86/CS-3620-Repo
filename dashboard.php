@@ -88,8 +88,6 @@
         <input type="text" placeholder="search?" name="search_keyword">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
-    </div>
-    <div class="menuItems">
       <form method='post'>
         <center><input class="btn btn-primary w3-button w3-round w3-red" type="submit" value="Reset" name="reset"/></center>
       </form>
