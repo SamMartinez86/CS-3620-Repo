@@ -57,10 +57,10 @@ require_once 'header.php';
   }
 
   .menuRow {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .searchHolder {
@@ -68,7 +68,7 @@ require_once 'header.php';
   }
 
   .menusItemized {
-    width: 100px;
+    width: 100%;
     display: flex;
 
   }
