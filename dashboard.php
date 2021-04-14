@@ -104,12 +104,12 @@ require_once 'header.php';
       <div class="searchHolder menuItems">
         <form method='post'>
           <input type="text" placeholder="search?" name="search_keyword">         
-          <button class="" type="submit"><i class="fa fa-search  w3-red"></i></button>
+          <button class="btn btn-primary btn-lg" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="" type="submit" value="Reset" name="reset" />
+          <input class="buttonBoi" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
