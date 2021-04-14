@@ -84,10 +84,6 @@ require_once 'header.php';
   .searchSpot {
     height: 50px;
   }
-
-
-
-  /* */
 </style>
 
 <!-- Begin page content -->
@@ -95,8 +91,15 @@ require_once 'header.php';
 
   <div class="menuRow">
 
-    <select class="buttonzy searchSpot" name="order" id="order">
-       
+    <form action="wishlist.php">
+      <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
+    </form>
+
+    <select class="buttonzy searchSpot" name="order">
+      <option value="name_asc">Name Asc</option>
+      <option value="name_desc">Name Desc</option>
+      <option value="cost_asc">Cost Asc</option>
+      <option value="cost_desc">Cost Desc</option>
     </select>
 
     <form method='post'>
@@ -106,10 +109,6 @@ require_once 'header.php';
 
     <form method='post'>
       <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
-    </form>
-
-    <form action="wishlist.php">
-      <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
     </form>
 
     <form action="logout.php">
