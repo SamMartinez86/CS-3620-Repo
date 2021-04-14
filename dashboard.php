@@ -1,5 +1,4 @@
 <?php
-error_reporting (E_ALL ^ E_NOTICE);
 require_once 'sessioncheck.php';
 
 require_once 'header.php';
@@ -58,50 +57,43 @@ require_once 'header.php';
     display: flex;
   }
 
-  select {
-  }
+  select {}
 
-  form {
-  }
-
-  
+  form {}
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
-
-  <center>
-    <div class="menuRow">
-      <div class="menusItemized">
-        <form action="wishlist.php">
-          <input class="" type="submit" value="Wish list" />
-        </form>
-      </div>
-      <div class="menusItemized ">
-        <select class="" name="order">
-          <option value="name_asc">Name Asc</option>
-          <option value="name_desc">Name Desc</option>
-          <option value="cost_asc">Cost Asc</option>
-          <option value="cost_desc">Cost Desc</option>
-        </select>
-      </div>
-      <div class="menusItemized ">
-        <form method='post'>
-          <input class="" type="text" placeholder="search?" name="search_keyword">
-          <button class="" type="submit">Search</button>
-        </form>
-      </div>
-      <div class="menusItemized ">
-        <form method='post'>
-          <input class="" type="submit" value="Reset" name="reset" />
-        </form>
-      </div>
-      <div class="menusItemized ">
-        <form action="logout.php">
-          <input class="" type="submit" value="Logout" />
-        </form>
-      </div>
-  </center>
+  <div class="menuRow">
+    <div class="menusItemized">
+      <form action="wishlist.php">
+        <input class="" type="submit" value="Wish list" />
+      </form>
+    </div>
+    <div class="menusItemized">
+      <select class="" name="order">
+        <option value="name_asc">Name Asc</option>
+        <option value="name_desc">Name Desc</option>
+        <option value="cost_asc">Cost Asc</option>
+        <option value="cost_desc">Cost Desc</option>
+      </select>
+    </div>
+    <div class="menusItemized">
+      <form method='post'>
+        <input class="" type="text" placeholder="search?" name="search_keyword">
+        <button class="" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="menusItemized ">
+      <form method='post'>
+        <input class="" type="submit" value="Reset" name="reset" />
+      </form>
+    </div>
+    <div class="menusItemized ">
+      <form action="logout.php">
+        <input class="" type="submit" value="Logout" />
+      </form>
+    </div>
   </div>
 
   <br />
