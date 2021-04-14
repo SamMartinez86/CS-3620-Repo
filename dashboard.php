@@ -84,6 +84,10 @@ require_once 'header.php';
   .searchSpot {
     height: 50px;
   }
+
+
+
+  /* */
 </style>
 
 <!-- Begin page content -->
@@ -92,11 +96,7 @@ require_once 'header.php';
   <div class="menuRow">
 
     <select class="buttonzy searchSpot" name="order" id="order">
-      <option value="name_asc">Name Asc</option>
-      </option>
-      <option value="name_desc">Name Desc</option>
-      <option value="cost_asc">Cost Asc</option>
-      <option value="cost_desc">Cost Desc</option>
+       
     </select>
 
     <form method='post'>
