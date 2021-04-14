@@ -1,121 +1,123 @@
-<?php 
-    require_once'sessioncheck.php'; 
+<?php
+require_once 'sessioncheck.php';
 
-    require_once'header.php';
+require_once 'header.php';
 
 ?>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  h1 {
-    text-align: center;
-  }
+    h1 {
+        text-align: center;
+    }
 
-  div {
-    text-align: center;
-    font-size: 20px;
-  }
+    div {
+        text-align: center;
+        font-size: 20px;
+    }
 
-  th {
-    text-align: left;
-  }
+    th {
+        text-align: left;
+    }
 
-  a {
-    color: blue;
-    font-size: 20px;
-  }
+    a {
+        color: blue;
+        font-size: 20px;
+    }
 
-  img {
+    img {
 
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    vertical-align: top;
-  }
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        vertical-align: top;
+    }
 
-  .cardtainer {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0.5em 0;
-    display: flex;
-    flex-flow: wrap;
+    .cardtainer {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5em 0;
+        display: flex;
+        flex-flow: wrap;
 
-  }
+    }
 
-  .cards {
-    width: 350px;
-    margin: 0.5em auto;
-    flex: 1 0 24%;
-    margin: 1%;
-  }
+    .cards {
+        width: 350px;
+        margin: 0.5em auto;
+        flex: 1 0 24%;
+        margin: 1%;
+    }
 
-  .card {
-    flex: 0 1 24%;
+    .card {
+        flex: 0 1 24%;
 
-  }
+    }
 
-  .menuRow {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+    .menuRow {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
-  .menuItems {}
+    .menuItems {
+    }
 
-  .searchHolder {
-    cursor: pointer;
-  }
+    .searchHolder {
+        cursor: pointer;
+    }
 
-  .deleteLink {
-    color: #2494ef;
-  }
+    .deleteLink {
+        color: #2494ef;
+    }
 
-  /* method='post' action="search_insert.php"      <div class="menuItems">
-      <form action="create_item.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
-      </form>
-    </div> */
+    /* method='post' action="search_insert.php"      <div class="menuItems">
+        <form action="create_item.php">
+          <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
+        </form>
+      </div> */
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
 
-  <div class="menuRow">
-    <div class="searchHolder menuItems">
-      <form method='post'>
-        <input type="text" placeholder="search?" name="search_keyword">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+    <div class="menuRow">
+        <div class="searchHolder menuItems">
+            <form method='post'>
+                <input action="search_insert.php" type="text" placeholder="search" name="search_keyword">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="menuItems">
+            <form action="wishlist.php">
+                <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist"/>
+                </center>
+            </form>
+        </div>
     </div>
-    <div class="menuItems">
-      <form action="wishlist.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
-      </form>
-    </div>
-  </div>
 
-  <br />
-  <div class="cardtainer">
-    <?php
-         
-        
+    <br/>
+    <div class="cardtainer">
+        <?php
+
+
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
         require_once('./item/item.php');
 
-        if( ! empty($_POST['search_keyword'])){
+        if (!empty($_POST['search_keyword'])) {
 
-        $item = new item();
-        $items = $item->getMyItems();
-        
-        $listLength = !empty($items) ? count($items) : 0;
+            $item = new item();
+            $items = $item->getMyItems();
 
-        for($i = 0; $i < $listLength; $i++) {            
-            echo '<div class="cards w3-card-4 w3-light-grey">
+            $listLength = !empty($items) ? count($items) : 0;
+
+            for ($i = 0; $i < $listLength; $i++) {
+                echo '<div class="cards w3-card-4 w3-light-grey">
                     <div class="card">                    
                       <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
                       <h1 >' . $items[$i]->getItemName() . '</h1>                     
@@ -128,16 +130,16 @@
                     </div>
                   </div>  
                     <br />';
-          }
+            }
         } else {
-          
-          $item = new item();
-          $items = $item->searchItemsByKeyword($_POST['search_keyword']);
-          
-          $listLength = !empty($items) ? count($items) :0;
 
-          for($i = 0; $i < $listLength; $i++) {            
-              echo '<div class="cards w3-card-4 w3-light-grey">
+            $item = new item();
+            $items = $item->searchItemsByKeyword($_POST['search_keyword']);
+
+            $listLength = !empty($items) ? count($items) : 0;
+
+            for ($i = 0; $i < $listLength; $i++) {
+                echo '<div class="cards w3-card-4 w3-light-grey">
                       <div class="card">                    
                         <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
                         <h1 >' . $items[$i]->getItemName() . '</h1>                     
@@ -150,11 +152,11 @@
                       </div>
                     </div>  
                       <br />';
-          }
+            }
 
         }
-      ?>
-  </div>
+        ?>
+    </div>
 
 </main>
 
