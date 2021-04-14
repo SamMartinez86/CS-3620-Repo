@@ -132,7 +132,7 @@
         } else {
           
           $item = new item();
-          $items = $item->searchItemsByUserId($_POST['search_keyword']);
+          $items = $item->searchItemsByKeyword($_POST['search_keyword']);
           
           $listLength = !empty($items) ? count($items) :0;
 

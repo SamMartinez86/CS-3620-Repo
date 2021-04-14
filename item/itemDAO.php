@@ -109,14 +109,14 @@ class itemDAO {
 
   //search items
   
-  function searchItemsByUserId($search_keyword){
+  function searchItemsByKeyword($search_keyword){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
 
     $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE %" . $search_keyword . "%";
     $result = $conn->query($sql);
 
-    $items;
+    $items = [];
     $index = 0;
 
     if ($result->num_rows > 0) {

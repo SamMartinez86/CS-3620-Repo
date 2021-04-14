@@ -119,9 +119,9 @@ class item implements \JsonSerializable {
   }
   
   // get item list function
-  function searchItemsByUserId($search_keyword){
+  function searchItemsByKeyword($search_keyword){
     $itemDAO = new itemDAO();
-    return $itemDAO->searchItemsByUserId($search_keyword);
+    return $itemDAO->searchItemsByKeyword($search_keyword);
   }
 }
 
