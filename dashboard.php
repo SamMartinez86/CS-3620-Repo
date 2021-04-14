@@ -43,6 +43,7 @@ require_once 'header.php';
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: stretch;
   }
 
   .searchHolder {
