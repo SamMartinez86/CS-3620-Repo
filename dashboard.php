@@ -67,11 +67,14 @@ require_once 'header.php';
   .searchHolder {
     cursor: pointer;
   }
+  .buttonguy {
+    width: 10px;
+  }
 
   .searchBox{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 5px;
 
   }
@@ -94,7 +97,7 @@ require_once 'header.php';
       </div>
       <div class="menuItems">
         <form method='post'>
-          <input class="w3-btn w3-tiny w3-ripple w3-red" type="submit" value="Reset" name="reset" />
+          <input class="w3-btn w3-tiny w3-ripple w3-red buttonguy" type="submit" value="Reset" name="reset" />
         </form>
       </div>
     </div>
