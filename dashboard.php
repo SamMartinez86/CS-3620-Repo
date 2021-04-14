@@ -107,7 +107,7 @@
         }
         */
 
-        /*
+        
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
@@ -115,8 +115,7 @@
         require_once('./item/item.php');
 
         $item = new item();
-        $items = $item->getMyItems($_SESSION["user_id"]);
-        $searchKey = $item->getSearchKeyword($_POST["search_keyword"])
+        $items = $item->getMyItems();
         
         // $listLength = !empty($items) ? count($items) :0;
         $listLength = count($items);
@@ -135,10 +134,12 @@
                     </div>
                     <br />';
           }
-          */
+          
         /* } else {
 
           <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+          
+          $searchKey = $item->getSearchKeyword($_POST["search_keyword"])
 
           $item = new item();
           $items = $item->getMyItems($_SESSION["user_id"]);
