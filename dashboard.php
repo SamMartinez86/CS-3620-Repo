@@ -61,7 +61,6 @@ require_once 'header.php';
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: baseline;
   }
 
   .menuItems {
@@ -74,7 +73,7 @@ require_once 'header.php';
     cursor: pointer;
   }
 
-  .searchBox{
+  .searchBox {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -87,15 +86,15 @@ require_once 'header.php';
   }
 
   .deleteLink {
-    color: #2494ef;  
+    color: #2494ef;
   }
 
-  .buttonzy{
-    
+  .buttonzy {
+    flex-grow: 3;
   }
 
   .searchSpot {
-    height: 34px;
+    height: 50px;
   }
 </style>
 
@@ -103,39 +102,32 @@ require_once 'header.php';
 <main role="main" class="container">
 
   <div class="menuRow">
-    <div class="searchBox">
-      <div class="menuItems">
-      <select class="buttonzy searchSpot" name="order" id="order">
-        <option value="name_asc">Name Asc</option></option>
-        <option value="name_desc">Name Desc</option>
-        <option value="cost_asc">Cost Asc</option>
-        <option value="cost_desc">Cost Desc</option>
-      </select>
-      </div>
-      <div class="menuItems">
-        <form method='post'>
-          <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">  
-          <button class="buttonzy searchSpot" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      <div class="menuItems">
-        <form method='post'>
-          <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
-        </form>
-      </div>
-    </div>
-    <div class="menuItems">
-      <form action="wishlist.php">
-        <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
-      </form>
-    </div>
-    <div class="menuItems" >
-      <div class="menuItems">
-        <form action="logout.php">
-          <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
-        </form>
-      </div>
-    </div>
+
+    <select class="buttonzy searchSpot" name="order" id="order">
+      <option value="name_asc">Name Asc</option>
+      </option>
+      <option value="name_desc">Name Desc</option>
+      <option value="cost_asc">Cost Asc</option>
+      <option value="cost_desc">Cost Desc</option>
+    </select>
+
+    <form method='post'>
+      <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
+      <button class="buttonzy searchSpot" type="submit">Search</button>
+    </form>
+
+    <form method='post'>
+      <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
+    </form>
+
+    <form action="wishlist.php">
+      <center><input class="buttonzy searchSpot" type="submit" value="Wish list" /></center>
+    </form>
+
+    <form action="logout.php">
+      <center><input class="buttonzy searchSpot" type="submit" value="Logout" /></center>
+    </form>
+
   </div>
 
   <br />
