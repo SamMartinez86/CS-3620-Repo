@@ -87,7 +87,7 @@ require_once 'header.php';
     </div>
     <div class="menuItems">
       <form method='post'>
-        <center><input class="btn btn-primary w3-button w3-round w3-red" type="submit" value="Reset" name="reset"/></center>
+        <center><input class="btn btn-primary w3-button w3-round w3-red" type="submit" name="reset"/><i class="fa fa-search"></center>
       </form>
     </div>
     <div class="menuItems">
@@ -102,9 +102,9 @@ require_once 'header.php';
         <?php
 
 
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
+        //ini_set('display_errors', 1);
+        //ini_set('display_startup_errors', 1);
+        //error_reporting(E_ALL);
 
         require_once('./item/item.php');
         
