@@ -53,9 +53,7 @@ require_once 'header.php';
   }
 
   .menusItemized {
-    margin: 0.5em auto;
-    flex: 1 0 24%;
-    margin: 1%;
+
   }
 
 
