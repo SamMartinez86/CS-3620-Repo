@@ -55,7 +55,7 @@ class itemDAO {
     $conn->close();
   }
 
-  // select heros by user id function
+  // select items by user id function
   function getItemsByUserId($user_id){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
@@ -106,5 +106,40 @@ class itemDAO {
     $conn->close();
   }
 
+
+  //search items
+  function searchItemsByUserId($user_id, $search_keyword){
+    require_once('./utilities/connection.php');
+    require_once('./item/item.php');
+
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE user_id =" . $user_id . " AND item_name LIKE "%. $search_keyword .%";
+    $result = $conn->query($sql);
+
+    $items;
+    $index = 0;
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $item = new item();
+
+            $item->setItemId($row["item_id"]);
+            $item->setItemName($row["item_name"]);
+            $item->setItemCost($row["item_description"]);
+            $item->setItemDescription($row["item_cost"]);
+            $item->setItemType($row["item_type"]);
+            $item->setItemImage($row["item_image"]);
+            $item->setUserId($row["user_id"]);
+            $items[$index] = $item;
+            $index = $index + 1;
+        }
+    }
+    else {
+        echo "0 results";
+    } 
+    $conn->close();
+
+    return $items;
+  
 }
 ?>
