@@ -20,7 +20,5 @@ $item->setUserId($_SESSION["user_id"]);
 
 $item->createItem(); 
 
-
-
 header("Location: dashboard.php");
 ?>

@@ -4,6 +4,7 @@ require_once('./item/itemDAO.php');
 class item implements \JsonSerializable {
 
   // object member variables
+  private $search_keyword;
   private $item_id;
   private $user_id;
   private $item_name;
@@ -15,6 +16,14 @@ class item implements \JsonSerializable {
 
   // constructor
   function __construct() {
+  }
+
+  // search_keyword getter/setter
+  function getSearchKeyword(){
+    return $this->search_keyword;
+  }
+  function setSearchKeyword($item_id){
+    $this->search_keyword = $search_keyword;
   }
 
   // item_id getter/setter
@@ -79,11 +88,11 @@ class item implements \JsonSerializable {
     return $itemDAO->getItemsByUserId($user_id);
   }
 
-    // get item list function
-    function getItemsByUserId($user_id){
-      $itemDAO = new itemDAO();
-      return $itemDAO->getItemsByUserId($user_id);
-    }
+  // get item list function
+  function getItemsByUserId($user_id){
+    $itemDAO = new itemDAO();
+    return $itemDAO->getItemsByUserId($user_id);
+  }
 
   // serialize object Json
   public function jsonSerialize(){
@@ -101,6 +110,18 @@ class item implements \JsonSerializable {
   function deleteItem($user_id, $item_id){
     $itemDAO = new itemDAO();
     $itemDAO->deleteItem($user_id, $item_id);
+  }
+  
+  // create new hero entry
+  function searchItem(){
+    $itemDAO = new itemDAO();
+    $itemDAO->searchItem($this);
+  }
+  
+  // get item list function
+  function searchItemsByUserId($user_id, $search_keyword){
+    $itemDAO = new itemDAO();
+    return $itemDAO->searchItemsByUserId($user_id, $search_keyword);
   }
 }
 

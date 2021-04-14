@@ -71,6 +71,8 @@
   .deleteLink {
     color: #2494ef;
   }
+
+  /* method='post' action="search_insert.php" */
 </style>
 
 <!-- Begin page content -->
@@ -78,8 +80,8 @@
 
   <div class="menuRow">
     <div class="searchHolder menuItems">
-      <form action="search.php">
-        <input type="text" placeholder="search?" name="search">
+      <form action="search_insert.php">
+        <input type="text" placeholder="search?" name="search_keyword">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
@@ -111,6 +113,7 @@
 
         $item = new item();
         $items = $item->getMyItems($_SESSION["user_id"]);
+        $searchKey = $item->getSearchKeyword($_POST["search_keyword"])
         
         $listLength = !empty($items) ? count($items) : 0;
 
@@ -127,9 +130,34 @@
                       </form>                       
                       <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
-                  </div>
-                  <br />';
-        }
+                    <br />';
+          }
+
+        /* } else {
+
+          $item = new item();
+          $items = $item->getMyItems($_SESSION["user_id"]);
+          
+          $listLength = count($items);
+
+          for($i = 0; $i < $listLength; $i++) {            
+              echo '<div class="cards w3-card-4 w3-light-grey">
+                      <div class="card">                    
+                        <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
+                        <h1 >' . $items[$i]->getItemName() . '</h1>                     
+                        <h4 > ' . $items[$i]->getItemCost() . '</h4>
+                        <h4 > ' . $items[$i]->getItemType() . '</h4>                       
+                        <h5 >$' . $items[$i]->getItemDescription() . '</h5>
+                        <form action="addWishlist.php">
+                        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
+                        </form>                       
+                        <a href="delete_item.php?item_id=' . $items[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                      </div>
+                    </div>
+                    <br />';
+          } 
+
+        } */
       ?>
   </div>
 
