@@ -9,31 +9,8 @@ require_once 'header.php';
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  h1 {
-    /* text-align: center; */
-  }
-
-  div {
-    /*
-    text-align: center;
-    font-size: 20px;
-    */
-  }
-
-  th {
-    /*align: left; */
-  }
-
-  a {
-
-    /*
-    color: blue;
-    font-size: 20px;
-    */
-  }
 
   img {
-
     width: 100%;
     height: 350px;
     object-fit: cover;
@@ -80,11 +57,11 @@ require_once 'header.php';
   }
 
   .buttonzy {
-    flex-grow: 3;
+ 
   }
 
   .searchSpot {
-    height: 50px;
+
   }
 </style>
 
