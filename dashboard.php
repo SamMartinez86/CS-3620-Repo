@@ -86,7 +86,7 @@ require_once 'header.php';
     <div class="menuRow">
         <div class="searchHolder menuItems">
             <form method='post'>
-                <input action="search_insert.php" type="text" placeholder="search" name="search_keyword">
+                <input type="text" placeholder="search?" name="search_keyword">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
