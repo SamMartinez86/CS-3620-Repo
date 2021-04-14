@@ -50,6 +50,7 @@ require_once 'header.php';
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    flex-basis: 16.66%;
   }
 
   .searchHolder {
@@ -61,16 +62,10 @@ require_once 'header.php';
     display: flex;
     background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQE0NnIkjkotGA/company-background_10000/0/1541489744017?e=2159024400&v=beta&t=8CzJngJh5TrtF6_WFRYSlDeycAkT52hAfb4qLYGYnv8");
     background-color: #cccccc;
-    flex-basis: 16.66%;
-  }
-
-  .buttonzy {
- 
-  }
-
-  .searchSpot {
 
   }
+
+
 </style>
 
 <!-- Begin page content -->
@@ -79,11 +74,11 @@ require_once 'header.php';
   <div class="menuRow">
     <div class="menusItemized">
       <form action="wishlist.php">
-        <input class="buttonzy searchSpot" type="submit" value="Wish list" />
+        <input class="" type="submit" value="Wish list" />
       </form>
     </div>
     <div class="menusItemized ">
-      <select class="buttonzy searchSpot" name="order">
+      <select class="" name="order">
         <option value="name_asc">Name Asc</option>
         <option value="name_desc">Name Desc</option>
         <option value="cost_asc">Cost Asc</option>
@@ -92,18 +87,18 @@ require_once 'header.php';
     </div>
     <div class="menusItemized ">
       <form method='post'>
-        <input class="buttonzy searchSpot" type="text" placeholder="search?" name="search_keyword">
-        <button class="buttonzy searchSpot" type="submit">Search</button>
+        <input class="" type="text" placeholder="search?" name="search_keyword">
+        <button class="" type="submit">Search</button>
       </form>
     </div>
     <div class="menusItemized ">
       <form method='post'>
-        <input class="buttonzy searchSpot" type="submit" value="Reset" name="reset" />
+        <input class="" type="submit" value="Reset" name="reset" />
       </form>
     </div>
     <div class="menusItemized ">
       <form action="logout.php">
-        <input class="buttonzy searchSpot" type="submit" value="Logout" />
+        <input class="" type="submit" value="Logout" />
       </form>
     </div>
   </div>
