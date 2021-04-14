@@ -9,9 +9,7 @@ require_once 'header.php';
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-
-  .carditem{
+  .carditem {
     text-align: center
   }
 
@@ -61,51 +59,50 @@ require_once 'header.php';
   }
 
   select {
-    width: 100px;
   }
 
   form {
-    width: 100px;
   }
 
-
-
+  
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
 
-  <center><div class="menuRow">
-    <div class="menusItemized">
-      <form action="wishlist.php">
-        <input class="" type="submit" value="Wish list" />
-      </form>
-    </div>
-    <div class="menusItemized ">
-      <select class="" name="order">
-        <option value="name_asc">Name Asc</option>
-        <option value="name_desc">Name Desc</option>
-        <option value="cost_asc">Cost Asc</option>
-        <option value="cost_desc">Cost Desc</option>
-      </select>
-    </div>
-    <div class="menusItemized ">
-      <form method='post'>
-        <input class="" type="text" placeholder="search?" name="search_keyword">
-        <button class="" type="submit">Search</button>
-      </form>
-    </div>
-    <div class="menusItemized ">
-      <form method='post'>
-        <input class="" type="submit" value="Reset" name="reset" />
-      </form>
-    </div>
-    <div class="menusItemized ">
-      <form action="logout.php">
-        <input class="" type="submit" value="Logout" />
-      </form>
-    </div>
-    </center></div>
+  <center>
+    <div class="menuRow">
+      <div class="menusItemized">
+        <form action="wishlist.php">
+          <input class="" type="submit" value="Wish list" />
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <select class="" name="order">
+          <option value="name_asc">Name Asc</option>
+          <option value="name_desc">Name Desc</option>
+          <option value="cost_asc">Cost Asc</option>
+          <option value="cost_desc">Cost Desc</option>
+        </select>
+      </div>
+      <div class="menusItemized ">
+        <form method='post'>
+          <input class="" type="text" placeholder="search?" name="search_keyword">
+          <button class="" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <form method='post'>
+          <input class="" type="submit" value="Reset" name="reset" />
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <form action="logout.php">
+          <input class="" type="submit" value="Logout" />
+        </form>
+      </div>
+  </center>
+  </div>
 
   <br />
   <div class="cardtainer">
