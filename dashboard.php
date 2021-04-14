@@ -60,13 +60,13 @@ require_once 'header.php';
     display: flex;
   }
 
- select {
+  select {
     width: 100px;
- }
+  }
 
- form {
-  width: 100px;
- }
+  form {
+    width: 100px;
+  }
 
 
 
