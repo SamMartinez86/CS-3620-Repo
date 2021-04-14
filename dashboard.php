@@ -1,4 +1,5 @@
 <?php
+error_reporting (E_ALL ^ E_NOTICE);
 require_once 'sessioncheck.php';
 
 require_once 'header.php';
@@ -57,43 +58,50 @@ require_once 'header.php';
     display: flex;
   }
 
-  select {}
+  select {
+    width: auto;
+  }
 
-  form {}
+  form {
+    width: auto;
+  }
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
-  <div class="menuRow">
-    <div class="menusItemized">
-      <form action="wishlist.php">
-        <input class="" type="submit" value="Wish list" />
-      </form>
-    </div>
-    <div class="menusItemized">
-      <select class="" name="order">
-        <option value="name_asc">Name Asc</option>
-        <option value="name_desc">Name Desc</option>
-        <option value="cost_asc">Cost Asc</option>
-        <option value="cost_desc">Cost Desc</option>
-      </select>
-    </div>
-    <div class="menusItemized">
-      <form method='post'>
-        <input class="" type="text" placeholder="search?" name="search_keyword">
-        <button class="" type="submit">Search</button>
-      </form>
-    </div>
-    <div class="menusItemized ">
-      <form method='post'>
-        <input class="" type="submit" value="Reset" name="reset" />
-      </form>
-    </div>
-    <div class="menusItemized ">
-      <form action="logout.php">
-        <input class="" type="submit" value="Logout" />
-      </form>
-    </div>
+
+  <center>
+    <div class="menuRow">
+      <div class="menusItemized">
+        <form action="wishlist.php">
+          <input class="" type="submit" value="Wish list" />
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <select class="" name="order">
+          <option value="name_asc">Name Asc</option>
+          <option value="name_desc">Name Desc</option>
+          <option value="cost_asc">Cost Asc</option>
+          <option value="cost_desc">Cost Desc</option>
+        </select>
+      </div>
+      <div class="menusItemized ">
+        <form method='post'>
+          <input class="" type="text" placeholder="search?" name="search_keyword">
+          <button class="" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <form method='post'>
+          <input class="" type="submit" value="Reset" name="reset" />
+        </form>
+      </div>
+      <div class="menusItemized ">
+        <form action="logout.php">
+          <input class="" type="submit" value="Logout" />
+        </form>
+      </div>
+  </center>
   </div>
 
   <br />
@@ -137,8 +145,7 @@ require_once 'header.php';
   
             $listLength = !empty($items) ? count($items) :0;
   
-            for($i = 0; $i < $listLength; $i++) {      
-
+            for($i = 0; $i < $listLength; $i++) {            
                 echo '<div class="cards w3-card-4 w3-light-grey">
                         <div class="card">                    
                           <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
@@ -152,16 +159,16 @@ require_once 'header.php';
                         </div>
                       </div>  
                         <br />';
-                        
+            }
         }  else {
-         
+
+          
             $item = new item();
             $items = $item->searchItemsByKeyword($_POST['search_keyword']);
 
             $listLength = !empty($items) ? count($items) : 0;
 
             for ($i = 0; $i < $listLength; $i++) {
-
                 echo '<div class="cards w3-card-4 w3-light-grey">
                       <div class="card">                    
                         <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
