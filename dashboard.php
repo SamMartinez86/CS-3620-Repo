@@ -41,12 +41,11 @@ require_once 'header.php';
   }
 
   .menuRow {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    flex-basis: 16.66%;
+    flex-flow: wrap;
   }
 
   .searchHolder {
@@ -54,17 +53,13 @@ require_once 'header.php';
   }
 
   .menusItemized {
-    width: 100%;
-    display: flex;
+    width: 350px;
+    margin: 0.5em auto;
+    flex: 1 0 24%;
+    margin: 1%;
   }
 
-  select {
-    width: auto;
-  }
 
-  form {
-    width: auto;
-  }
 </style>
 
 <!-- Begin page content -->
@@ -74,7 +69,7 @@ require_once 'header.php';
     <div class="menuRow">
       <div class="menusItemized">
         <form action="wishlist.php">
-          <input class="" type="submit" value="Wish list" />
+          <input type="submit" value="Wish list" />
         </form>
       </div>
       <div class="menusItemized ">
@@ -87,18 +82,18 @@ require_once 'header.php';
       </div>
       <div class="menusItemized ">
         <form method='post'>
-          <input class="" type="text" placeholder="search?" name="search_keyword">
-          <button class="" type="submit">Search</button>
+          <input class="searchHolder" type="text" placeholder="search?" name="search_keyword">
+          <button  type="submit">Search</button>
         </form>
       </div>
       <div class="menusItemized ">
         <form method='post'>
-          <input class="" type="submit" value="Reset" name="reset" />
+          <input  type="submit" value="Reset" name="reset" />
         </form>
       </div>
       <div class="menusItemized ">
         <form action="logout.php">
-          <input class="" type="submit" value="Logout" />
+          <input  type="submit" value="Logout" />
         </form>
       </div>
   </center>
