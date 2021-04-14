@@ -135,7 +135,7 @@ require_once 'header.php';
                   </div>  
                     <br />';
 
-          } elseif($_POST["reset"]){
+          } elseif (isset($_POST["reset"])){
 
             $item = new item();
             $items = $item->getMyItems();
