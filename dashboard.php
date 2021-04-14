@@ -12,10 +12,9 @@ require_once 'header.php';
 
 
   .carditem{
-
     text-align: center
-
   }
+
   img {
     width: 100%;
     height: 350px;
@@ -41,18 +40,15 @@ require_once 'header.php';
 
   .card {
     flex: 0 1 24%;
-
   }
 
   .menuRow {
     width: 100%;
     display: flex;
-    flex-flow:  wrap;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
     flex-basis: 16.66%;
-    align-items: baseline;
   }
 
   .searchHolder {
@@ -62,7 +58,6 @@ require_once 'header.php';
   .menusItemized {
     width: 100%;
     display: flex;
-
   }
 
  select {
