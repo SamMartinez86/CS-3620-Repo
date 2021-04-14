@@ -108,7 +108,7 @@ class itemDAO {
 
 
   //search items
-  /*
+  
   function searchItemsByUserId($search_keyword){
     require_once('./utilities/connection.php');
     require_once('./item/item.php');
@@ -141,7 +141,7 @@ class itemDAO {
     $conn->close();
 
     return $items;
-    */
+    
   
 }
 ?>
