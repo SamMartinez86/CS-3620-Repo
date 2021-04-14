@@ -75,6 +75,8 @@ require_once 'header.php';
 
   .menusItemized {
     width: 100px; 
+    display: flex;
+    
   }
 
   .buttonzy {
