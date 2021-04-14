@@ -114,7 +114,7 @@ class itemDAO {
     require_once('./item/item.php');
 
     //$sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE %" . $search_keyword . "%";
-    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE %USB%";
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item WHERE item_name LIKE '%USB%'";
     $result = $conn->query($sql);
 
     $items = [];
