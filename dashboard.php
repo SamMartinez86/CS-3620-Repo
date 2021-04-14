@@ -10,6 +10,12 @@ require_once 'header.php';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
+
+  .carditem{
+
+    text-align: center
+
+  }
   img {
     width: 100%;
     height: 350px;
@@ -55,7 +61,7 @@ require_once 'header.php';
     display: flex;
     background-image: url("https://media-exp1.licdn.com/dms/image/C511BAQE0NnIkjkotGA/company-background_10000/0/1541489744017?e=2159024400&v=beta&t=8CzJngJh5TrtF6_WFRYSlDeycAkT52hAfb4qLYGYnv8");
     background-color: #cccccc;
-    flex-grow: 1;
+    flex-basis: 16.66%;
   }
 
   .buttonzy {
@@ -124,10 +130,10 @@ require_once 'header.php';
                 echo '<div class="cards w3-card-4 w3-light-grey">
                     <div class="card">                    
                       <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
-                      <h1 >' . $items[$i]->getItemName() . '</h1>                     
-                      <h4 > ' . $items[$i]->getItemCost() . '</h4>
-                      <h4 > ' . $items[$i]->getItemType() . '</h4>                       
-                      <h5 >$' . $items[$i]->getItemDescription() . '</h5>
+                      <h1 class="carditem">' . $items[$i]->getItemName() . '</h1>                     
+                      <h4 class="carditem"> ' . $items[$i]->getItemCost() . '</h4>
+                      <h4 class="carditem"> ' . $items[$i]->getItemType() . '</h4>                       
+                      <h5 class="carditem">$' . $items[$i]->getItemDescription() . '</h5>
                       <form action="addWishlist.php">
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                       </form>                                            
