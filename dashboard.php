@@ -47,10 +47,12 @@ require_once 'header.php';
   .menuRow {
     width: 100%;
     display: flex;
+    flex-flow:  wrap;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
     flex-basis: 16.66%;
+    align-items: baseline;
   }
 
   .searchHolder {
