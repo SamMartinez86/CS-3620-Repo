@@ -134,8 +134,8 @@ require_once 'header.php';
                     </div>
                   </div>  
                     <br />';
-
-          } elseif (isset($_POST["reset"])){
+          
+          } /* elseif (isset($_POST["reset"])){
 
             $item = new item();
             $items = $item->getMyItems();
@@ -157,7 +157,7 @@ require_once 'header.php';
                       </div>  
                         <br />';
             }
-        } else {
+        } */ else {
 
             $item = new item();
             $items = $item->searchItemsByKeyword($_POST['search_keyword']);
