@@ -61,11 +61,11 @@ require_once 'header.php';
   }
 
  select {
-    width: auto;
+    width: 100px;
  }
 
  form {
-  width: auto;
+  width: 100px;
  }
 
 
@@ -148,7 +148,8 @@ require_once 'header.php';
   
             $listLength = !empty($items) ? count($items) :0;
   
-            for($i = 0; $i < $listLength; $i++) {            
+            for($i = 0; $i < $listLength; $i++) {      
+
                 echo '<div class="cards w3-card-4 w3-light-grey">
                         <div class="card">                    
                           <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
@@ -162,16 +163,16 @@ require_once 'header.php';
                         </div>
                       </div>  
                         <br />';
-            }
+                        
         }  else {
-
-          
+         
             $item = new item();
             $items = $item->searchItemsByKeyword($_POST['search_keyword']);
 
             $listLength = !empty($items) ? count($items) : 0;
 
             for ($i = 0; $i < $listLength; $i++) {
+
                 echo '<div class="cards w3-card-4 w3-light-grey">
                       <div class="card">                    
                         <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
