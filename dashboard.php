@@ -68,11 +68,12 @@ require_once 'header.php';
 
   <center>
     <div class="menuRow">
-      <div class="menusItemized">
-        <form action="wishlist.php">
-          <input type="submit" value="Wish list" />
-        </form>
-      </div>
+        <h4>Hello, <?php ?></h4>
+        <div class="menusItemized ">
+            <form action="logout.php">
+                <input  type="submit" value="Logout" />
+            </form>
+        </div>
       <div class="menusItemized ">
         <select name="order">
           <option value="name_asc">Name Asc</option>
@@ -81,22 +82,18 @@ require_once 'header.php';
           <option value="cost_desc">Cost Desc</option>
         </select>
       </div>
-      <div class="menusItemized ">
-        <form method='post'>
-          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
-          <button  type="submit">Search</button>
-        </form>
-      </div>
-      <div class="menusItemized ">
-        <form method='post'>
-          <input  type="submit" value="Reset" name="reset" />
-        </form>
-      </div>
-      <div class="menusItemized ">
-        <form action="logout.php">
-          <input  type="submit" value="Logout" />
-        </form>
-      </div>
+<!--      <div class="menusItemized ">-->
+<!--        <form method='post'>-->
+<!--          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">-->
+<!--          <button  type="submit">Search</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--      <div class="menusItemized ">-->
+<!--        <form method='post'>-->
+<!--          <input  type="submit" value="Reset" name="reset" />-->
+<!--        </form>-->
+<!--      </div>-->
+
   </center>
   </div>
 
