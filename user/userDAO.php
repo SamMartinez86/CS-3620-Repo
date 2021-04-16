@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 class UserDAO {
   function getUser($user){
-    require_once('./utilities/connection.php');
+    require('./utilities/connection.php');
     
     $sql = "SELECT first_name, last_name, username, user_id FROM user WHERE user_id =" . $user->getUserId();
     $result = $conn->query($sql);

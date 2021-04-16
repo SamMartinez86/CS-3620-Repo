@@ -65,10 +65,14 @@ require_once 'header.php';
 
 <!-- Begin page content -->
 <main role="main" class="container">
-
+    <?php
+        require_once('./user/user.php');
+        $user_test = new User();
+        $user_test->getUser($_SESSION['user_id']);
+    ?>
   <center>
     <div class="menuRow">
-        <h4>Hello, <?php ?></h4>
+        <h4>Hello, <?php echo $user_test->getFirstName(); ?></h4>&nbsp;&nbsp;
         <div class="menusItemized ">
             <form action="logout.php">
                 <input  type="submit" value="Logout" />
@@ -123,7 +127,7 @@ require_once 'header.php';
                       <h4 class="carditem"> ' . $items[$i]->getItemCost() . '</h4>
                       <h4 class="carditem"> ' . $items[$i]->getItemType() . '</h4>                       
                       <h5 class="carditem">$' . $items[$i]->getItemDescription() . '</h5>
-                      <form action="addWishlist.php">
+                      <form action="addWishlist.php?item_id=' . $items[$i]->getItemId() . '" method="post">
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                       </form>                                            
                     </div>
@@ -146,7 +150,7 @@ require_once 'header.php';
                           <h4 > ' . $items[$i]->getItemCost() . '</h4>
                           <h4 > ' . $items[$i]->getItemType() . '</h4>                       
                           <h5 >$' . $items[$i]->getItemDescription() . '</h5>
-                          <form action="addWishlist.php">
+                          <form action="addWishlist.php?item_id=' . $items[$i]->getItemId() . '" method="post">
                           <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                           </form>                                            
                         </div>
@@ -169,7 +173,7 @@ require_once 'header.php';
                         <h4 > ' . $items[$i]->getItemCost() . '</h4>
                         <h4 > ' . $items[$i]->getItemType() . '</h4>                       
                         <h5 >$' . $items[$i]->getItemDescription() . '</h5>
-                        <form action="addWishlist.php">
+                        <form action="addWishlist.php?item_id=' . $items[$i]->getItemId() . '" method="post">
                         <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                         </form>                                            
                       </div>

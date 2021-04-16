@@ -2,7 +2,7 @@
 error_reporting (E_ALL ^ E_NOTICE);
 class itemDAO {
   function getAllItems(){
-    require_once('./utilities/connection.php');
+    require('./utilities/connection.php');
     require_once('./item/item.php');
 
     $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item";
