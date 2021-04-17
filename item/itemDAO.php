@@ -36,6 +36,41 @@ class itemDAO {
     return $items;
   }
 
+  function getAllFilterItems($order){
+    require_once('./utilities/connection.php');
+    require_once('./item/item.php');
+
+    $sql = "SELECT item_id, item_name, item_description, item_cost, item_type, item_image, user_id FROM userschema.item
+    ORDER BY " . $order;
+    $result = $conn->query($sql);
+
+    $items = [];
+    $index = 0;
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            $item = new item();
+
+            $item->setItemId($row["item_id"]);
+            $item->setItemName($row["item_name"]);
+            $item->setItemCost($row["item_description"]);
+            $item->setItemDescription($row["item_cost"]);
+            $item->setItemType($row["item_type"]);
+            $item->setItemImage($row["item_image"]);
+            $item->setUserId($row["user_id"]);
+            $items[$index] = $item;
+            $index = $index + 1;
+        }
+    }
+    else {
+        echo "0 results";
+    } 
+    $conn->close();
+
+    return $items;
+  }
+
 
   function createItem($item){
     require_once('./utilities/connection.php');
