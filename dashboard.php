@@ -161,7 +161,7 @@ require_once 'header.php';
           } elseif (isset($_POST["reset"])){
 
             $item = new item();
-            $items = $item->getMyOrderedItems($order);
+            $items = $item->getMyItems();
   
             $listLength = !empty($items) ? count($items) :0;
   
