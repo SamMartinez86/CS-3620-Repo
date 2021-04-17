@@ -91,7 +91,7 @@ require_once 'header.php';
       </div>
       <div class="menusItemized ">        
           <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
-         <button  type="submit">Search</button>-->
+         <button  type="submit">Search</button>
         </form>
       </div>
 <!--      <div class="menusItemized ">-->
@@ -107,7 +107,11 @@ require_once 'header.php';
   <div class="cardtainer">
     <?php
 
-
+      if(isset($_POST['order'])) 
+        {
+        $aOrder = $_POST['order'];
+        }
+        echo($aOrder);
         //ini_set('display_errors', 1);
         //ini_set('display_startup_errors', 1);
         //error_reporting(E_ALL);
