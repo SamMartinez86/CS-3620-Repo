@@ -98,12 +98,6 @@ class item implements \JsonSerializable {
     return $itemDAO->getAllItems();
   }
 
-  // get ordered item list function
-  function getMyOrderedItems($order){
-    $itemDAO = new itemDAO();
-    return $itemDAO->getAllOrderedItems($order);
-  }
-
   // get item list function
   function getItemsByUserId($user_id){
     $itemDAO = new itemDAO();

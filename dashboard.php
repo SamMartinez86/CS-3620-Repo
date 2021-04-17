@@ -79,21 +79,21 @@ require_once 'header.php';
             </form>
         </div>
       <div class="menusItemized ">
-        <select name="order">
-          <option value="item_name ASC">Name Asc</option>
-          <option value="item_name DESC">Name Desc</option>
-          <option value="item_type ASC">Type Asc</option>
-          <option value="item_type DESC">Type Desc</option>
-          <option value="item_cost ASC">Cost Asc</option>
-          <option value="item_cost DESC">Cost Desc</option>
-        </select>
+        <form method='post'>
+          <select name="order">
+            <option value="item_name ASC">Name Asc</option>
+            <option value="item_name DESC">Name Desc</option>
+            <option value="item_type ASC">Type Asc</option>
+            <option value="item_type DESC">Type Desc</option>
+            <option value="item_cost ASC">Cost Asc</option>
+            <option value="item_cost DESC">Cost Desc</option>
+          </select>
       </div>
-<!--      <div class="menusItemized ">-->
-<!--        <form method='post'>-->
-<!--          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">-->
-<!--          <button  type="submit">Search</button>-->
-<!--        </form>-->
-<!--      </div>-->
+      <div class="menusItemized ">        
+          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
+         <button  type="submit">Search</button>-->
+        </form>
+      </div>
 <!--      <div class="menusItemized ">-->
 <!--        <form method='post'>-->
 <!--          <input  type="submit" value="Reset" name="reset" />-->
@@ -113,14 +113,12 @@ require_once 'header.php';
         //error_reporting(E_ALL);
 
         require_once('./item/item.php');
-        if(isset($_POST['order']){
-          echo ($_POST['order']);
-        }
+
         
-        if (!isset($_POST['search_keyword']) && isset($_POST['order'])) {
+        if (!isset($_POST['search_keyword'])) {
 
             $item = new item();
-            $items = $item->getMyOrderedItems($order);
+            $items = $item->getMyItems();
 
             $listLength = !empty($items) ? count($items) : 0;
 
