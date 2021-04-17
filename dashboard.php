@@ -65,14 +65,14 @@ require_once 'header.php';
 
 <!-- Begin page content -->
 <main role="main" class="container">
-    <?php
-        require_once('./user/user.php');
-        $user_test = new User();
-        $user_test->getUser($_SESSION['user_id']);
-    ?>
+<!--  <?php
+//        require_once('./user/user.php');
+//        $user_test = new User();
+//        $user_test->getUser($_SESSION['user_id']);
+//    ?>  -->
   <center>
     <div class="menuRow">
-        <h4>Hello, <?php echo $user_test->getFirstName(); ?></h4>&nbsp;&nbsp;
+<!--        <h4>Hello, --><?php //echo $user_test->getFirstName(); ?><!--</h4>&nbsp;&nbsp;-->
         <div class="menusItemized ">
             <form action="logout.php">
                 <input  type="submit" value="Logout" />
