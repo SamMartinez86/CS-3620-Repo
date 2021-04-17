@@ -56,28 +56,25 @@ require_once 'header.php';
     display: flex;
   }
 
-  .top-menu {
-
-  }
-
-
+  .top-menu {}
 </style>
 
 <!-- Begin page content -->
 <main role="main" class="container">
-<!--  <?php
+  <!--  <?php
 //        require_once('./user/user.php');
 //        $user_test = new User();
 //        $user_test->getUser($_SESSION['user_id']);
 //    ?>  -->
   <center>
     <div class="menuRow">
-<!--        <h4>Hello, --><?php //echo $user_test->getFirstName(); ?><!--</h4>&nbsp;&nbsp;-->
-        <div class="menusItemized ">
-            <form action="logout.php">
-                <input  type="submit" value="Logout" />
-            </form>
-        </div>
+      <!--        <h4>Hello, --><?php //echo $user_test->getFirstName(); ?>
+      <!--</h4>&nbsp;&nbsp;-->
+      <div class="menusItemized ">
+        <form action="logout.php">
+          <input type="submit" value="Logout" />
+        </form>
+      </div>
       <div class="menusItemized ">
         <form method='post'>
           <select name="order">
@@ -89,16 +86,16 @@ require_once 'header.php';
             <option value="item_cost DESC">Cost Desc</option>
           </select>
       </div>
-      <div class="menusItemized ">        
-          <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
-         <button  type="submit">Search</button>
+      <div class="menusItemized ">
+        <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
+        <button type="submit">Search</button>
         </form>
       </div>
-<!--      <div class="menusItemized ">-->
-<!--        <form method='post'>-->
-<!--          <input  type="submit" value="Reset" name="reset" />-->
-<!--        </form>-->
-<!--      </div>-->
+      <!--      <div class="menusItemized ">-->
+      <!--        <form method='post'>-->
+      <!--          <input  type="submit" value="Reset" name="reset" />-->
+      <!--        </form>-->
+      <!--      </div>-->
 
   </center>
   </div>
@@ -142,7 +139,7 @@ require_once 'header.php';
                     <br />';
             }
           
-          } elseif ($_POST['search_keyword'] == '' &&  isset($_POST["order"])){
+          } elseif (!isset($_POST['search_keyword']) &&  isset($_POST["order"])){
             
             $item = new item();
             $items = $item->getMyFilterItems($order);
