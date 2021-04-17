@@ -6,6 +6,7 @@ class item implements \JsonSerializable {
 
   // object member variables
   private $search_keyword;
+  private $order;
   private $item_id;
   private $user_id;
   private $item_name;
@@ -17,6 +18,14 @@ class item implements \JsonSerializable {
 
   // constructor
   function __construct() {
+  }
+
+  // order getter/setter
+  function getOrder(){
+    return $this->order;
+  }
+  function setOrder($order){
+    $this->order = $order;
   }
 
   // search_keyword getter/setter
@@ -89,6 +98,12 @@ class item implements \JsonSerializable {
     return $itemDAO->getAllItems();
   }
 
+  // get ordered item list function
+  function getMyOrderedItems($order){
+    $itemDAO = new itemDAO();
+    return $itemDAO->getAllOrderedItems($order);
+  }
+
   // get item list function
   function getItemsByUserId($user_id){
     $itemDAO = new itemDAO();
@@ -101,28 +116,40 @@ class item implements \JsonSerializable {
       return $vars;
   }
 
-  // create new hero entry
+  // create new item entry
   function createItem(){
     $itemDAO = new itemDAO();
     $itemDAO->createItem($this);
   }
 
-  // delete hero function
+  // delete item function
   function deleteItem($user_id, $item_id){
     $itemDAO = new itemDAO();
     $itemDAO->deleteItem($user_id, $item_id);
   }
   
-  // create new hero entry
+  // create new item entry
   function searchItem(){
     $itemDAO = new itemDAO();
     $itemDAO->searchItem($this);
+  }
+
+  // create new order entry
+  function orderItem(){
+    $itemDAO = new itemDAO();
+    $itemDAO->orderItem($this);
   }
   
   // get item list function
   function searchItemsByKeyword($search_keyword){
     $itemDAO = new itemDAO();
     return $itemDAO->searchItemsByKeyword($search_keyword);
+  }
+
+  // get ordered item list function
+  function   function searchOrderedItemsByKeyword($search_keyword, $order){
+    $itemDAO = new itemDAO();
+    return $itemDAO->searchOrderedItemsByKeyword($search_keyword, $order);
   }
 }
 

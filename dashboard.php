@@ -80,10 +80,12 @@ require_once 'header.php';
         </div>
       <div class="menusItemized ">
         <select name="order">
-          <option value="name_asc">Name Asc</option>
-          <option value="name_desc">Name Desc</option>
-          <option value="cost_asc">Cost Asc</option>
-          <option value="cost_desc">Cost Desc</option>
+          <option value="item_name ASC">Name Asc</option>
+          <option value="item_name DESC">Name Desc</option>
+          <option value="item_type ASC">Type Asc</option>
+          <option value="item_type DESC">Type Desc</option>
+          <option value="item_cost ASC">Cost Asc</option>
+          <option value="item_cost DESC">Cost Desc</option>
         </select>
       </div>
 <!--      <div class="menusItemized ">-->
@@ -112,10 +114,10 @@ require_once 'header.php';
 
         require_once('./item/item.php');
         
-        if (!isset($_POST['search_keyword'])) {
+        if (!isset($_POST['search_keyword']) && isset($_POST['order'])) {
 
             $item = new item();
-            $items = $item->getMyItems();
+            $items = $item->getMyOrderedItems($order);
 
             $listLength = !empty($items) ? count($items) : 0;
 
@@ -135,10 +137,10 @@ require_once 'header.php';
                     <br />';
             }
           
-          } elseif (isset($_POST["reset"])){
+          } elseif (isset($_POST["reset"]) && isset($_POST['order'])){
 
             $item = new item();
-            $items = $item->getMyItems();
+            $items = $item->getMyOrderedItems($order);
   
             $listLength = !empty($items) ? count($items) :0;
   
@@ -159,9 +161,8 @@ require_once 'header.php';
             }
         }  else {
 
-          
             $item = new item();
-            $items = $item->searchItemsByKeyword($_POST['search_keyword']);
+            $items = $item->searchOrderedItemsByKeyword($_POST['search_keyword'], $_POST['order']);
 
             $listLength = !empty($items) ? count($items) : 0;
 
