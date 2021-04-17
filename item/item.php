@@ -147,7 +147,7 @@ class item implements \JsonSerializable {
   }
 
   // get ordered item list function
-  function   function searchOrderedItemsByKeyword($search_keyword, $order){
+  function searchOrderedItemsByKeyword($search_keyword, $order){
     $itemDAO = new itemDAO();
     return $itemDAO->searchOrderedItemsByKeyword($search_keyword, $order);
   }
