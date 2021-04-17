@@ -113,6 +113,9 @@ require_once 'header.php';
         //error_reporting(E_ALL);
 
         require_once('./item/item.php');
+        if(isset($_POST['order']){
+          echo ($_POST['order']);
+        }
         
         if (!isset($_POST['search_keyword']) && isset($_POST['order'])) {
 
@@ -137,7 +140,7 @@ require_once 'header.php';
                     <br />';
             }
           
-          } elseif (isset($_POST["reset"]) && isset($_POST['order'])){
+          } elseif (isset($_POST["reset"])){
 
             $item = new item();
             $items = $item->getMyOrderedItems($order);
