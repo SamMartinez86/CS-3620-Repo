@@ -14,7 +14,7 @@
         //echo $_POST["username"];
         //echo $_POST["password"];
         echo $login_result;
-        header("Location: login.html?error=true");
+        header("Location: loginhtml.php?error=true");
         exit();
     }
     else{
