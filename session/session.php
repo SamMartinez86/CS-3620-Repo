@@ -12,7 +12,7 @@ class session {
       return true;
     }
     else{
-      logout();
+      $this->logout();
       return false;
     }
   }
