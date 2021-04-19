@@ -71,9 +71,9 @@ require_once 'header.php';
       <!--        <h4>Hello, --><?php //echo $user_test->getFirstName(); ?>
       <!--</h4>&nbsp;&nbsp;-->
       <div class="menusItemized ">
-        <form action="logout.php">
+        <!--<form action="logout.php">
           <input type="submit" value="Logout" />
-        </form>
+        </form> -->
       </div>
       <div class="menusItemized ">
         <form method='post'>
@@ -88,7 +88,7 @@ require_once 'header.php';
       </div>
       <div class="menusItemized ">
         <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
-        <button type="submit">Search</button>
+        <button type="submit">Go!</button>
         </form>
       </div>
       <!--      <div class="menusItemized ">-->

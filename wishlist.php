@@ -135,6 +135,4 @@
 
 </main>
 
-<center><a href="logout.php">Logout</a></center>
-
 <?php require_once('footer.php'); ?>
