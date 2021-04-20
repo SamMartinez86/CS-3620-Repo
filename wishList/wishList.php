@@ -25,6 +25,11 @@ class wishList implements \JsonSerializable {
   function setItemId($item_id){
     $this->item_id = $item_id;
   }
+
+  function createWishlistItem(){
+      $wishListDAO = new wishList();
+      $wishListDAO->createWishlistItem($this);
+  }
   
   public function jsonSerialize(){
       $vars = get_object_vars($this);

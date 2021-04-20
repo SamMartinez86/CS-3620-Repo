@@ -127,6 +127,7 @@ require_once 'header.php';
                       <h4 class="carditem"> ' . $items[$i]->getItemType() . '</h4>                       
                       <h5 class="carditem">$' . $items[$i]->getItemDescription() . '</h5>
                       <form action="addWishlist.php?item_id=' . $items[$i]->getItemId() . '" method="post">
+                         <input type="text" name="item" value="' . $items[$i]->getItemId() . '" hidden> 
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                       </form>                                            
                     </div>
@@ -143,7 +144,7 @@ require_once 'header.php';
 
             for ($i = 0; $i < $listLength; $i++) {
                 echo '<div class="cards w3-card-4 w3-light-grey">
-                    <div class="card">                    
+                    <div class="card">  
                       <a href="' . $items[$i]->getItemImage() . '"><img alt="' . $items[$i]->getItemName() . '" title="' . $items[$i]->getItemName() . '" src="' . $items[$i]->getItemImage() . '" border="0" /></a>
                       <h1 class="carditem">' . $items[$i]->getItemName() . '</h1>                     
                       <h4 class="carditem"> ' . $items[$i]->getItemCost() . '</h4>
