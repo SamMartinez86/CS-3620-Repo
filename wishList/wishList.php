@@ -92,8 +92,8 @@ class wishList implements \JsonSerializable {
 
 
   function createWishlistItem(){
-      $wishListDAO = new wishList();
-      $wishListDAO->createWishlistItem($this);
+    $wishListDAO = new wishList();
+    $wishListDAO->createWishlistItem($this);
   }
 
   // get item list function
