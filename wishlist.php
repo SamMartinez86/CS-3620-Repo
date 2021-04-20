@@ -100,7 +100,7 @@
     <?php
          
         if(isset($_GET["del"]) AND $_GET["del"] == "true"){
-          echo "<script>alert('Item was deleted!')</script>";
+          echo "<script>alert('Wishlist item deleted!')</script>";
         }
 
         ini_set('display_errors', 1);

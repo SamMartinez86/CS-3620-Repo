@@ -1,14 +1,12 @@
 <?php
 require_once('./wishList/wishListDAO.php');
 
+//ini_set('memory_limit','-1');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
-//ini_set('memory_limit','-1');
-
-class wishList implements \JsonSerializable {
+class wishlist implements \JsonSerializable {
   // Properties
   private $user_id;
   private $first_name;
@@ -91,23 +89,21 @@ class wishList implements \JsonSerializable {
 
   function createWishlistItem(){
     echo("repeating?");
-    $wishListDAO = new wishList();
+    $wishListDAO = new wishlist();
     $wishListDAO->createWishlistItem($this);
   }
 
   // delete item function
   function deleteWishlistItem($user_id, $item_id){
-    $wishListDAO = new wishList();
+    $wishListDAO = new wishlist();
     $wishListDAO->deleteWishlistItem($user_id, $item_id);
   }
 
   // get item list function
   function ShowWishListItem($user_id){
     echo("repeating?");
-    $this->user_id = $user_id;
-    $wishListDAO = new wishList();
-    $wishListDAO->ShowWishListItem($user_id);
-    return $this;
+    $wishListDAO = new wishlist();
+    return $wishListDAO->ShowWishListItem($user_id);
   }
 
   public function jsonSerialize(){

@@ -47,7 +47,7 @@ class wishListDAO {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $wish= new wishList();
+            $wish= new wishlist();
 
             $wish->setItemId($row["userschema.item.item_id"]);
             $wish->setItemName($row["userschema.item.item_name"]);
