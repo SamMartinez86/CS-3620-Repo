@@ -43,7 +43,7 @@ class wishListDAO {
     */
     
     // with alias
-    $sql = "SELECT i.item_name, i.item_description, i.item_cost, i.item_type, i.item_image, i.item_id
+    $sql = "SELECT i.item_name, i.item_description, i.item_cost, i.item_type, i.item_image, i.item_id,
     u.user_id FROM ((userschema.wishlist AS w 
     INNER JOIN userschema.user AS u ON w.user_id = u.user_id)
     INNER JOIN userschema.item AS i ON w.item_id = i.item_id)
