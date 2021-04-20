@@ -104,6 +104,10 @@ require_once 'header.php';
   <div class="cardtainer">
     <?php
 
+
+        if(isset($_GET["wish"]) AND $_GET["wish"] == "true"){
+          echo "<script>alert('Item added to wishlist!')</script>";
+        }
         //ini_set('display_errors', 1);
         //ini_set('display_startup_errors', 1);
         //error_reporting(E_ALL);

@@ -14,6 +14,6 @@ $wishlist->setUserId($_SESSION["user_id"]);
 
 $wishlist->createWishlistItem();
 
-header("Location: dashboard.php");
+header("Location: dashboard.php?wish=true");
 
 ?>
