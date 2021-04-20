@@ -32,14 +32,21 @@ class wishListDAO {
     require_once($_SERVER['DOCUMENT_ROOT'].'/user/user.php');
     require_once('./wishList/wishList.php');
 
-    
+    /*
     $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_cost, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
     userschema.user.user_id, userschema.user.first_name)
     FROM userschema.wishlist 
     INNER JOIN userschema.user ON userschema.wishlist.user_id = userschema.user.user_id
     INNER JOIN userschema.item ON userschema.wishlist.item_id = userschema.item.item_id
     WHERE userschema.user.user_id =" . $user_id;
+    */
 
+    $sql = "SELECT (i.item_name, i.item_description, i.item_cost, i.item_type, i.item_image, i.item_id
+    u.user_id, u.first_name)
+    FROM ((userschema.wishlist w
+    INNER JOIN userschema.user u ON w.user_id = u.user_id)
+    INNER JOIN userschema.item i ON w.item_id = i.item_id)
+    WHERE u.user_id =" . $user_id;
 
     $result = $conn->query($sql);
 
