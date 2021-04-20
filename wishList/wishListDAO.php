@@ -16,8 +16,8 @@ class wishListDAO {
     `user_id`) VALUES (?, ?)");
 
     
-    $user = $wishList->getUserId();
-    $item = $wishList->getItemId();
+    $user = $wishlist->getUserId();
+    $item = $wishlist->getItemId();
 
     $insertWishList->bind_param("ss", $item, $user);
     $insertWishList->execute();
