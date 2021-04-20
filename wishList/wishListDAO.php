@@ -16,7 +16,7 @@ class wishListDAO {
 //        $result = $conn->query($sql);
 //    }
 
-    function createWishlistItem($wishlist){
+    function createWishlistItemSQL($wishlist){
         require_once('./utilities/connection.php');
         //require_once('./wishList.wishList.php');
 
@@ -37,7 +37,7 @@ class wishListDAO {
 
 
 
-    function ShowWishListItem($user_id){
+    function ShowWishListItemSQL($user_id){
         require_once('./utilities/connection.php');
         require_once('../item/item.php');
         require_once('../user/user.php');

@@ -92,13 +92,14 @@ class wishList implements \JsonSerializable {
   function createWishlistItem(){
     echo("repeating?");
     $wishListDAO = new wishList();
-    $wishListDAO->createWishlistItem($this);
+    $wishListDAO->createWishlistItemSQL($this);
   }
 
   // get item list function
   function ShowWishListItem($user_id){
+    echo("repeating?");
     $wishListDAO = new wishList();
-    return $wishListDAO->ShowWishListItem($user_id);
+    return $wishListDAO->ShowWishListItemSQL($user_id);
   }
 
   public function jsonSerialize(){
