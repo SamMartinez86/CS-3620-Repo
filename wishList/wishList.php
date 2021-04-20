@@ -110,7 +110,7 @@ class wishList implements \JsonSerializable {
     $this->user_id = $user_id;
     $wishListDAO = new wishList();
     $wishListDAO->ShowWishListItem($this);
-    return $this
+    return $this;
   }
 }
 
