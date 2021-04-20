@@ -110,7 +110,8 @@
         require_once('./wishList/wishList.php');
 
         $wishList = new wishList();
-        $wishLists = $wishList->ShowWishListItem($_SESSION["user_id"]);
+        //$wishLists = $wishList->ShowWishListItem($_SESSION["user_id"]);
+        $wishLists = $wishList->ShowWishListItem(36);
 
         $listLength = !empty($wishLists) ? count($wishLists) : 0;
         for($i = 0; $i < $listLength; $i++) {            
