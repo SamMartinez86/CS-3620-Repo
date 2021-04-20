@@ -15,9 +15,8 @@ class wishListDAO {
     $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,
     `user_id`) VALUES (?, ?)");
 
-    $user = $wishlist->getUserId();
-    $item = $wishlist->getItemId();
-
+    $user = $wishList->getUserId();
+    $item = $wishList->getItemId();
 
     $insertWishList->bind_param("ss", $item, $user);
     $insertWishList->execute();
