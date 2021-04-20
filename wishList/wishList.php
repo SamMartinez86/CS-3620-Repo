@@ -5,6 +5,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+ini_set(“memory_limit”,”16M“);
+
 class wishList implements \JsonSerializable {
   // Properties
   private $user_id;
@@ -27,7 +29,6 @@ class wishList implements \JsonSerializable {
   }
 
   function createWishlistItem(){
-      ini_set('memory_limit', '-1');
       $wishListDAO = new wishList();
       $wishListDAO->createWishlistItem($this);
   }
