@@ -19,7 +19,8 @@ class wishListDAO {
         require_once('./utilities/connection.php');
 
         // prepare and bind
-        $stmt = $conn->prepare("INSERT INTO wishlist (item_id,user_id) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,`user_id`)
+        VALUES (?, ?)");
 
         $user = $wishlist->getUserId();
         $item = $wishlist->getItemId();
