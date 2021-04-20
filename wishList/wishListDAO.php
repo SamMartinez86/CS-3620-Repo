@@ -28,8 +28,10 @@ class wishListDAO {
 
   function ShowWishListItem($user_id){
     require_once('./utilities/connection.php');
-    require_once('../../../item/item.php');
-    require_once('../../../user/user.php');
+    //require_once('../../../item/item.php');
+    //require_once('../../../user/user.php');
+    require_once( __DIR__ . '/item/item.php');
+    require_once( __DIR__ . '/user/user.php');
     require_once('./wishList/wishList.php');
 
     /*
