@@ -9,21 +9,15 @@ class wishListDAO {
 
   function createWishlistItem($wishlist){
     require_once('./utilities/connection.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/item/item.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/user/user.php');
     //require_once('./wishList.wishList.php');
 
     // prepare and bind
     $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,
     `user_id`) VALUES (?, ?)");
 
-    /*
+    
     $user = $wishList->getUserId();
     $item = $wishList->getItemId();
-    */
-
-    $user = $wishList->getUserId();
-    $item = $item->getItemId();
 
     $insertWishList->bind_param("ss", $item, $user);
     $insertWishList->execute();
@@ -34,8 +28,6 @@ class wishListDAO {
 
   function ShowWishListItem($user_id){
     require_once('./utilities/connection.php');
-    //require_once('../../../item/item.php');
-    //require_once('../../../user/user.php');
     require_once($_SERVER['DOCUMENT_ROOT'].'/item/item.php');
     require_once($_SERVER['DOCUMENT_ROOT'].'/user/user.php');
     require_once('./wishList/wishList.php');
@@ -57,16 +49,16 @@ class wishListDAO {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            $wish= new wishlist();
+            $wishlist= new wishlist();
 
-            $wish->setItemId($row["item.item_id"]);
-            $wish->setItemName($row["item.item_name"]);
-            $wish->setItemCost($row["item.item_description"]);
-            $wish->setItemDescription($row["item.item_cost"]);
-            $wish->setItemType($row["item.item_type"]);
-            $wish->setItemImage($row["item.item_image"]);
-            //$wish->setUserId($row["user.user_id"]);
-            $wishes[$index] = $wish;
+            $wishlist->setItemId($row["item.item_id"]);
+            $wishlist->setItemName($row["item.item_name"]);
+            $wishlist->setItemCost($row["item.item_description"]);
+            $wishlist->setItemDescription($row["item.item_cost"]);
+            $wishlist->setItemType($row["item.item_type"]);
+            $wishlist->setItemImage($row["item.item_image"]);
+            $wishlist->setUserId($row["user.user_id"]);
+            $wishes[$index] = $wishlist;
             $index = $index + 1;
         }
     }
