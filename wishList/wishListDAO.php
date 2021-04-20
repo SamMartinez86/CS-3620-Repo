@@ -20,8 +20,8 @@ class wishListDAO {
         require_once('./wishList.wishList.php');
 
         // prepare and bind
-        $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,`user_id`)
-        VALUES (?, ?)");
+        $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,
+        `user_id`) VALUES (?, ?)");
 
         $user = $wishlist->getUserId();
         $item = $wishlist->getItemId();
