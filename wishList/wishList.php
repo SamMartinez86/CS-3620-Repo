@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-class wishlist implements \JsonSerializable {
+class wishList implements \JsonSerializable {
   // Properties
   private $user_id;
   private $first_name;
@@ -87,30 +87,31 @@ class wishlist implements \JsonSerializable {
     $this->item_image = $item_image;
   }
 
+  public function jsonSerialize(){
+    $vars = get_object_vars($this);
+    return $vars;
+} 
+
   function createWishlistItem(){
     echo("repeating?");
-    $wishListDAO = new wishlist();
+    $wishListDAO = new wishList();
     $wishListDAO->createWishlistItem($this);
   }
 
   // delete item function
   function deleteWishlistItem($user_id, $item_id){
-    $wishListDAO = new wishlist();
+    $wishListDAO = new wishList();
     $wishListDAO->deleteWishlistItem($user_id, $item_id);
   }
 
   // get item list function
   function ShowWishListItem($user_id){
     echo("repeating?");
-    $wishListDAO = new wishlist();
-    return $wishListDAO->ShowWishListItem($user_id);
+    $this->user_id = $user_id;
+    $wishListDAO = new wishList();
+    $wishListDAO->ShowWishListItem($this);
+    return $this
   }
-
-  public function jsonSerialize(){
-      $vars = get_object_vars($this);
-      return $vars;
-  }
-  
 }
 
 ?>

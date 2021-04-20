@@ -65,7 +65,7 @@ class wishListDAO {
     } 
     $conn->close();
 
-    return $items;
+    return $wishes;
   }
 
   // delete wishlist item function
