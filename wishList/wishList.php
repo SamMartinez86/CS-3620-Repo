@@ -6,7 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-//ini_set('memory_limit','16M');
+ini_set('memory_limit','256M');
 
 class wishList implements \JsonSerializable {
   // Properties
@@ -39,7 +39,6 @@ class wishList implements \JsonSerializable {
   function setFirstName($first_name){
     $this->first_name = $first_name;
   }
-
 
   // from items
   // item_id getter/setter
@@ -90,7 +89,6 @@ class wishList implements \JsonSerializable {
     $this->item_image = $item_image;
   }
 
-
   function createWishlistItem(){
     $wishListDAO = new wishList();
     $wishListDAO->createWishlistItem($this);
@@ -102,11 +100,11 @@ class wishList implements \JsonSerializable {
     return $wishListDAO->ShowWishListItem($user_id);
   }
 
-  
   public function jsonSerialize(){
       $vars = get_object_vars($this);
       return $vars;
   }
   
 }
+
 ?>
