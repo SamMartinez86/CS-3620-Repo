@@ -14,6 +14,9 @@ $wishlist = new wishList();
 $wishlist->setItemId($_POST["item_id"]);
 $wishlist->setUserId($_SESSION["user_id"]);
 
+echo("Item ID:". $_POST["item_id"]);
+echo("User ID:". $_SESSION["user_id"]);
+
 $wishlist->createWishlistItem();
 
 header("Location: dashboard.php");
