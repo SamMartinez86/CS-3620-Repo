@@ -6,13 +6,13 @@ error_reporting(E_ALL);
 
 session_start();
 
-require_once('sessioncheck.php');
-
 require_once('./wishList/wishList.php');
+require_once('../session/session.php');
 
 $wishlist = new wishList();
 $wishlist->setItemId($_POST["item"]);
 $wishlist->setUserId($_SESSION["user_id"]);
+
 $wishlist->createWishlistItem();
 
 header("Location: dashboard.php");

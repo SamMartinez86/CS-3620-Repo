@@ -35,12 +35,15 @@ class wishListDAO {
         $conn->close();
     }
 
-}
+
 
     function ShowWishListItem($user_id){
         require_once('./utilities/connection.php');
+        require_once('../item/item.php');
+        require_once('../user/user.php');
+        require_once('./wishList.wishList.php');
 
-        $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
+        $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_cost, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
         userschema.user.user_id, userschema.user.first_name)
         FROM (( userschema.wishlist 
         INNER JOIN userschema.user ON userschema.wishlist.user_id = userschema.user.user_id)
@@ -57,13 +60,13 @@ class wishListDAO {
             while($row = $result->fetch_assoc()) {
                 $item = new item();
     
-                $item->setItemId($row["item_id"]);
-                $item->setItemName($row["item_name"]);
-                $item->setItemCost($row["item_description"]);
-                $item->setItemDescription($row["item_cost"]);
-                $item->setItemType($row["item_type"]);
-                $item->setItemImage($row["item_image"]);
-                $item->setUserId($row["user_id"]);
+                $item->setItemId($row["userschema.item.item_id"]);
+                $item->setItemName($row["userschema.item.item_name"]);
+                $item->setItemCost($row["userschema.item.item_description"]);
+                $item->setItemDescription($row["userschema.item.item_cost"]);
+                $item->setItemType($row["userschema.item.item_type"]);
+                $item->setItemImage($row["userschema.item.item_image"]);
+                $item->setUserId($row["userschema.user.user_id"]);
                 $items[$index] = $item;
                 $index = $index + 1;
             }
@@ -75,4 +78,5 @@ class wishListDAO {
     
         return $items;
     }
+}
 ?>
