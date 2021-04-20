@@ -32,6 +32,7 @@ class wishListDAO {
     require_once($_SERVER['DOCUMENT_ROOT'].'/user/user.php');
     require_once('./wishList/wishList.php');
 
+    // without alias
     /*
     $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_cost, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
     userschema.user.user_id)
@@ -41,6 +42,7 @@ class wishListDAO {
     WHERE userschema.user.user_id =" . $user_id;
     */
     
+    // with alias
     $sql = "SELECT i.item_name, i.item_description, i.item_cost, i.item_type, i.item_image, i.item_id
     u.user_id FROM ((userschema.wishlist AS w 
     INNER JOIN userschema.user AS u ON w.user_id = u.user_id)
