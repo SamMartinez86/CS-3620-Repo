@@ -83,11 +83,13 @@
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
+    <!--
     <div class="menuItems">
       <form action="create_item.php">
         <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add item" /></center>
       </form>
     </div>
+    -->
     <div class="menuItems">
       <form action="wishlist.php">
         <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
@@ -120,10 +122,7 @@
                       <h1 >' . $wishLists[$i]->getItemName() . '</h1>                     
                       <h4 > ' . $wishLists[$i]->getItemCost() . '</h4>
                       <h4 > ' . $wishLists[$i]->getItemType() . '</h4>                       
-                      <h5 >$' . $wishLists[$i]->getItemDescription() . '</h5>
-                      <form action="addWishlist.php">
-                      <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
-                      </form>                       
+                      <h5 >$' . $wishLists[$i]->getItemDescription() . '</h5>                    
                       <a href="deleteWishList.php?item_id=' . $wishLists[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
@@ -135,3 +134,7 @@
 </main>
 
 <?php require_once('footer.php'); ?>
+
+<!--                   <form action="addWishlist.php">
+                      <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
+                      </form>    -->
