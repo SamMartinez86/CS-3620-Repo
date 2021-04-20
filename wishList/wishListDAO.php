@@ -28,8 +28,8 @@ class wishListDAO {
 
   function ShowWishListItem($user_id){
     require_once('./utilities/connection.php');
-    require_once('../item/item.php');
-    require_once('../user/user.php');
+    require_once('./item/item.php');
+    require_once('./user/user.php');
     require_once('./wishList.wishList.php');
 
     $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_cost, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
