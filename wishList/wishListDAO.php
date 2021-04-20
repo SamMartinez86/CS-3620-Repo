@@ -41,7 +41,7 @@ class wishListDAO {
     WHERE userschema.user.user_id =" . $user_id;
     */
 
-    $sql = "SELECT * FROM userschema.wishlist WHERE user_id" . $user_id;
+    $sql = "SELECT * FROM userschema.wishlist";
 
     $result = $conn->query($sql);
 
