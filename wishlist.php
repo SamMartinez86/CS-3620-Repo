@@ -125,7 +125,7 @@
                       <form action="addWishlist.php">
                       <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="Add to wishlist" /></center>
                       </form>                       
-                      <a href="delete_item.php?item_id=' . $wishLists[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
+                      <a href="deleteWishList.php?item_id=' . $wishLists[$i]->getItemId() . '" class="card-link deleteLink">Delete item</a>
                     </div>
                   </div>
                   <br />';

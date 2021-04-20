@@ -10,7 +10,7 @@ require_once('./wishList/wishList.php');
 require_once('./session/session.php');
 
 $wishlist = new wishList();
-$wishlist->setItemId($_POST["item"]);
+$wishlist->setItemId($_POST["item_id"]);
 $wishlist->setUserId($_SESSION["user_id"]);
 
 $wishlist->createWishlistItem();
