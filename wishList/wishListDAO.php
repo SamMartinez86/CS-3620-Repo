@@ -60,13 +60,13 @@ class wishListDAO {
         while($row = $result->fetch_assoc()) {
             $wishList= new wishList();
 
-            $wishList->setItemId($row["i.item_id"]);
-            $wishList->setItemName($row["i.item_name"]);
-            $wishList->setItemCost($row["i.item_cost"]);
-            $wishList->setItemDescription($row["i.item_description"]);
-            $wishList->setItemType($row["i.item_type"]);
-            $wishList->setItemImage($row["i.item_image"]);
-            $wishList->setUserId($row["u.user_id"]);
+            $wishList->setItemId($row["item_id"]);
+            $wishList->setItemName($row["item_name"]);
+            $wishList->setItemCost($row["item_cost"]);
+            $wishList->setItemDescription($row["item_description"]);
+            $wishList->setItemType($row["item_type"]);
+            $wishList->setItemImage($row["item_image"]);
+            $wishList->setUserId($row["user_id"]);
             $wishes[$index] = $wishList;
             $index = $index + 1;
         }
