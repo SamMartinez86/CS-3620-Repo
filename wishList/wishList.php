@@ -38,6 +38,7 @@ class wishList implements \JsonSerializable {
   }
   function setFirstName($first_name){
     $this->first_name = $first_name;
+  }
 
 
   // from items
@@ -101,11 +102,11 @@ class wishList implements \JsonSerializable {
     return $wishListDAO->ShowWishListItem($user_id);
   }
 
-  /*
+  
   public function jsonSerialize(){
       $vars = get_object_vars($this);
       return $vars;
   }
-  */
+  
 }
 ?>
