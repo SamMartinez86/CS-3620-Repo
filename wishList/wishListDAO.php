@@ -49,6 +49,8 @@ class wishListDAO {
     INNER JOIN userschema.item AS i ON w.item_id = i.item_id)
     WHERE u.user_id =" . $user_id;
 
+    echo($sql);
+
     $result = $conn->query($sql);
 
     $wishes = [];
