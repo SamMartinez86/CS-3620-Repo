@@ -9,14 +9,21 @@ class wishListDAO {
 
   function createWishlistItem($wishlist){
     require_once('./utilities/connection.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/item/item.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/user/user.php');
     //require_once('./wishList.wishList.php');
 
     // prepare and bind
     $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,
     `user_id`) VALUES (?, ?)");
 
+    /*
     $user = $wishList->getUserId();
     $item = $wishList->getItemId();
+    */
+
+    $user = $wishList->getUserId();
+    $item = $item->getItemId();
 
     $insertWishList->bind_param("ss", $item, $user);
     $insertWishList->execute();
