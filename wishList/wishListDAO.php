@@ -35,9 +35,9 @@ class wishListDAO {
     
     $sql = "SELECT (userschema.item.item_name, userschema.item.item_description, userschema.item.item_cost, userschema.item.item_type, userschema.item.item_image, userschema.item.item_id
     userschema.user.user_id, userschema.user.first_name)
-    FROM (( userschema.wishlist 
-    INNER JOIN userschema.user ON userschema.wishlist.user_id = userschema.user.user_id)
-    INNER JOIN userschema.item ON userschema.wishlist.item_id = userschema.item.item_id)
+    FROM userschema.wishlist 
+    INNER JOIN userschema.user ON userschema.wishlist.user_id = userschema.user.user_id
+    INNER JOIN userschema.item ON userschema.wishlist.item_id = userschema.item.item_id
     WHERE userschema.user.user_id =" . $user_id;
 
 
@@ -51,13 +51,13 @@ class wishListDAO {
         while($row = $result->fetch_assoc()) {
             $wishlist= new wishlist();
 
-            $wishlist->setItemId($row["item.item_id"]);
-            $wishlist->setItemName($row["item.item_name"]);
-            $wishlist->setItemCost($row["item.item_description"]);
-            $wishlist->setItemDescription($row["item.item_cost"]);
-            $wishlist->setItemType($row["item.item_type"]);
-            $wishlist->setItemImage($row["item.item_image"]);
-            $wishlist->setUserId($row["user.user_id"]);
+            $wishlist->setItemId($row["userschema.item.item_id"]);
+            $wishlist->setItemName($row["userschema.item.item_name"]);
+            $wishlist->setItemCost($row["userschema.item.item_description"]);
+            $wishlist->setItemDescription($row["userschema.item.item_cost"]);
+            $wishlist->setItemType($row["userschema.item.item_type"]);
+            $wishlist->setItemImage($row["userschema.item.item_image"]);
+            $wishlist->setUserId($row["userschema.user.user_id"]);
             $wishes[$index] = $wishlist;
             $index = $index + 1;
         }

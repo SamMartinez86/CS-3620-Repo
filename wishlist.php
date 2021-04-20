@@ -113,7 +113,6 @@
         $wishLists = $wishList->ShowWishListItem($_SESSION["user_id"]);
 
         $listLength = !empty($wishLists) ? count($wishLists) : 0;
-
         for($i = 0; $i < $listLength; $i++) {            
             echo '<div class="cards w3-card-4 w3-light-grey">
                     <div class="card">                    
