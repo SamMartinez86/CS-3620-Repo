@@ -101,9 +101,11 @@ class wishList implements \JsonSerializable {
     return $wishListDAO->ShowWishListItem($user_id);
   }
 
+  /*
   public function jsonSerialize(){
       $vars = get_object_vars($this);
       return $vars;
   }
+  */
 }
 ?>
