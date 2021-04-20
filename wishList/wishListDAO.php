@@ -44,9 +44,9 @@ class wishListDAO {
     $sql = "SELECT (item.item_name, item.item_description, item.item_cost, item.item_type, item.item_image, item.item_id
     user.user_id, user.first_name)
     FROM (( userschema.wishlist 
-    INNER JOIN userschema.user ON userschema.wishlist.user_id = userschema.user.user_id)
-    INNER JOIN userschema.item ON userschema.wishlist.item_id = userschema.item.item_id)";
-    //WHERE userschema.user.user_id =" . $user_id;
+    INNER JOIN userschema.user ON wishlist.user_id = user.user_id)
+    INNER JOIN userschema.item ON wishlist.item_id = item.item_id)
+    WHERE userschema.user.user_id =" . $user_id;
 
     $result = $conn->query($sql);
 
