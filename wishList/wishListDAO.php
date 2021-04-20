@@ -18,7 +18,7 @@ class wishListDAO {
 
     function createWishlistItem($wishlist){
         require_once('./utilities/connection.php');
-        require_once('./wishList.wishList.php');
+        //require_once('./wishList.wishList.php');
 
         // prepare and bind
         $insertWishList = $conn->prepare("INSERT INTO userschema.wishlist (`item_id`,
