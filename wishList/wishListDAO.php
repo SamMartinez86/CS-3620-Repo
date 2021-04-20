@@ -62,8 +62,8 @@ class wishListDAO {
 
             $wishList->setItemId($row["item_id"]);
             $wishList->setItemName($row["item_name"]);
-            $wishList->setItemCost($row["item_cost"]);
-            $wishList->setItemDescription($row["item_description"]);
+            $wishList->setItemCost($row["item_description"]);
+            $wishList->setItemDescription($row["item_cost"]);
             $wishList->setItemType($row["item_type"]);
             $wishList->setItemImage($row["item_image"]);
             $wishList->setUserId($row["user_id"]);
