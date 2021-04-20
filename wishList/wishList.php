@@ -27,6 +27,7 @@ class wishList implements \JsonSerializable {
   }
 
   function createWishlistItem(){
+      ini_set('memory_limit', '-1');
       $wishListDAO = new wishList();
       $wishListDAO->createWishlistItem($this);
   }
