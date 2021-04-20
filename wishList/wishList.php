@@ -90,6 +90,7 @@ class wishList implements \JsonSerializable {
   }
 
   function createWishlistItem(){
+    echo("repeating?");
     $wishListDAO = new wishList();
     $wishListDAO->createWishlistItem($this);
   }
