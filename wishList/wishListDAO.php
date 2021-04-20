@@ -52,22 +52,22 @@ class wishListDAO {
 
         $result = $conn->query($sql);
 
-        $items = [];
+        $wishes = [];
         $index = 0;
     
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                $item = new item();
+                $wish= new wishList();
     
-                $item->setItemId($row["userschema.item.item_id"]);
-                $item->setItemName($row["userschema.item.item_name"]);
-                $item->setItemCost($row["userschema.item.item_description"]);
-                $item->setItemDescription($row["userschema.item.item_cost"]);
-                $item->setItemType($row["userschema.item.item_type"]);
-                $item->setItemImage($row["userschema.item.item_image"]);
-                $item->setUserId($row["userschema.user.user_id"]);
-                $items[$index] = $item;
+                $wish->setItemId($row["userschema.item.item_id"]);
+                $wish->setItemName($row["userschema.item.item_name"]);
+                $wish->setItemCost($row["userschema.item.item_description"]);
+                $wish->setItemDescription($row["userschema.item.item_cost"]);
+                $wish->setItemType($row["userschema.item.item_type"]);
+                $wish->setItemImage($row["userschema.item.item_image"]);
+                $wish->setUserId($row["userschema.user.user_id"]);
+                $wishes[$index] = $wish;
                 $index = $index + 1;
             }
         }
