@@ -75,12 +75,12 @@
 
 <!-- Begin page content -->
 <main role="main" class="container">
-    <br/>
-  <div class="menuRow" style="justify-content: normal; margin-left: 75px;">
-    <div class="searchHolder menuItems" style="font-size: 15px;">
+
+  <div class="menuRow">
+    <div class="searchHolder menuItems">
       <form action="search_insert.php">
-        <input style="border-radius: 20px; width: 200px; height: 40px;" type="text" placeholder="search" name="search">
-        <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="search?" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
     <!--
@@ -92,7 +92,7 @@
     -->
     <div class="menuItems">
       <form action="wishlist.php">
-        <input style="display: none;" class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" name="search_keyword" />
+        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
       </form>
     </div>
   </div>
