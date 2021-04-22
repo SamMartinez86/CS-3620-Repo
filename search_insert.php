@@ -13,7 +13,7 @@ require_once('./item/item.php');
 $item = new item();
 $item->setSearchKeyword($_POST["search_keyword"]);
 
-$item->searchItem(); 
+//$item->searchItem();
 
 header("Location: dashboard.php");
 ?>
