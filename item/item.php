@@ -131,7 +131,7 @@ class item implements \JsonSerializable {
   // create new item entry
   function searchItem(){
     $itemDAO = new itemDAO();
-    $itemDAO->searchItemsByKeyword($this);
+    $itemDAO->searchItem($this);
   }
 
   // create new order entry

@@ -92,7 +92,7 @@
     -->
     <div class="menuItems">
       <form action="wishlist.php">
-        <input style="display: none;" class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" />
+        <input style="display: none;" class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" name="search_keyword" />
       </form>
     </div>
   </div>
