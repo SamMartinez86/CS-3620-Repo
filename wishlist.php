@@ -90,14 +90,12 @@
       </form>
     </div>
     -->
-      <!--
     <div class="menuItems">
       <form action="wishlist.php">
-        <center><input class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" /></center>
+        <input style="display: none;" class="btn btn-primary w3-button w3-round w3-blue" type="submit" value="wishlist" />
       </form>
     </div>
   </div>
-  -->
 
   <br />
   <div class="cardtainer">
