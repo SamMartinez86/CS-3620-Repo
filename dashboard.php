@@ -87,8 +87,8 @@ require_once 'header.php';
           </select>
       </div>
       <div class="menusItemized ">
-        <input class="searchHolder" type="text" placeholder="search" name="search_keyword">
-        <button type="submit">Go!</button>
+        <input class="searchHolder" type="text" placeholder="search" name="search_keyword" style="border-radius: 20px;">
+        <button style="color: grey; border-radius: 75px; width: 40px; height: 40px; margin-left: 20px;" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
       <!--      <div class="menusItemized ">-->

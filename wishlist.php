@@ -75,12 +75,12 @@
 
 <!-- Begin page content -->
 <main role="main" class="container">
-    <br/><br/>
+    <br/>
   <div class="menuRow">
     <div class="searchHolder menuItems">
       <form action="search_insert.php">
-        <input type="text" placeholder="search" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input style="border-radius: 20px;" type="text" placeholder="search" name="search">
+        <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
     <!--
