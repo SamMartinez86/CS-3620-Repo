@@ -79,7 +79,7 @@
   <div class="menuRow">
     <div class="searchHolder menuItems">
       <form action="search_insert.php">
-        <input style="border-radius: 20px;" type="text" placeholder="search" name="search">
+        <input style="border-radius: 20px; width: 200px; height: 40px;" type="text" placeholder="search" name="search">
         <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
