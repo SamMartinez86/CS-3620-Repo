@@ -81,12 +81,11 @@ require_once 'header.php';
                        style="border-radius: 20px;  margin-left: 20px; margin-right: 10px; height: 40px; width: 200px;">
                 <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i
                             class="fa fa-search"></i></button>
-                </form>
             </div>
-            <div style="margin-left: 500px;">
+            <div style="margin-left: 580px;">
                 <div>Order by:</div>
-                <div class="menusItemized ">
-                    <form method='post'>
+                <div class="menusItemized">
+                    <form method="post">
                         <select name="order">
                             <option value="item_name ASC">Name Asc</option>
                             <option value="item_name DESC">Name Desc</option>
