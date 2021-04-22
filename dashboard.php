@@ -76,7 +76,14 @@ require_once 'header.php';
                   <input type="submit" value="Logout" />
                 </form> -->
             </div>
-            <div>
+            <div class="menusItemized ">
+                <input class="searchHolder" type="text" placeholder="search" name="search_keyword"
+                       style="border-radius: 20px;  margin-left: 20px; margin-right: 10px; height: 40px; width: 200px;">
+                <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i
+                            class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div style="margin-left: 500px;">
                 <div>Order by:</div>
                 <div class="menusItemized ">
                     <form method='post'>
@@ -89,13 +96,6 @@ require_once 'header.php';
                             <option value="item_cost DESC">Cost Desc</option>
                         </select>
                 </div>
-            </div>
-            <div class="menusItemized ">
-                <input class="searchHolder" type="text" placeholder="search" name="search_keyword"
-                       style="border-radius: 20px;  margin-left: 20px; margin-right: 10px; height: 40px; width: 200px;">
-                <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i
-                            class="fa fa-search"></i></button>
-                </form>
             </div>
             <!--      <div class="menusItemized ">-->
             <!--        <form method='post'>-->
