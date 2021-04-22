@@ -76,8 +76,8 @@
 <!-- Begin page content -->
 <main role="main" class="container">
     <br/>
-  <div class="menuRow" style="font-size: 15px; justify-content: normal; margin-left: 75px;">
-    <div class="searchHolder menuItems">
+  <div class="menuRow" style="justify-content: normal; margin-left: 75px;">
+    <div class="searchHolder menuItems" style="font-size: 15px;">
       <form action="search_insert.php">
         <input style="border-radius: 20px; width: 200px; height: 40px;" type="text" placeholder="search" name="search">
         <button style="color: grey; border-radius: 75px; width: 40px; height: 40px;" type="submit"><i class="fa fa-search"></i></button>
